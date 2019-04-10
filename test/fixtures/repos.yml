@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  repo_name: MyString
+  seed_size: 1
+  language: MyString
+  entities: MyString
+  sort_method: MyString
+  status: MyString
+
+two:
+  repo_name: MyString
+  seed_size: 1
+  language: MyString
+  entities: MyString
+  sort_method: MyString
+  status: MyString

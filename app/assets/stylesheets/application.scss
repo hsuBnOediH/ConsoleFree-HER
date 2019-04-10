@@ -1,0 +1,268 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#sign_up_box {
+    width: 1980px;
+    height: 1080px;
+}
+
+#right_box {
+    width: 756px;
+    height: 1080px;
+    float: right;
+}
+
+#right_box_top {
+    border-radius: 0px 25px 0px 0px;
+    width: 756px;
+    float: left;
+    height: 283px;
+    background: #4099F5;
+}
+
+#right_box_key {
+    float: left;
+    height: 120px;
+    width: 240px;
+    position: relative;
+    top: 130px;
+    left: 50px;
+}
+
+.right_box_white {
+    color: white;
+}
+
+#right_box_top_sign_in {
+    position: relative;
+    left: 300px;
+    top: 180px;
+}
+
+#right_box_key_head_out {
+    margin-top: 20px;
+    background: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+}
+
+#right_box_key_head_in {
+    background: #4099F5;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+#right_box_key_body {
+    background: white;
+    height: 20px;
+    width: 100px;
+    position: relative;
+    left: 75px;
+    bottom: 50px;
+}
+
+#right_box_key_tail {
+    background: white;
+    height: 25px;
+    width: 20px;
+    position: relative;
+    bottom: 50px;
+    left: 135px;
+}
+
+#right_box_body {
+    margin-top: 280px;
+    margin-left: 78px;
+    width: 600px;
+    height: 800px;
+}
+
+.right_box_body_row h3 {
+    color: #808080;
+}
+
+.right_box_body_row input {
+    width: 500px;
+
+    font-size: 30px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #4099F5;
+}
+
+.right_box_body_row {
+    padding-top: 60px;
+}
+
+#sign_up_button {
+    width: 200px;
+    height: 70px;
+    background-color: #4099F5; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    top: 100px;
+}
+
+#sign_up_button span {
+    position: relative;
+    top: 20px;
+}
+
+#sign_up_return_button {
+    width: 200px;
+    height: 70px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    top: 90px;
+    left: 60px;
+}
+
+#sign_up_return_button span {
+    position: relative;
+    color: #808080;
+    top: 30px;
+    font-size: 25px;
+}
+
+#video_box {
+    width: 300px;
+    height: 900px
+}
+
+#left_box {
+    width: 1223px;
+    height: 1080px;
+    background: black;
+}
+
+
+/*# sourceMappingURL=users.css.map */
+
+
+
+#left_frame {
+  float: left;
+  width: 239px;
+  height: 1080px;
+}
+
+#left_frame_img_name {
+  width: 239px;
+  height: 300px;
+}
+
+#left_frame_img {
+  background: sienna;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  margin-top: 90px;
+  margin-left: 79px;
+}
+
+#left_frame_name {
+  position: relative;
+  top: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#left_frame_buttons {
+}
+
+.left_frame_row {
+  width: 239px;
+  height: 70px;
+}
+
+.left_frame_row img {
+  float: left;
+  height: 30px;
+  background: black;
+  width: 30px;
+  position: relative;
+  top: 20px;
+  left: 57px;
+}
+
+.left_frame_row p {
+  float: left;
+  height: 22px;
+  position: relative;
+  font-size: 20px;
+  left: 77px;
+  top: 25px;
+  color: black;
+}
+
+#right_frame {
+  float: left;
+  width: 1622px;
+  height: 1080px;
+  position: relative;
+  left: 60px;
+}
+
+#right_frame_header{
+  width: 1622px;
+  height: 244px;
+  background: white;
+}
+#right_frame_header h1{
+  height: 88px;
+  float: left;
+  margin: 0;
+  position: relative;
+  top: 118px;
+}
+#right_frame_header img{
+  height: 68px;
+  width: 186px;
+  background:black;
+  position: relative;
+  top: 95px;
+  left:100px ;
+}
+
+#right_frame_header #exit_button{
+  width: 186px;
+  height: 80px;
+  background:#A9CBEE;
+  position: relative;
+  left: 1412px;
+  bottom: 50px;text-align: center;
+}
+#exit_button p{
+  position: relative;
+  top: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+#right_frame_body{
+  height: 672px;
+  width: 1476px;
+}
+
+
+

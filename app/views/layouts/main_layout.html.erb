@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</head>
+<body>
+
+<div class="container">
+  <div id="left_frame">
+    <div id="left_frame_img_name">
+      <img id="left_frame_img">
+      <p id="left_frame_name">USER NAME</p>
+    </div>
+    <div id="left_frame_buttons">
+      <div class="left_frame_row" id="left_frame_button_repo">
+        <img>
+        <p>Repo info</p>
+      </div>
+      <div class="left_frame_row" id="left_frame_button_upload">
+        <img>
+        <p>Upload File</p>
+      </div>
+      <div class="left_frame_row" id="left_frame_button_tag_color">
+        <img>
+        <p>Tag Color</p>
+      </div>
+      <div class="left_frame_row" id="left_frame_button_annotation">
+        <img>
+        <p>Annotation</p>
+      </div>
+      <div class="left_frame_row" id="left_frame_button_result">
+        <img>
+        <p>Result</p>
+      </div>
+    </div>
+  </div>
+  <div id="right_frame">
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>
