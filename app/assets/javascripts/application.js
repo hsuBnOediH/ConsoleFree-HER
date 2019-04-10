@@ -80,6 +80,8 @@ function sendLogIn(){
         }
     });
 }
+
+
 function sendSignUp() {
 
     let username =$("#user_name").val();

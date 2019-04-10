@@ -1,11 +1,102 @@
 <div id="repo_cards"></div>
 
-<!--<h1>INFO PAGE</h1>-->
-<!--<h1>username: <%#= @user.username %></h1>-->
-<!--<h1>password: <%#= @user.password %></h1>-->
-<!--<h1>repos: <%#= @user.repos.first.repo_name %></h1>-->
 
 <% @user_repo_array.each do |repo_url| %>
   <a href=<%=repo_url %>>URL:<%=repo_url %></a>
 <%end %>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal" >Add</button>
+<!--*****IMPORTANT*****-->
+
+<!-- Modal -->
+
+<!--*****IMPORTANT*****-->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <!--*****IMPORTANT*****-->
+
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <div class="md-form">
+
+          <label for="repo_name">Repository Name</label>
+
+          <!--*****IMPORTANT*****-->
+          <input id="repo_name" value="Demo" type="text" class="form-control">
+          <!--*****IMPORTANT*****-->
+
+          <label for="language">Language</label>
+
+          <!--*****IMPORTANT*****-->
+          <input id="language" value="English" type="text" class="form-control">
+          <!--*****IMPORTANT*****-->
+
+          <label for="entities">Entities And Colors</label>
+
+          <!--*****IMPORTANT*****-->
+          <div id="entities"><input id="entity_0" value="GEO" type="text" class="form-control"></div>
+          <div><button onclick="add_entity()"  type="button" class="btn btn-outline-secondary">Add More</button></div>
+          <!--*****IMPORTANT*****-->
+
+          <label for="sortMethod">SortMethod</label>
+
+          <!--*****IMPORTANT*****-->
+          <input id="sortMethod" value="Pretag_Delax" type="text"  class="form-control">
+          <!--*****IMPORTANT*****-->
+
+          <label for="seed_size">Seed Size</label>
+
+          <!--*****IMPORTANT*****-->
+          <input id="seed_size" value="100" type="text" class="form-control">
+          <!--*****IMPORTANT*****-->
+
+
+          <form class="md-form" action="#">
+            <div class="file-field">
+              <div class="btn btn-primary btn-sm float-left">
+                <span>Choose files</span>
+
+                <!--*****IMPORTANT*****-->
+                <input id="file_upload" type="file" multiple>
+                <!--*****IMPORTANT*****-->
+
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+              </div>
+            </div>
+          </form>
+
+
+          <form class="md-form" action="#">
+            <div class="file-field">
+              <div class="btn btn-primary btn-sm float-left">
+                <span>Choose files</span>
+
+                <!--*****IMPORTANT*****-->
+                <input id="gaz_upload" type="file" multiple>
+                <!--*****IMPORTANT*****-->
+
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+              </div>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+      <div class="modal-footer">
+
+        <!--*****IMPORTANT*****-->
+        <button onclick="cancel_repo()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button onclick="create_repo()" type="button" class="btn btn-primary">Create Repo</button>
+        <!--*****IMPORTANT*****-->
+
+      </div>
+    </div>
+  </div>
+</div>
 

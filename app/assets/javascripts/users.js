@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require_tree
 
+let entity_num = 1;
+
 $(document).ready(function(){
     // $(".left_frame_row").on('mouseenter',function () {
     //     $(this).css("background-color", "#429AF5");
@@ -24,27 +26,73 @@ $(document).ready(function(){
     //     $(this).css("background-color", "white");
     // }) ;
 
-
-    generate_repo_cards();
 });
 
-function generate_repo_cards(){
 
-    let pathname = window.location.pathname;
+function add_entity(){
+    $('#entities').append('<input id="entity_'+entity_num.toString()+'" value="" type="text" class="form-control">');
+    entity_num += 1;
+}
+
+
+function create_repo(){
+
+    // var files = $('#file_upload').prop('files');
+    // var data = new FormData();
+    // for(let i=0; i<files.length; i++) {
+    //     data.append(files[i].toString(), files[i]);
+    // }
+    let repo_name = $("#repo_name").val();
+    let language = $('#language').val();
+    let sort_method = $('#sortMethod').val();
+    let seed_size = $('#seed_size').val();
+    let entities = [];
+
+    for(let i=0; i<entity_num; i++){
+
+        entities.push($('#entity_' + i.toString()).val());
+    }
+
+    let files = $('#file_upload').prop('files');
+    let data_file = new FormData();
+    for(let i=0; i<files.length; i++) {
+        data_file.append(files[i].toString(), files[i]);
+    }
+
+    let gazs = $('#gaz_upload').prop('files');
+    let gaz_file = new FormData();
+    for(let i=0; i<gazs.length; i++) {
+        gaz_file.append(gazs[i].toString(), gazs[i]);
+    }
+
+    let repo_info = {repo_name: repo_name,
+        language: language,
+        sort_method: sort_method,
+        seed_size: seed_size,
+        entities: entities,
+        files: data_file,
+        gazs: gaz_file,
+        user_id: window.location.pathname.substring(1)};
+
+    let repo_info_json = JSON.stringify(repo_info);
 
     $.ajax({
-        url: pathname+"/get_repo_info", type: "GET", dataType: "json", success: function(msg){
-            $("#repo_cards").empty();
-
-            //*************************************
-            //extract details of repo information
-            $("#repo_cards").append('<div>'+msg.sentence.toString()+'</div>');
-            $("#repo_cards").append('<div>SSSS</div>');
-            //*************************************
-        }
+        url: 'users/add_repo',
+        type: 'POST',
+        data: repo_info_json,
+        cache: false,
+        async: false,
+        processData: false,
+        contentType: false
     });
 
+    window.location.reload();
+
+
+    //window.location.reload();
 }
+
+
 
 
 

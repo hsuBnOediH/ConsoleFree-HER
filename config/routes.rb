@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/:id/:repo_name', to:"repos#main"
 
+  post '/users/add_repo'
   post '/users/create',to:"users#create"
   post '/users/validate',to:"users#validate"
   root 'application#login'

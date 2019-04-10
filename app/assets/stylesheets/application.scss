@@ -2,6 +2,15 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.container{
+  width: 1980px;
+  height: 1080px;
+}
+
 #sign_up_box {
     width: 1980px;
     height: 1080px;
@@ -216,7 +225,7 @@
 
 #right_frame {
   float: left;
-  width: 1622px;
+  width: 1600px;
   height: 1080px;
   position: relative;
   left: 60px;
