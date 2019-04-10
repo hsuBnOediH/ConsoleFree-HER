@@ -58,8 +58,59 @@ function changeToLogIn(){
 
 function sendLogIn(){
 
+    let username =$("#user_name").val();
+    let password = $("#password").val();
+
+    let user_account = {username: username, password: password};
+    let user_account_json = JSON.stringify(user_account);
+
+    $.ajax({
+        url: "/users/validate",
+        type: "POST",
+        data: user_account_json,
+        async: false,
+        success: function (msg) {
+            if (msg.status){
+                let url="/"+msg.user_id;
+                window.location.replace(url);
+            }else{
+                alert("Incorrect username or password");
+                window.location.reload();
+            }
+        }
+    });
 }
 function sendSignUp() {
 
+    let username =$("#user_name").val();
+    let password = $("#password").val();
+    let confirm_password = $("#confirm_password").val();
+
+    if (password === confirm_password){
+
+        let user_account = {username: username, password: password};
+        let user_account_json = JSON.stringify(user_account);
+
+        $.ajax({
+            url: "/users/create",
+            type: "POST",
+            data: user_account_json,
+            async: false,
+            success: function (msg) {
+                if (msg.status){
+                    let url="/"+msg.user_id;
+                    window.location.replace(url);
+
+                }else{
+                    alert("Username already used, please try another one.");
+                    window.location.reload();
+                }
+            }
+        });
+    }else {
+        alert("Please enter non-empty username or make sure passwords are matched");
+        window.location.reload();
+    }
 }
+
 

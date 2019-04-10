@@ -1,5 +1,11 @@
-<h1>INFO PAGE</h1>
-<h1>username: <%= @user.username %></h1>
-<h1>password: <%= @user.password %></h1>
-<h1>repos: <%= @user.repos.first.repo_name %></h1>
+<div id="repo_cards"></div>
+
+<!--<h1>INFO PAGE</h1>-->
+<!--<h1>username: <%#= @user.username %></h1>-->
+<!--<h1>password: <%#= @user.password %></h1>-->
+<!--<h1>repos: <%#= @user.repos.first.repo_name %></h1>-->
+
+<% @user_repo_array.each do |repo_url| %>
+  <a href=<%=repo_url %>>URL:<%=repo_url %></a>
+<%end %>
 
