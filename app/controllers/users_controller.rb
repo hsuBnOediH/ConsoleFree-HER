@@ -174,6 +174,7 @@ class UsersController < ApplicationController
      else
         status = false
     end
+
     respond_to do |format|
 
       msg = {:status => status}

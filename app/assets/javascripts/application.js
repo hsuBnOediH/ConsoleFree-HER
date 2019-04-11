@@ -102,7 +102,6 @@ function sendSignUp() {
                 if (msg.status){
                     let url="/"+ username;
                     window.location.replace(url);
-
                 }else{
                     alert("Username already used, please try another one.");
                     window.location.reload();
