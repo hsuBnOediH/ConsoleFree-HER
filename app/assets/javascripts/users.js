@@ -56,30 +56,27 @@ function create_repo(){
     let files = $('#file_upload').prop('files');
     let data_file = new FormData();
     for(let i=0; i<files.length; i++) {
-        data_file.append(files[i].toString(), files[i]);
+        data_file.append("file_" + i.toString(), files[i]);
     }
 
     let gazs = $('#gaz_upload').prop('files');
     let gaz_file = new FormData();
-    for(let i=0; i<gazs.length; i++) {
-        gaz_file.append(gazs[i].toString(), gazs[i]);
-    }
+    // for(let i=0; i<gazs.length; i++) {
+    //     data_file.append("gazs", gazs[i]);
+    // }
 
     let repo_info = {repo_name: repo_name,
         language: language,
         sort_method: sort_method,
         seed_size: seed_size,
-        entities: entities,
-        files: data_file,
-        gazs: gaz_file,
-        user_id: window.location.pathname.substring(1)};
+        entities: entities};
 
     let repo_info_json = JSON.stringify(repo_info);
-
+    // data_file.append('json', repo_info_json)
     $.ajax({
         url: 'users/add_repo',
         type: 'POST',
-        data: repo_info_json,
+        data: data_file,
         cache: false,
         async: false,
         processData: false,

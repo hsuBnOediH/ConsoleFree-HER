@@ -5543,3 +5543,1275 @@ Processing by ReposController#main as HTML
 Completed 200 OK in 37ms (Views: 30.6ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for ::1 at 2019-04-10 16:59:48 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (422.8ms)
+Completed 200 OK in 469ms (Views: 460.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-10 17:03:49 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 23.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-10 17:03:54 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 70ms (Views: 66.8ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-10 17:04:57 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 0.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 17:04:58 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (1.4ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.9ms)
+Completed 200 OK in 231ms (Views: 97.3ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/1/repohahahaha" for ::1 at 2019-04-10 17:05:06 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.4ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "repos_users" ON "users"."id" = "repos_users"."user_id" WHERE "repos_users"."repo_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["repo_id", 2], ["LIMIT", 1]]
+  Rendered repos/main.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 96ms (Views: 86.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/2" for ::1 at 2019-04-10 17:12:27 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.8ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='2') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.1ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 5.6ms)
+
+
+  
+ActionView::Template::Error (The asset "stylesheets/users.css" is not present in the asset pipeline.):
+    4: 
+    5:   <%= csrf_meta_tags %>
+    6:   <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+    7:   <%= stylesheet_link_tag    'stylesheets/users', media: 'all','data-turbolinks-track': 'reload' %>
+    8:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: 
+   10: </head>
+  
+app/views/layouts/main_layout.html.erb:7:in `_app_views_layouts_main_layout_html_erb___17373516941898234_70334967943480'
+Started GET "/1" for ::1 at 2019-04-10 17:12:33 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.5ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.5ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (The asset "stylesheets/users.css" is not present in the asset pipeline.):
+    4: 
+    5:   <%= csrf_meta_tags %>
+    6:   <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+    7:   <%= stylesheet_link_tag    'stylesheets/users', media: 'all','data-turbolinks-track': 'reload' %>
+    8:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: 
+   10: </head>
+  
+app/views/layouts/main_layout.html.erb:7:in `_app_views_layouts_main_layout_html_erb___17373516941898234_70334891119920'
+Started GET "/" for ::1 at 2019-04-10 17:12:39 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-10 17:12:49 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 17:12:49 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (The asset "stylesheets/users.css" is not present in the asset pipeline.):
+    4: 
+    5:   <%= csrf_meta_tags %>
+    6:   <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+    7:   <%= stylesheet_link_tag    'stylesheets/users', media: 'all','data-turbolinks-track': 'reload' %>
+    8:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: 
+   10: </head>
+  
+app/views/layouts/main_layout.html.erb:7:in `_app_views_layouts_main_layout_html_erb___17373516941898234_70334972399060'
+Started GET "/1" for ::1 at 2019-04-10 17:13:34 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.5ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.7ms)
+Completed 500 Internal Server Error in 4874ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( users.css )` to `config/initializers/assets.rb` and restart your server):
+    4: 
+    5:   <%= csrf_meta_tags %>
+    6:   <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+    7:   <%= stylesheet_link_tag    'users', media: 'all','data-turbolinks-track': 'reload' %>
+    8:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: 
+   10: </head>
+  
+app/views/layouts/main_layout.html.erb:7:in `_app_views_layouts_main_layout_html_erb___17373516941898234_70334824896640'
+Started GET "/1" for ::1 at 2019-04-10 17:17:20 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.7ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.5ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( users.css )` to `config/initializers/assets.rb` and restart your server):
+    4: 
+    5:   <%= csrf_meta_tags %>
+    6:   <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+    7:   <%= stylesheet_link_tag    'users', media: 'all','data-turbolinks-track': 'reload' %>
+    8:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: 
+   10: </head>
+  
+app/views/layouts/main_layout.html.erb:7:in `_app_views_layouts_main_layout_html_erb___17373516941898234_70334968107020'
+Started GET "/1" for ::1 at 2019-04-10 17:17:36 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (1.0ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (4.0ms)
+Completed 200 OK in 523ms (Views: 405.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 17:55:29 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.9ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (1.0ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.6ms)
+Completed 200 OK in 132ms (Views: 43.3ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 17:59:04 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.6ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.5ms)
+Completed 200 OK in 127ms (Views: 46.9ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 17:59:41 -0400
+Processing by UsersController#add_repo as */*
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "Dhljpnlkemo"], ["seed_size", 100], ["language", "English"], ["entities", "GEO "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-10 21:59:41.861184"], ["updated_at", "2019-04-10 21:59:41.861184"]]
+  [1m[35m (37.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["repo_id", 14], ["created_at", "2019-04-10 21:59:41.935935"], ["updated_at", "2019-04-10 21:59:41.935935"]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 49.3ms)
+
+
+  
+NameError (undefined local variable or method `files' for #<UsersController:0x00007f6044dd68e0>):
+  
+app/controllers/users_controller.rb:100:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 17:59:42 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.4ms)
+Completed 200 OK in 51ms (Views: 46.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 18:01:55 -0400
+Processing by UsersController#add_repo as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "asfsafasDemo"], ["seed_size", 100], ["language", "English"], ["entities", "GEO "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-10 22:01:55.966489"], ["updated_at", "2019-04-10 22:01:55.966489"]]
+  [1m[35m (36.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["repo_id", 15], ["created_at", "2019-04-10 22:01:56.026848"], ["updated_at", "2019-04-10 22:01:56.026848"]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+No template found for UsersController#add_repo, rendering head :no_content
+Completed 204 No Content in 147ms (ActiveRecord: 50.6ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:01:56 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (1.0ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.6ms)
+Completed 200 OK in 51ms (Views: 29.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:09:29 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.9ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.6ms)
+Completed 200 OK in 181ms (Views: 81.1ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 18:09:45 -0400
+Processing by UsersController#add_repo as */*
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "fassadfadg"], ["seed_size", 100], ["language", "English"], ["entities", "GEO "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-10 22:09:45.032563"], ["updated_at", "2019-04-10 22:09:45.032563"]]
+  [1m[35m (33.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["repo_id", 16], ["created_at", "2019-04-10 22:09:45.096352"], ["updated_at", "2019-04-10 22:09:45.096352"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+No template found for UsersController#add_repo, rendering head :no_content
+Completed 204 No Content in 129ms (ActiveRecord: 46.1ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:09:45 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.9ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.7ms)
+Completed 200 OK in 88ms (Views: 60.2ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 18:11:35 -0400
+Processing by UsersController#add_repo as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "ppd"], ["seed_size", 100], ["language", "English"], ["entities", "GEO sda "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-10 22:11:35.563586"], ["updated_at", "2019-04-10 22:11:35.563586"]]
+  [1m[35m (38.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["repo_id", 17], ["created_at", "2019-04-10 22:11:35.648200"], ["updated_at", "2019-04-10 22:11:35.648200"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+No template found for UsersController#add_repo, rendering head :no_content
+Completed 204 No Content in 171ms (ActiveRecord: 49.9ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:11:35 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.4ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.9ms)
+Completed 200 OK in 141ms (Views: 81.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:11:43 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.4ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (1.0ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.3ms)
+Completed 200 OK in 73ms (Views: 47.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:23:07 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.5ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.1ms)
+Completed 200 OK in 228ms (Views: 151.9ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 18:23:20 -0400
+Processing by UsersController#add_repo as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (765: unexpected token at ',[object FormData],[object FormData]'):
+  
+app/controllers/users_controller.rb:70:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 18:23:20 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.7ms)
+Completed 200 OK in 46ms (Views: 37.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:23:48 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (2.6ms)
+Completed 200 OK in 123ms (Views: 49.7ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 18:24:01 -0400
+Processing by UsersController#add_repo as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (765: unexpected token at '{'):
+  
+app/controllers/users_controller.rb:70:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 18:24:02 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.4ms)
+Completed 200 OK in 41ms (Views: 34.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:24:36 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.9ms)
+Completed 200 OK in 162ms (Views: 148.6ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 18:24:47 -0400
+Processing by UsersController#add_repo as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (765: unexpected token at '{'):
+  
+app/controllers/users_controller.rb:70:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 18:24:47 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.4ms)
+Completed 200 OK in 33ms (Views: 24.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 18:25:52 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (1.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.0ms)
+Completed 200 OK in 275ms (Views: 189.1ms | ActiveRecord: 9.7ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 18:26:02 -0400
+Processing by UsersController#add_repo as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (765: unexpected token at '{'):
+  
+app/controllers/users_controller.rb:72:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 18:26:02 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.6ms)
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2019-04-10 20:01:36 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"static_pages", "repo_name"=>"home"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='home') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `repo_name' for nil:NilClass):
+    1: <h1>MAIN PAGE</h1>
+    2: <h1>repo name: <%= @repo.repo_name %></h1>
+    3: <h1>seed_size: <%= @repo.seed_size.to_s %></h1>
+    4: <h1>owner: <%= @repo.users.first.username %></h1>
+  
+app/views/repos/main.html.erb:2:in `_app_views_repos_main_html_erb__1778710951013056175_46990675748000'
+Started GET "/" for ::1 at 2019-04-10 20:01:38 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (383.2ms)
+Completed 200 OK in 415ms (Views: 412.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-10 20:02:53 -0400
+Started GET "/" for ::1 at 2019-04-10 20:03:03 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-10 20:03:04 -0400
+Processing by ApplicationController#login as HTML
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 51ms (Views: 46.6ms)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 0.4ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-10 20:03:08 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:03:09 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.3ms)
+Completed 200 OK in 77ms (Views: 40.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:03:38 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.7ms)
+Completed 200 OK in 225ms (Views: 212.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:03:52 -0400
+Processing by UsersController#add_repo as */*
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `each' for "o":String):
+  
+app/controllers/users_controller.rb:45:in `repo_directory_setup'
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:03:52 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.5ms)
+Completed 200 OK in 46ms (Views: 31.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:05:00 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.9ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.9ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.9ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.7ms)
+Completed 200 OK in 412ms (Views: 288.7ms | ActiveRecord: 15.3ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:05:06 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"files"=>#<ActionDispatch::Http::UploadedFile:0x00007f5105af4828 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-11283-v701yj.txt>, @original_filename="rebours.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"files\"; filename=\"rebours.txt\"\r\nContent-Type: text/plain\r\n">}
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `files' for #<UsersController:0x00007f5105af4f30>):
+  
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:05:07 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.8ms)
+Completed 200 OK in 47ms (Views: 40.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:05:21 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"files"=>#<ActionDispatch::Http::UploadedFile:0x00007f51008e9c68 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-11283-17oczkw.txt>, @original_filename="rebours.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"files\"; filename=\"rebours.txt\"\r\nContent-Type: text/plain\r\n">}
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `files' for #<UsersController:0x00007f510814c700>):
+  
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:05:22 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.4ms)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:06:22 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"files"=>#<ActionDispatch::Http::UploadedFile:0x00007f51049cb678 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-11283-v42whl.txt>, @original_filename="cahier.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"files\"; filename=\"cahier.txt\"\r\nContent-Type: text/plain\r\n">}
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `files' for #<UsersController:0x00007f5104958880>):
+  
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:06:22 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.3ms)
+Completed 200 OK in 149ms (Views: 143.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:06:56 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f5106120080 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-11283-9f8gvo.txt>, @original_filename="cahier.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"cahier.txt\"\r\nContent-Type: text/plain\r\n">}
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `files' for #<UsersController:0x00007f5106120788>):
+  
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:06:57 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.9ms)
+Completed 200 OK in 176ms (Views: 162.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:06:58 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.6ms)
+Completed 200 OK in 114ms (Views: 101.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:07:07 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f510836aa78 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-11283-18wrx2u.txt>, @original_filename="physiologie.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"physiologie.txt\"\r\nContent-Type: text/plain\r\n">}
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `files' for #<UsersController:0x00007f510836b180>):
+  
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:07:08 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.5ms)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:11:43 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.6ms)
+Completed 200 OK in 195ms (Views: 185.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:11:57 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00007f51081bb8a8 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-11283-1g5w4bk.txt>, @original_filename="rebours.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_upload\"; filename=\"rebours.txt\"\r\nContent-Type: text/plain\r\n">}
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `files' for #<UsersController:0x00007f51081c80a8>):
+  
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:11:57 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.0ms)
+Completed 200 OK in 47ms (Views: 38.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:12:20 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.7ms)
+Completed 200 OK in 194ms (Views: 60.9ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:12:31 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00007f5100be5a98 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-11283-xbo1il.txt>, @original_filename="physiologie.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_upload\"; filename=\"physiologie.txt\"\r\nContent-Type: text/plain\r\n">}
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ dir_s_chdir - HER-data):
+  
+app/controllers/users_controller.rb:38:in `chdir'
+app/controllers/users_controller.rb:38:in `repo_directory_setup'
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:12:32 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.7ms)
+Completed 200 OK in 57ms (Views: 47.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:12:50 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (2.5ms)
+Completed 200 OK in 543ms (Views: 443.1ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:13:01 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00007f306c2e1438 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-4058-1s29592.txt>, @original_filename="physiologie.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_upload\"; filename=\"physiologie.txt\"\r\nContent-Type: text/plain\r\n">}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `each' for #<String:0x00007f306c2ee278>):
+  
+app/controllers/users_controller.rb:45:in `repo_directory_setup'
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:13:01 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.6ms)
+Completed 200 OK in 41ms (Views: 33.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:15:11 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.6ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.5ms)
+Completed 200 OK in 74ms (Views: 23.9ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:15:37 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00007f3068466618 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-4058-x2j3dh.txt>, @original_filename="physiologie.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_upload\"; filename=\"physiologie.txt\"\r\nContent-Type: text/plain\r\n">}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ dir_s_chdir - HER-data):
+  
+app/controllers/users_controller.rb:38:in `chdir'
+app/controllers/users_controller.rb:38:in `repo_directory_setup'
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:15:37 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.5ms)
+Completed 200 OK in 43ms (Views: 36.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:15:49 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (2.8ms)
+Completed 200 OK in 577ms (Views: 458.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:15:52 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.9ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (1.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.7ms)
+Completed 200 OK in 64ms (Views: 43.1ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:16:01 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file_upload"=>#<ActionDispatch::Http::UploadedFile:0x00007fd6542d32c8 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-9275-yqmdy7.txt>, @original_filename="rebours.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_upload\"; filename=\"rebours.txt\"\r\nContent-Type: text/plain\r\n">}
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+No template found for UsersController#add_repo, rendering head :no_content
+Completed 204 No Content in 109ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:16:01 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.1ms)
+Completed 200 OK in 42ms (Views: 31.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:19:40 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.5ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (0.5ms)
+Completed 200 OK in 251ms (Views: 184.7ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:20:06 -0400
+Processing by UsersController#add_repo as */*
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `each' for "[object FormData],[object FormData],[object FormData]":String):
+  
+app/controllers/users_controller.rb:45:in `repo_directory_setup'
+app/controllers/users_controller.rb:102:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:20:06 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.1ms)
+Completed 200 OK in 53ms (Views: 43.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:30:38 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.6ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (2.0ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.6ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.7ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.7ms)
+Completed 200 OK in 388ms (Views: 249.6ms | ActiveRecord: 13.4ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:30:50 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file_0"=>#<ActionDispatch::Http::UploadedFile:0x00007fd65432c710 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-9275-slapgk.txt>, @original_filename="rebours.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_0\"; filename=\"rebours.txt\"\r\nContent-Type: text/plain\r\n">, "file_1"=>#<ActionDispatch::Http::UploadedFile:0x00007fd65432c698 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-9275-rgyenr.txt>, @original_filename="physiologie.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_1\"; filename=\"physiologie.txt\"\r\nContent-Type: text/plain\r\n">, "file_2"=>#<ActionDispatch::Http::UploadedFile:0x00007fd65432c620 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-9275-1t7kkx8.txt>, @original_filename="chaumiere.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_2\"; filename=\"chaumiere.txt\"\r\nContent-Type: text/plain\r\n">}
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ dir_s_chdir - HER-data):
+  
+app/controllers/users_controller.rb:38:in `chdir'
+app/controllers/users_controller.rb:38:in `repo_directory_setup'
+app/controllers/users_controller.rb:103:in `add_repo'
+Started GET "/1" for ::1 at 2019-04-10 20:30:50 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.3ms)
+Completed 200 OK in 45ms (Views: 34.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:31:16 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.5ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.8ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.9ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (1.0ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (2.3ms)
+Completed 200 OK in 558ms (Views: 440.5ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/users/add_repo" for ::1 at 2019-04-10 20:31:24 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"file_0"=>#<ActionDispatch::Http::UploadedFile:0x00007f904c33f020 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-5812-1rwxs2q.txt>, @original_filename="chaumiere.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_0\"; filename=\"chaumiere.txt\"\r\nContent-Type: text/plain\r\n">, "file_1"=>#<ActionDispatch::Http::UploadedFile:0x00007f904c33efa8 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-5812-1ql3m8x.txt>, @original_filename="physiologie.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_1\"; filename=\"physiologie.txt\"\r\nContent-Type: text/plain\r\n">, "file_2"=>#<ActionDispatch::Http::UploadedFile:0x00007f904c33ef30 @tempfile=#<Tempfile:/tmp/RackMultipart20190410-5812-eejk0p.txt>, @original_filename="rebours.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file_2\"; filename=\"rebours.txt\"\r\nContent-Type: text/plain\r\n">}
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+No template found for UsersController#add_repo, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 20:31:24 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/main_layout
+  Rendered users/info.html.erb within layouts/main_layout (1.3ms)
+Completed 200 OK in 52ms (Views: 42.3ms | ActiveRecord: 1.7ms)
+
+
