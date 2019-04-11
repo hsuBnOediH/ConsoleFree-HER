@@ -7,7 +7,7 @@ class ReposController < ApplicationController
 
     Repo.where("repo_name='"+params[:repo_name]+"'").find_each do|repo|
 
-      ReposUser.where("repo_id='"+repo.id.to_s+"'" " AND user_id='"+params[:id].to_s+"'").find_each do
+      ReposUser.where("repo_id='"+repo.id.to_s+"'" " AND user_id='"+User.find_by_username(params[:username]).id.to_s+"'").find_each do
 
         @repo = repo
 
@@ -310,23 +310,6 @@ class ReposController < ApplicationController
     Dir.chdir $return_path
 
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

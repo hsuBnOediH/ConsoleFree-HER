@@ -75,7 +75,6 @@ function create_repo(){
         success: function(msg){
             if(msg.status){
                 let file = $('#file_upload').prop('files');
-                alert(file.length);
 
                 recursive_upload(file, 0, a+'cp_file');
 
@@ -88,9 +87,6 @@ function create_repo(){
     });
 
     window.location.reload();
-
-
-    //window.location.reload();
 }
 
 
