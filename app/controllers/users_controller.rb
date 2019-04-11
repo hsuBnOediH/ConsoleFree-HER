@@ -1,18 +1,21 @@
 require 'json'
 class UsersController < ApplicationController
-  before_action :set_user, only: [:info]
+  before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz]
+  #before_action :set_repo_path, only: [:cp_file, :cp_gaz, :add_repo]
 
   layout "main_layout",:only => [:login]
 
 
   def info
-    @user_repo_array =[]
+    @user_repo_array = []
+    @user_repo_info = []
 
     ReposUser.where("user_id='"+@user.id.to_s+"'").find_each do |repo|
 
       Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
         url = @user.id.to_s + "/" + re.repo_name
         @user_repo_array << url
+        @user_repo_info << [re.repo_name, re.entities, re.language]
       end
 
     end
@@ -33,28 +36,83 @@ class UsersController < ApplicationController
 
   end
 
-  def repo_directory_setup files, gazs, repo
+  def cp_gaz
+
+    data = request.body.read
+
+    name = @user.repos[-1].id.to_s + "_" + @user.repos[-1].repo_name
+
+    dir = 'HER-data/' + name + "/Data/Gazatteers/"
+    file_count = Dir[File.join(dir, '**', '*')].count { |file| File.file?(file) }
+
+    Dir.chdir 'HER-data/'
+
+    File.open("temp"+file_count.to_s+".txt", 'wb') { |file| file.write(data) }
+    system("sed", "-i", "1,4d;$d", "temp"+file_count.to_s+".txt")
+    system("mv", "temp"+file_count.to_s+".txt", name+"/Data/Gazatteers/")
+
+    Dir.chdir '../'
+
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
+  end
+
+
+  def cp_file
+
+    data = request.body.read
+
+    name = @user.repos[-1].id.to_s + "_" + @user.repos[-1].repo_name
+
+    dir = 'HER-data/' + name + "/Data/Original/"
+    file_count = Dir[File.join(dir, '**', '*')].count { |file| File.file?(file) }
+
+    Dir.chdir 'HER-data/'
+
+    File.open("temp"+file_count.to_s+".txt", 'wb') { |file| file.write(data) }
+    system("sed", "-i", "1,4d;$d", "temp"+file_count.to_s+".txt")
+    system("mv", "temp"+file_count.to_s+".txt", name+"/Data/Original/")
+
+    Dir.chdir '../'
+    puts "**************************"
+
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
+
+  end
+
+  def repo_directory_setup repo
 
     Dir.chdir "HER-data"
-    name = "ssssssssssssssss"#repo.id.to_s + "_" + repo.repo_name.to_s
+    name = repo.id.to_s + "_" + repo.repo_name.to_s
     system("mkdir", name)
     Dir.chdir "../HER-core"
     system('sh', 'Scripts/set_up.sh', "../HER-data/"+name)
-    Dir.chdir "../HER-data"
 
-    i = 0
-    while i < 3
-      File.open("temp"+i.to_s+".txt", 'wb') { |file| file.write(files["file_"+i.to_s]) }
-      system("sed", "-i", "1,4d;$d", "temp"+i.to_s+".txt")
-      system("mv", "temp"+i.to_s+".txt", name+"/Data/Original/")
-      i += 1
-    end
 
-    # gazs.each do |data|
-    #   File.open("temp.txt", 'wb') { |file| file.write(data) }
-    #   system("sed", "-i", "1,4d;$d", "temp.txt")
-    #   system("mv", "temp.txt", name+"/Data/Gazatteers/")
-    # end
+
+    # i = 0
+    # File.open("temp"+i.to_s+".txt", 'wb') { |file| file.write(files) }
+    # system("sed", "-i", "1,4d;$d", "temp"+i.to_s+".txt")
+    # system("mv", "temp"+i.to_s+".txt", name+"/Data/Original/")
+    # i += 1
+    #
+    #
+    # # gazs.each do |data|
+    # #   File.open("temp.txt", 'wb') { |file| file.write(data) }
+    # #   system("sed", "-i", "1,4d;$d", "temp.txt")
+    # #   system("mv", "temp.txt", name+"/Data/Gazatteers/")
+    # # end
 
     Dir.chdir "../"
 
@@ -68,48 +126,37 @@ class UsersController < ApplicationController
 
     repo_info = request.body.read
 
-    #files = repo_info[1]
-    #gazs = repo_info[2]
-
-    # repo_info = JSON.parse(repo_info[0])
-    #
-    # repo_name = repo_info["repo_name"]
-    # language = repo_info["language"]
-    # seed_size = repo_info["seed_size"]
-    # sort_method = repo_info["sort_method"]
-    # user_id = repo_info["user_id"]
-    #
-    # entities = ""
-    # repo_info["entities"].each do |entity|
-    #   entities += entity + " "
-    # end
-    #
-    #
-    # Repo.new(:repo_name => repo_name,
-    #          :language => language,
-    #          :seed_size => seed_size.to_i,
-    #          :sort_method => sort_method,
-    #          :entities => entities,
-    #          :status => repo_status_initializer).save
-    #
-    # User.find_by_id(user_id).repos << Repo.last
-
-    # respond_to do |format|
-    #
-    #   msg = {:status => true, :url => @user.id.}
-    #
-    #   format.json {render :json => msg}
-    #
-    # end
-    repo_directory_setup(repo_info, repo_info, Repo.last)
+    repo_info = JSON.parse(repo_info)
 
 
-    # File.open("db/temp.txt", 'wb') { |file| file.write(data) }
-    # system("sed", "-i", "1,4d;$d", "db/temp.txt")
-    # setup_repo
-    # system("mv", "db/temp.txt", $path+"Data/Original/")
-    #
-    # generate_seed
+    repo_name = repo_info["repo_name"]
+    language = repo_info["language"]
+    seed_size = repo_info["seed_size"]
+    sort_method = repo_info["sort_method"]
+    entities = repo_info["entities"]
+    user_id = @user.id
+
+
+    Repo.new(:repo_name => repo_name,
+             :language => language,
+             :seed_size => seed_size.to_i,
+             :sort_method => sort_method,
+             :entities => entities,
+             :status => repo_status_initializer).save
+
+    User.find_by_id(user_id).repos << Repo.last
+
+    repo_directory_setup Repo.last
+
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
+
+
 
   end
 
@@ -175,6 +222,10 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def set_repo_path
+
     end
 
     def user_params

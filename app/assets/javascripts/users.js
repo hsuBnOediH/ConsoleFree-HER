@@ -46,41 +46,45 @@ function create_repo(){
     let language = $('#language').val();
     let sort_method = $('#sortMethod').val();
     let seed_size = $('#seed_size').val();
-    let entities = [];
+    let entities = "";
 
     for(let i=0; i<entity_num; i++){
 
-        entities.push($('#entity_' + i.toString()).val());
+        entities +=　$('#entity_' + i.toString()).val() + " ";
     }
 
-    let files = $('#file_upload').prop('files');
-    let data_file = new FormData();
-    for(let i=0; i<files.length; i++) {
-        data_file.append("file_" + i.toString(), files[i]);
-    }
 
-    let gazs = $('#gaz_upload').prop('files');
-    let gaz_file = new FormData();
-    // for(let i=0; i<gazs.length; i++) {
-    //     data_file.append("gazs", gazs[i]);
-    // }
-
-    let repo_info = {repo_name: repo_name,
+    let repo_info = {repo_name:repo_name,
         language: language,
         sort_method: sort_method,
         seed_size: seed_size,
         entities: entities};
 
     let repo_info_json = JSON.stringify(repo_info);
-    // data_file.append('json', repo_info_json)
+
+    let a = window.location.pathname+'/';
+
     $.ajax({
-        url: 'users/add_repo',
+        url: a+'add_repo',
         type: 'POST',
-        data: data_file,
+        data: repo_info_json,
         cache: false,
         async: false,
         processData: false,
-        contentType: false
+        contentType: false,
+        success: function(msg){
+            if(msg.status){
+                let file = $('#file_upload').prop('files');
+                alert(file.length);
+
+                recursive_upload(file, 0, a+'cp_file');
+
+                let gaz = $('#gaz_upload').prop('files');
+                alert(gaz.length);
+
+                recursive_upload(gaz, 0, a+'cp_gaz');
+            }
+        }
     });
 
     window.location.reload();
@@ -90,6 +94,28 @@ function create_repo(){
 }
 
 
+function recursive_upload(data, index, path){
 
+    if (index >= data.length){
+        return;
+    }
+
+    let data_form = new FormData();
+    data_form.append('file', data[index]);
+    $.ajax({
+        url: path,
+        type: 'POST',
+        data: data_form,
+        cache: false,
+        async: false,
+        processData: false,
+        contentType: false,
+        success: function(msg){
+            if (msg.status) {
+                recursive_upload(data, index + 1, path);
+            }
+        }
+    });
+}
 
 

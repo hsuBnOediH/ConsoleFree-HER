@@ -15,35 +15,18 @@
   </div>
 
   <div id="repo_card_space">
-    <a href="#">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        </div>
-      </div>
-    </a>
 
-    <a href="#">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+    <% @user_repo_array.zip(@user_repo_info).each do |repo_url, repo_info| %>
+      <a href=<%= repo_url %>>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= repo_info[0]%></h5>
+              <p class="card-text">Entities: <%= repo_info[1]%></p>
+              <p class="card-text">Language: <%= repo_info[2]%></p>
+          </div>
         </div>
-      </div>
-    </a>
-
-    <a href="#">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        </div>
-      </div>
-    </a>
+      </a>
+    <% end %>
 
     <div class="card" style="width: 18rem;">
       <div id="add_repo" data-toggle="modal" data-target="#addModal">
@@ -117,7 +100,7 @@
                 <span>Choose files</span>
 
                 <!--*****IMPORTANT*****-->
-                <input id="file_upload" type="file" multiple>
+                <input id="file_upload" name="file" type="file" multiple>
                 <!--*****IMPORTANT*****-->
 
               </div>
@@ -134,7 +117,7 @@
                 <span>Choose files</span>
 
                 <!--*****IMPORTANT*****-->
-                <input id="gaz_upload" type="file" multiple>
+                <input id="gaz_upload" name="gaz" type="file" multiple >
                 <!--*****IMPORTANT*****-->
 
               </div>
