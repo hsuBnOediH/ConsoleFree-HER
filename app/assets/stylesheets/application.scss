@@ -6,6 +6,7 @@
 
 
 .container {
+  padding: 0;
   width: 1980px;
   height: 1080px;
 }
@@ -161,13 +162,14 @@
   background: black;
 }
 
-
 /*# sourceMappingURL=users.css.map */
-
+.navbar{
+  margin-bottom: 0;
+}
 
 #header_bar p {
   position: relative;
-  left: 100px;
+  left: 50px;
   top: 5px;
   float: left;
   color: #fff;
@@ -222,8 +224,8 @@
 }
 
 #repo_card_space {
-  margin-left: 190px;
-  margin-right: 190px;
+  margin-left: 140px;
+  margin-right: 230px;
   width: 1600px;
   min-height: 800px;
 }
@@ -287,4 +289,45 @@
 
 #repo_card_space a {
   color:#000;
+}
+
+
+/***********/
+
+
+#info_center{
+  float: left;
+  width: 260px;
+  height: 100%;
+  background: #4099F5;
+  opacity: 0.7;
+}
+
+#project_info{
+  height:250px ;
+  background: #2E2F30;
+}
+#progress{
+  height:250px ;
+  background: salmon;
+}
+
+#sentence_history{
+  height:500px;
+  background: aqua;
+}
+
+#work_space_wrapper{
+  float: left;
+  width: 1620px;
+  height: 1980px;
+  background: aquamarine;
+}
+
+#button_space{
+  height: 50px;
+  width: 300px;
+  position: fixed;
+  bottom: 0px;
+  background: #4099F5;
 }

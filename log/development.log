@@ -13626,3 +13626,989 @@ Processing by ApplicationController#login as HTML
 Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/1/reponame" for ::1 at 2019-04-10 23:51:20 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "repos_users" ON "users"."id" = "repos_users"."user_id" WHERE "repos_users"."repo_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["repo_id", 1], ["LIMIT", 1]]
+  Rendered repos/main.html.erb within layouts/application (119.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 130.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-10 23:53:27 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 23:54:04 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 23:54:23 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__379066385415195099_70316709419700 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__379066385415195099_70316709419700 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1318ms (Views: 1312.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/1" for ::1 at 2019-04-10 23:54:35 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__379066385415195099_70316686602260 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__379066385415195099_70316686602260 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 1471ms (Views: 1465.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-10 23:56:13 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-10 23:59:38 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 2249ms (Views: 2229.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-11 00:01:26 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 109.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-11 00:01:37 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-11 00:03:22 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 103.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:03:28 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 13.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:03:30 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-11 00:03:45 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-11 00:05:08 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/reponame" for ::1 at 2019-04-11 00:05:20 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"reponame"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='reponame') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='1' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__4353296280684698755_69865159348860 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__4353296280684698755_69865159348860 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 2903ms (Views: 2901.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:05:25 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:06:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 2197ms (Views: 2169.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:06:16 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:06:17 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.4ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:06:18 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 21.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:06:18 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:06:18 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:06:18 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 27.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-11 00:07:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application
+  Rendered application/login.html.erb within layouts/application (85.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 103.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-11 00:07:02 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:07:02 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 17.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:09:38 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191926305840 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191926305840 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 3020ms (Views: 3012.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:09:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:13:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191888907500 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191888907500 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1455ms (Views: 1454.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1" for ::1 at 2019-04-11 00:13:33 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:13:50 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:14:14 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:14:33 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191889480400 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191889480400 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1366ms (Views: 1364.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:16:35 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+Completed 200 OK in 572ms (Views: 567.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:17:26 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:17:27 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:17:27 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.3ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:17:28 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:18:14 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:19:06 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:19:54 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191884536360 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191884536360 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+Completed 200 OK in 1534ms (Views: 1532.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:23:48 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:24:54 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191814619600 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191814619600 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+Completed 200 OK in 1350ms (Views: 1349.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:25:15 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191936752320 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191936752320 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+Completed 200 OK in 1297ms (Views: 1295.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:25:36 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191818939920 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191818939920 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+Completed 200 OK in 1297ms (Views: 1296.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:25:51 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191822111380 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191822111380 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+Completed 200 OK in 1307ms (Views: 1305.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:25:57 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191817359380 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191817359380 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+Completed 200 OK in 1311ms (Views: 1309.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:26:03 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191822977040 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_main_layout_html_erb__222497549468479561_70191822977040 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/main_layout.html.erb:5)
+Completed 200 OK in 1318ms (Views: 1316.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:26:11 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/main_layout
+  Rendered repos/main.html.erb within layouts/main_layout (0.2ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:27:04 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:28:47 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:29:02 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191818139020 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191818139020 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1421ms (Views: 1420.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:29:53 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820337780 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820337780 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1424ms (Views: 1422.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:30:00 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191934455920 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191934455920 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1476ms (Views: 1474.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:30:44 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822212960 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822212960 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1461ms (Views: 1460.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:30:55 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191817356960 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191817356960 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1417ms (Views: 1415.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:32:25 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822814240 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822814240 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1361ms (Views: 1360.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:32:37 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822937160 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822937160 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1398ms (Views: 1396.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:34:34 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822446120 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822446120 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1340ms (Views: 1338.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:34:46 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191817257000 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191817257000 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1409ms (Views: 1408.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:35:02 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822307400 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822307400 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1426ms (Views: 1425.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:35:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822276160 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822276160 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1366ms (Views: 1364.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:37:05 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821821100 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821821100 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1383ms (Views: 1381.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:37:21 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821800600 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821800600 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1348ms (Views: 1346.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:37:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820292400 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820292400 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1338ms (Views: 1337.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:39:03 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820135180 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820135180 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1361ms (Views: 1359.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:42:31 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:42:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70192080356160 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70192080356160 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1364ms (Views: 1363.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:43:09 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821246280 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821246280 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1325ms (Views: 1324.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:43:17 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822962280 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822962280 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1355ms (Views: 1353.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:43:28 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822719660 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822719660 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1430ms (Views: 1428.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:44:05 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822718240 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822718240 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1338ms (Views: 1337.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:44:15 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822391680 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191822391680 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1392ms (Views: 1390.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:45:38 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821930880 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191821930880 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1375ms (Views: 1374.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:48:47 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820427820 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820427820 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1342ms (Views: 1341.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:49:08 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191819938920 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191819938920 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1336ms (Views: 1335.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/1/username" for ::1 at 2019-04-11 00:49:38 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"id"=>"1", "repo_name"=>"username"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='username') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820256700 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb__854886297211657296_70191820256700 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1344ms (Views: 1342.5ms | ActiveRecord: 0.1ms)
+
+
