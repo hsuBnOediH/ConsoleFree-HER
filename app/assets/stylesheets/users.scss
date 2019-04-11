@@ -3,6 +3,109 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#right_frame{
-  width: 1500px;
+
+#left_frame {
+  float: left;
+  width: 239px;
+  height: 1080px;
+}
+
+#left_frame_img_name {
+  width: 239px;
+  height: 300px;
+}
+
+#left_frame_img {
+  background: sienna;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  margin-top: 90px;
+  margin-left: 79px;
+}
+
+#left_frame_name {
+  position: relative;
+  top: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#left_frame_buttons {
+}
+
+.left_frame_row {
+  width: 239px;
+  height: 70px;
+}
+
+.left_frame_row img {
+  float: left;
+  height: 30px;
+  background: black;
+  width: 30px;
+  position: relative;
+  top: 20px;
+  left: 57px;
+}
+
+.left_frame_row p {
+  float: left;
+  height: 22px;
+  position: relative;
+  font-size: 20px;
+  left: 77px;
+  top: 25px;
+  color: black;
+}
+
+#right_frame {
+  float: left;
+  width: 1600px;
+  height: 1080px;
+  position: relative;
+  left: 60px;
+}
+
+#right_frame_header{
+  width: 1622px;
+  height: 244px;
+  background: white;
+}
+#right_frame_header h1{
+  height: 88px;
+  float: left;
+  margin: 0;
+  position: relative;
+  top: 118px;
+}
+#right_frame_header img{
+  height: 68px;
+  width: 186px;
+  background:black;
+  position: relative;
+  top: 95px;
+  left:100px ;
+}
+
+#right_frame_header #exit_button{
+  width: 186px;
+  height: 80px;
+  background:#A9CBEE;
+  position: relative;
+  left: 1412px;
+  bottom: 50px;text-align: center;
+}
+#exit_button p{
+  position: relative;
+  top: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+#right_frame_body{
+  height: 672px;
+  width: 1476px;
 }

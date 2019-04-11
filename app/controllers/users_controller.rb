@@ -2,7 +2,7 @@ require 'json'
 class UsersController < ApplicationController
   before_action :set_user, only: [:info]
 
-  layout "main_layout"
+  layout "main_layout",:only => [:login]
 
 
   def info

@@ -1,11 +1,68 @@
-<div id="repo_cards"></div>
+<div class="container">
+  <div id="welcome_block">
+    <div id="user_initial">
+      <p>S</p>
+    </div>
+    <div id="welcome_username_and_greeting">
+      <div id="welcome_username">
+        N M S L
+      </div>
+      <div id="welcome_greeting">
+        NI HAO NMSL!!!
+      </div>
+    </div>
+
+  </div>
+
+  <div id="repo_card_space">
+    <a href="#">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="#">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="#">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </div>
+    </a>
+
+    <div class="card" style="width: 18rem;">
+      <div id="add_repo" data-toggle="modal" data-target="#addModal">
+        <p>&#10010</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 
 <% @user_repo_array.each do |repo_url| %>
-  <a href=<%=repo_url %>>URL:<%=repo_url %></a>
-<%end %>
+  <a href=<%= repo_url %>>URL:<%= repo_url %></a>
+<% end %>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal" >Add</button>
+
+
+
 <!--*****IMPORTANT*****-->
 
 <!-- Modal -->
@@ -36,13 +93,15 @@
 
           <!--*****IMPORTANT*****-->
           <div id="entities"><input id="entity_0" value="GEO" type="text" class="form-control"></div>
-          <div><button onclick="add_entity()"  type="button" class="btn btn-outline-secondary">Add More</button></div>
+          <div>
+            <button onclick="add_entity()" type="button" class="btn btn-outline-secondary">Add More</button>
+          </div>
           <!--*****IMPORTANT*****-->
 
           <label for="sortMethod">SortMethod</label>
 
           <!--*****IMPORTANT*****-->
-          <input id="sortMethod" value="Pretag_Delax" type="text"  class="form-control">
+          <input id="sortMethod" value="Pretag_Delax" type="text" class="form-control">
           <!--*****IMPORTANT*****-->
 
           <label for="seed_size">Seed Size</label>
@@ -54,7 +113,7 @@
 
           <form class="md-form" action="#">
             <div class="file-field">
-              <div class="btn btn-primary btn-sm float-left">
+              <div class="btn btn-primary btn-sm float-left choose_file">
                 <span>Choose files</span>
 
                 <!--*****IMPORTANT*****-->
@@ -71,7 +130,7 @@
 
           <form class="md-form" action="#">
             <div class="file-field">
-              <div class="btn btn-primary btn-sm float-left">
+              <div class="btn btn-primary btn-sm float-left choose_file">
                 <span>Choose files</span>
 
                 <!--*****IMPORTANT*****-->

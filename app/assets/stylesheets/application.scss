@@ -1,277 +1,290 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.container{
+
+.container {
   width: 1980px;
   height: 1080px;
 }
 
 #sign_up_box {
-    width: 1980px;
-    height: 1080px;
+  width: 1980px;
+  height: 1080px;
 }
 
 #right_box {
-    width: 756px;
-    height: 1080px;
-    float: right;
+  width: 756px;
+  height: 1080px;
+  float: right;
 }
 
 #right_box_top {
-    border-radius: 0px 25px 0px 0px;
-    width: 756px;
-    float: left;
-    height: 283px;
-    background: #4099F5;
+  border-radius: 0px 25px 0px 0px;
+  width: 756px;
+  float: left;
+  height: 283px;
+  background: #4099F5;
 }
 
 #right_box_key {
-    float: left;
-    height: 120px;
-    width: 240px;
-    position: relative;
-    top: 130px;
-    left: 50px;
+  float: left;
+  height: 120px;
+  width: 240px;
+  position: relative;
+  top: 130px;
+  left: 50px;
 }
 
 .right_box_white {
-    color: white;
+  color: white;
 }
 
 #right_box_top_sign_in {
-    position: relative;
-    left: 300px;
-    top: 180px;
+  position: relative;
+  left: 300px;
+  top: 180px;
 }
 
 #right_box_key_head_out {
-    margin-top: 20px;
-    background: white;
-    height: 80px;
-    width: 80px;
-    border-radius: 40px;
+  margin-top: 20px;
+  background: white;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
 }
 
 #right_box_key_head_in {
-    background: #4099F5;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    position: relative;
-    top: 20px;
-    left: 20px;
+  background: #4099F5;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  position: relative;
+  top: 20px;
+  left: 20px;
 }
 
 #right_box_key_body {
-    background: white;
-    height: 20px;
-    width: 100px;
-    position: relative;
-    left: 75px;
-    bottom: 50px;
+  background: white;
+  height: 20px;
+  width: 100px;
+  position: relative;
+  left: 75px;
+  bottom: 50px;
 }
 
 #right_box_key_tail {
-    background: white;
-    height: 25px;
-    width: 20px;
-    position: relative;
-    bottom: 50px;
-    left: 135px;
+  background: white;
+  height: 25px;
+  width: 20px;
+  position: relative;
+  bottom: 50px;
+  left: 135px;
 }
 
 #right_box_body {
-    margin-top: 280px;
-    margin-left: 78px;
-    width: 600px;
-    height: 800px;
+  margin-top: 280px;
+  margin-left: 78px;
+  width: 600px;
+  height: 800px;
 }
 
 .right_box_body_row h3 {
-    color: #808080;
+  color: #808080;
 }
 
 .right_box_body_row input {
-    width: 500px;
+  width: 500px;
 
-    font-size: 30px;
-    margin: 8px 0;
-    border: none;
-    border-bottom: 2px solid #4099F5;
+  font-size: 30px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid #4099F5;
 }
 
 .right_box_body_row {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 #sign_up_button {
-    width: 200px;
-    height: 70px;
-    background-color: #4099F5; /* Green */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: relative;
-    top: 100px;
+  width: 200px;
+  height: 70px;
+  background-color: #4099F5; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  top: 100px;
 }
 
 #sign_up_button span {
-    position: relative;
-    top: 20px;
+  position: relative;
+  top: 20px;
 }
 
 #sign_up_return_button {
-    width: 200px;
-    height: 70px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: relative;
-    top: 90px;
-    left: 60px;
+  width: 200px;
+  height: 70px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  top: 90px;
+  left: 60px;
 }
 
 #sign_up_return_button span {
-    position: relative;
-    color: #808080;
-    top: 30px;
-    font-size: 25px;
+  position: relative;
+  color: #808080;
+  top: 30px;
+  font-size: 25px;
 }
 
 #video_box {
-    width: 300px;
-    height: 900px
+  width: 300px;
+  height: 900px
 }
 
 #left_box {
-    width: 1223px;
-    height: 1080px;
-    background: black;
+  width: 1223px;
+  height: 1080px;
+  background: black;
 }
 
 
 /*# sourceMappingURL=users.css.map */
 
 
-
-#left_frame {
+#header_bar p {
+  position: relative;
+  left: 100px;
+  top: 5px;
   float: left;
-  width: 239px;
-  height: 1080px;
+  color: #fff;
+  font-size: 27px;
 }
 
-#left_frame_img_name {
-  width: 239px;
-  height: 300px;
+
+#sign_out {
+  position: relative;
+  right: 150px;
+  top: 10px;
+  width: 100px;
+  height: 30px;
+  float: right;
+  font-size: 20px;
 }
 
-#left_frame_img {
-  background: sienna;
-  height: 80px;
-  width: 80px;
-  border-radius: 40px;
-  margin-top: 90px;
-  margin-left: 79px;
+#header_bar a {
+  color: #fff;
 }
 
-#left_frame_name {
+#welcome_block {
+  height: 230px;
+}
+
+#user_initial {
+  float: left;
   position: relative;
   top: 30px;
-  height: 30px;
-  text-align: center;
-  font-size: 30px;
-}
-
-#left_frame_buttons {
-}
-
-.left_frame_row {
-  width: 239px;
-  height: 70px;
-}
-
-.left_frame_row img {
-  float: left;
-  height: 30px;
+  left: 400px;
+  width: 170px;
+  height: 170px;
   background: black;
-  width: 30px;
-  position: relative;
-  top: 20px;
-  left: 57px;
+  border-radius: 85px;
 }
 
-.left_frame_row p {
-  float: left;
-  height: 22px;
+#user_initial p {
   position: relative;
-  font-size: 20px;
-  left: 77px;
-  top: 25px;
-  color: black;
-}
-
-#right_frame {
-  float: left;
-  width: 1600px;
-  height: 1080px;
-  position: relative;
-  left: 60px;
-}
-
-#right_frame_header{
-  width: 1622px;
-  height: 244px;
-  background: white;
-}
-#right_frame_header h1{
-  height: 88px;
-  float: left;
+  left: 33px;
+  bottom: 17px;
   margin: 0;
+  font-size: 140px;
+  color: #fff;
+}
+
+#welcome_username_and_greeting {
+  float: left;
   position: relative;
-  top: 118px;
+  top: 60px;
+  left: 460px;
+  font-size: 40px;
 }
-#right_frame_header img{
-  height: 68px;
-  width: 186px;
-  background:black;
+
+#repo_card_space {
+  margin-left: 190px;
+  margin-right: 190px;
+  width: 1600px;
+  min-height: 800px;
+}
+
+.card {
+  float: left;
+  min-width: 470px;
+  min-height: 250px;
+  margin-left: 60px;
+  margin-top: 60px;
+  background: #4099F5;
+}
+
+.card-title {
+  font-size: 25px;
+}
+
+.card-body {
+  min-height: 150px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.card-text {
+  font-size: 17px;
+}
+
+.card a {
   position: relative;
-  top: 95px;
-  left:100px ;
+  right: 30px;
+  bottom: 10px;
+  float: right;
 }
 
-#right_frame_header #exit_button{
-  width: 186px;
-  height: 80px;
-  background:#A9CBEE;
+#add_repo{
+  margin-top: 50px;
+  margin-left:160px;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  background: #ffffff;
+  font-size: 100px;
+  color: #4099F5;
+}
+
+#add_repo p{
   position: relative;
-  left: 1412px;
-  bottom: 50px;text-align: center;
-}
-#exit_button p{
-  position: relative;
-  top: 10px;
-  font-weight: bold;
-  font-size: 30px;
-  color: white;
-}
-
-#right_frame_body{
-  height: 672px;
-  width: 1476px;
+  left: 18px;
 }
 
 
+.file-field{
+  margin-top: 15px;
+}
 
+.file-path-wrapper{
+  margin-top: 10px;
+}
+
+
+#repo_card_space a {
+  color:#000;
+}
