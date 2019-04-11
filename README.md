@@ -1,16 +1,16 @@
-#User-Friendly Interface for Humanity Entity Recognizer ---- An Active Learning annotation System for NER annotators
+# User-Friendly Interface for Humanity Entity Recognizer ---- An Active Learning annotation System for NER annotators
 
-##Presentation
-###Introduction
+## Presentation
+### Introduction
 --- NER  
 --- Annotation Task  
 --- HER approach  
 --- Pipeline
-###Demo
-###Details
+### Demo
+### Details
 --- back-end  
---- server-end  
+--- server-enKd  
 --- front-end
-###Problems and Solutions
-###What next
-###Question, Conclusion, and Acknowledgement
+### Problems and Solutions
+### What next
+### Question, Conclusion, and Acknowledgement
