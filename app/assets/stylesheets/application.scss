@@ -207,12 +207,16 @@
 }
 
 #user_initial p {
-  position: relative;
-  left: 33px;
-  bottom: 17px;
+  padding: 0;
   margin: 0;
+  width: 110px;
+  height: 110px;
+  position: relative;
+  bottom: 20px;
+  left: 30px;
   font-size: 140px;
   color: #fff;
+  text-align: center;
 }
 
 #welcome_username_and_greeting {
@@ -273,8 +277,8 @@
 }
 
 #add_repo p{
-  position: relative;
-  left: 18px;
+  margin: auto 0;
+  text-align: center;
 }
 
 
@@ -348,21 +352,23 @@
 }
 
 #sentence_history{
-  height:500px;
+  height:427px;
   background: aqua;
 }
 
 #work_space_wrapper{
   float: left;
-  width: 1620px;
-  height: 1980px;
+  width: 1645px;
+  height: 927px;
   background: aquamarine;
+  position: relative;
 }
 
 #button_space{
-  height: 50px;
-  width: 300px;
-  position: fixed;
-  bottom: 0px;
+  height: 100px;
+  width: 600px;
+  position: absolute;
+  bottom: 0;
+  left: 500px;
   background: #4099F5;
 }
