@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     ReposUser.where("user_id='"+@user.id.to_s+"'").find_each do |repo|
 
       Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
-        url = @user.id.to_s + "/" + re.repo_name
+        url = @user.username + "/" + re.repo_name
         @user_repo_array << url
         @user_repo_info << [re.repo_name, re.entities, re.language]
       end
@@ -176,7 +176,7 @@ class UsersController < ApplicationController
     end
     respond_to do |format|
 
-      msg = {:status => status, :user_id => User.find_by_username(username).id}
+      msg = {:status => status}
 
       format.json {render :json => msg}
 
@@ -205,7 +205,7 @@ class UsersController < ApplicationController
 
       respond_to do |format|
 
-        msg = {:status => true, :user_id => User.find_by_username(username).id}
+        msg = {:status => true}
 
         format.json {render :json => msg}
 
@@ -221,7 +221,7 @@ class UsersController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find_by_username(params[:username])
     end
 
     def set_repo_path

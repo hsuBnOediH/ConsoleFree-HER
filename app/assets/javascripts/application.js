@@ -71,7 +71,7 @@ function sendLogIn(){
         async: false,
         success: function (msg) {
             if (msg.status){
-                let url="/"+msg.user_id;
+                let url="/"+ username;
                 window.location.replace(url);
             }else{
                 alert("Incorrect username or password");
@@ -100,7 +100,7 @@ function sendSignUp() {
             async: false,
             success: function (msg) {
                 if (msg.status){
-                    let url="/"+msg.user_id;
+                    let url="/"+ username;
                     window.location.replace(url);
 
                 }else{
