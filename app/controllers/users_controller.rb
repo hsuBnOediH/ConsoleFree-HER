@@ -1,6 +1,6 @@
 require 'json'
 class UsersController < ApplicationController
-  before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz]
+  before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz, :share_repo]
   #before_action :set_repo_path, only: [:cp_file, :cp_gaz, :add_repo]
 
   layout "main_layout",:only => [:login]
@@ -155,10 +155,54 @@ class UsersController < ApplicationController
       format.json {render :json => msg}
 
     end
+  end
 
 
+  def share_repo
+
+    user_info = request.body.read
+
+    user_info = JSON.parse(user_info)
+
+    users = user_info["users"].split
+    user_repo = user_info["url"].split("/")
+    username = user_repo[0]
+    repo_name = user_repo[1]
+
+    success_s = ""
+    fail_s = ""
+
+    ReposUser.where("user_id='" +User.find_by_username(username).id.to_s+"'").find_each do |repo|
+
+      Repo.where("id='"+repo.id.to_s+"'").find_each do |re|
+        if re.repo_name == repo_name
+
+          users.each do |name|
+            if User.find_by_username(name).blank?
+              fail_s += name + " "
+            else
+              success_s += name + " "
+
+              if re.users.include? User.find_by_username(name)
+              else
+                re.users << User.find_by_username(name)
+              end
+            end
+          end
+        end
+      end
+    end
+
+    respond_to do |format|
+
+      msg = {:success_s => success_s}
+
+      format.json {render :json => msg}
+
+    end
 
   end
+
 
   def create
 

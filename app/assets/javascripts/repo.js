@@ -18,13 +18,13 @@
 
 
 
-
 let uploadTagArray = [];
 let availableOptionArray = [];
 let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B"];
 
 $(document).ready(function () {
-
+    data_from_server();
+    update_cache();
 });
 
 function data_from_server(){
@@ -55,6 +55,7 @@ function generate_sentence(sentence, entities){
     }
 }
 
+
 function send_data() {
     data_to_server();
 
@@ -63,12 +64,12 @@ function send_data() {
     update_cache();
 }
 
+
 function data_to_server(){
 
     let jsonArrayStr="";
     uploadTagArray.forEach(function (element){
         jsonArrayStr += JSON.stringify(element) + " "
-
     });
     $.ajax({
         url: "send_sentence.json",
@@ -80,6 +81,16 @@ function data_to_server(){
         }
     });
 }
+
+
+function update_cache(){
+    $.ajax({
+        url: "get_cache_data", type: "GET", dataType: "json", success: function (msg) {
+            generate_cache_sentence(msg.sentence)
+        }
+    });
+}
+
 
 function generate_cache_sentence(sentence){
 
@@ -105,26 +116,15 @@ function generate_cache_sentence(sentence){
     }
 }
 
+
+
+
+
 function tag_click(tagButton) {
     uploadTagArray[parseInt(tagButton.className)].tag = tagButton.innerHTML;
     $("#word" + tagButton.className).css("background-color", getTagColor(tagButton.innerHTML, availableOptionArray));
 }
 
-function update_cache(){
-    $.ajax({
-        url: "get_cache_data", type: "GET", dataType: "json", success: function (msg) {
-            generate_cache_sentence(msg.sentence)
-        }
-    });
-}
-
-function wait(ms){
-    var start = new Date().getTime();
-    var end = start;
-    while(end < start + ms) {
-        end = new Date().getTime();
-    }
-}
 
 function cache_to_annotate(sentence_div) {
 
@@ -165,7 +165,6 @@ function cache_to_annotate(sentence_div) {
 function update_data(){
 
     data_to_server();
-
     $("#cache_block").empty();
 
     $.ajax({
@@ -194,6 +193,8 @@ function get_status(){
     });
 }
 
+
+
 function getDropDown(availableOptionArray, id) {
     let result = '';
     result += ' <div class="dropdown-content">';
@@ -216,27 +217,11 @@ function getTagColor(tag, availableOptionArray) {
     return result;
 }
 
-//upload data to server
-function upload() {
 
-    var files = $('#avatar').prop('files');
-    var data = new FormData();
-    data.append('avatar', files[0]);
 
-    $.ajax({
-        url: 'upload',
-        type: 'POST',
-        data: data,
-        cache: false,
-        async: false,
-        processData: false,
-        contentType: false
-    });
 
-    data_from_server();
 
-    get_status();
-}
+
 
 function update_rank(){
     $.ajax({

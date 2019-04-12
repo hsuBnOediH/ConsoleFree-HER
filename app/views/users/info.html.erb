@@ -1,14 +1,14 @@
 <div class="container">
   <div id="welcome_block">
     <div id="user_initial">
-      <p>P</p>
+      <p><%=@user.username[0].to_s.capitalize %></p>
     </div>
     <div id="welcome_username_and_greeting">
       <div id="welcome_username">
-        N M S L
+        <%=@user.username %>
       </div>
       <div id="welcome_greeting">
-        你好 NMSL！ 你一共有 10 个 Repos！
+        Welcome to your repository page!
       </div>
     </div>
 
@@ -26,7 +26,43 @@
           </div>
         </div>
       </a>
-    <% end %>
+      <div data-toggle="modal" data-target="#shareModal"+<%= repo_url%>>Share</div>
+      <div data-toggle="modal" data-target="#addModal">Delete</div>
+
+      <div class="modal fade" id="shareModal"+<%= repo_url%> index="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <!--*****IMPORTANT*****-->
+
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+
+            <div class="modal-body">
+              <div class="md-form">
+                <!--*****IMPORTANT*****-->
+
+                <label for="users">Please enter the username to share this repo</label>
+
+                <!--*****IMPORTANT*****-->
+                <div id="users"><input id="user_0" value="" type="text" class="form-control"></div>
+                <div>
+                  <button onclick="add_user()" type="button" class="btn btn-outline-secondary">Add More</button>
+                </div>
+                <!--*****IMPORTANT*****-->
+
+              </div>
+            </div>
+            <div class="modal-footer">
+
+              <!--*****IMPORTANT*****-->
+              <button onclick="_cancel()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="<%= repo_url%>"  onclick="share_repo(this)" type="button" class="btn btn-primary">Create Repo</button>
+              <!--*****IMPORTANT*****-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <% end %>
 
     <div class="card" style="width: 18rem;"  id="card_for_add_repo" data-toggle="modal" data-target="#addModal">
       <div id="add_repo" >
@@ -126,7 +162,7 @@
       <div class="modal-footer">
 
         <!--*****IMPORTANT*****-->
-        <button onclick="cancel_repo()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button onclick="_cancel()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button onclick="create_repo()" type="button" class="btn btn-primary">Create Repo</button>
         <!--*****IMPORTANT*****-->
 

@@ -17,6 +17,7 @@
 //= require_tree
 
 let entity_num = 1;
+let user_num = 1;
 
 $(document).ready(function(){
     // $(".left_frame_row").on('mouseenter',function () {
@@ -32,6 +33,37 @@ $(document).ready(function(){
 function add_entity(){
     $('#entities').append('<input id="entity_'+entity_num.toString()+'" value="" type="text" class="form-control">');
     entity_num += 1;
+}
+
+function add_user(){
+    $('#users').append('<input id="user_'+user_num.toString()+'" value="" type="text" class="form-control">');
+    user_num += 1;
+}
+
+function share_repo(button){
+    let users = "";
+    for(let i=0; i<entity_num; i++){
+
+        users += $('#user_' + i.toString()).val() + " ";
+    }
+
+    let user_info_json = JSON.stringify({users: users, url:button.id.toString()});
+
+    let a = window.location.pathname+'/';
+
+
+    $.ajax({
+        url: a+'share_repo',
+        type: 'POST',
+        data: user_info_json,
+        cache: false,
+        async: false,
+        processData: false,
+        contentType: false,
+        success: function(msg){
+            alert("Successful Added: " + msg.success_s.toString());
+        }
+    });
 }
 
 

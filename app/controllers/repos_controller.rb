@@ -1,7 +1,7 @@
 class ReposController < ApplicationController
   before_action :find_repo, except: [:home]
 
-  private
+  $cache = {}
 
   def find_repo
 
@@ -11,32 +11,36 @@ class ReposController < ApplicationController
 
         @repo = repo
 
-        # $name = @repo.id.to_s+"_"+@repo.name
-        # $entities = @repo.entities
-        # $sortMethod = @repo.sort_method
-        # $lg = @repo.language
-        # $seed_size = @repo.seed_size
-        #
-        # #Retrieve from database
-        # status = @repo.status.split
-        # $line_num = status[0].to_i
-        # $prev_line_num = status[1].to_i
-        # $seed_status = status[2]
-        # $seed_line_annotated = status[3].to_i
-        # $seed_line_total = status[4].to_i
-        # $corpus_line_annotated = status[5].to_i
-        # $corpus_line_total = status[6].to_i
-        # $time = status[7].to_i
-        #
-        # $path = "HER-data/"+$name+"/"
-        # $return_path = "../.."
-        # $seed_path = "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed"
-        # $corpus_path = "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod
-        #
-        # $seed_status ? ($sentence_path = $seed_path) : ($sentence_path = $corpus_path)
-        #
-        # $cache_data = []
-        # $annotating_cache = [false, -999]
+        $name = @repo.id.to_s+"_"+@repo.repo_name
+        $entities = @repo.entities
+        $sortMethod = @repo.sort_method
+        $lg = @repo.language
+        $seed_size = @repo.seed_size
+
+        #Retrieve from database
+        status = @repo.status.split
+        $line_num = status[0].to_i
+        $prev_line_num = status[1].to_i
+        $seed_status = status[2]
+        $seed_line_annotated = status[3].to_i
+        $seed_line_total = status[4].to_i
+        $corpus_line_annotated = status[5].to_i
+        $corpus_line_total = status[6].to_i
+        $time = status[7].to_i
+
+        $path = "HER-data/"+$name+"/"
+        $return_path = "../.."
+        $seed_path = "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed"
+        $corpus_path = "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod
+
+        $seed_status ? ($sentence_path = $seed_path) : ($sentence_path = $corpus_path)
+
+        if $cache[$name] != nil
+          $cache_data = $cache[$name][0]
+          $annotating_cache = $cache[$name][1]
+        else
+          $cache_data = []
+          $annotating_cache = [false, -999]
 
         break
       end
@@ -56,7 +60,7 @@ class ReposController < ApplicationController
 
     id = request.body.read
 
-    $annotating_cache = [true, id.to_i]
+    $cache[$name][1] = [true, id.to_i]
 
   end
 
@@ -136,7 +140,7 @@ class ReposController < ApplicationController
 
     $seed_status ? ($seed_line_annotated = $prev_line_num) : ($corpus_line_annotated = $prev_line_num)
 
-    $cache_data = []
+    $cache[$name][0] = []
 
   end
 
@@ -155,10 +159,11 @@ class ReposController < ApplicationController
     end
 
     if $annotating_cache[0]
-      $cache_data[$annotating_cache[1]] = sentence
-      $annotating_cache[0] = false
+
+      $cache[$name][0][$cache[$name][1][1]] = sentence
+      $cache[$name][1][0] = false
     else
-      $cache_data << sentence
+      $cache[$name][0] << sentence
     end
 
   end
@@ -311,7 +316,6 @@ class ReposController < ApplicationController
 
   end
 
-
-
-
+  end
 end
+
