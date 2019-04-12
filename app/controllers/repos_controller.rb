@@ -1,60 +1,27 @@
 class ReposController < ApplicationController
-  before_action :find_repo, except: [:home]
+  before_action :find_and_setup_repo, except: [:temp]
 
   $cache = {}
-
-  def find_repo
-
-    Repo.where("repo_name='"+params[:repo_name]+"'").find_each do|repo|
-
-      ReposUser.where("repo_id='"+repo.id.to_s+"'" " AND user_id='"+User.find_by_username(params[:username]).id.to_s+"'").find_each do
-
-        @repo = repo
-
-        $name = @repo.id.to_s+"_"+@repo.repo_name
-        $entities = @repo.entities
-        $sortMethod = @repo.sort_method
-        $lg = @repo.language
-        $seed_size = @repo.seed_size
-
-        #Retrieve from database
-        status = @repo.status.split
-        $line_num = status[0].to_i
-        $prev_line_num = status[1].to_i
-        $seed_status = status[2]
-        $seed_line_annotated = status[3].to_i
-        $seed_line_total = status[4].to_i
-        $corpus_line_annotated = status[5].to_i
-        $corpus_line_total = status[6].to_i
-        $time = status[7].to_i
-
-        $path = "HER-data/"+$name+"/"
-        $return_path = "../.."
-        $seed_path = "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed"
-        $corpus_path = "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod
-
-        $seed_status ? ($sentence_path = $seed_path) : ($sentence_path = $corpus_path)
-
-        if $cache[$name] != nil
-          $cache_data = $cache[$name][0]
-          $annotating_cache = $cache[$name][1]
-        else
-          $cache_data = []
-          $annotating_cache = [false, -999]
-
-        break
-      end
-    end
-
-  end
 
   def main
 
   end
 
-  def home
+  def temp
 
   end
+  def welcome
+
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+    end
+
+  end
+
+
 
   def send_annotating_cache
 
@@ -69,7 +36,7 @@ class ReposController < ApplicationController
     respond_to do |format|
 
       msg = {:status => "ok", :message => "Success!",
-             :sentence => [$cache_data[$annotating_cache[1]],$entities.split]}
+             :sentence => [$cache[$name][0][$cache[$name][1][1]],$entities.split]}
 
       format.json {render :json => msg}
 
@@ -82,7 +49,7 @@ class ReposController < ApplicationController
     respond_to do |format|
 
       msg = {:status => "ok", :message => "Success!",
-             :sentence => $cache_data}
+             :sentence => $cache[$name][0]}
 
       format.json {render :json => msg}
 
@@ -126,13 +93,12 @@ class ReposController < ApplicationController
 
   def update_to_file
 
-    $cache_data.each do |sentence|
+    $cache[$name][0].each do |sentence|
 
       sentence.each do |line|
 
         system("sed", "-i", $prev_line_num.to_s+"s/^.*$/"+line+"/", $path+$sentence_path)
         $prev_line_num += 1
-
       end
 
       $prev_line_num += 1
@@ -141,6 +107,8 @@ class ReposController < ApplicationController
     $seed_status ? ($seed_line_annotated = $prev_line_num) : ($corpus_line_annotated = $prev_line_num)
 
     $cache[$name][0] = []
+
+    @repo.update(status: update_status)
 
   end
 
@@ -158,7 +126,7 @@ class ReposController < ApplicationController
       sentence << update_str
     end
 
-    if $annotating_cache[0]
+    if $cache[$name][1][0]
 
       $cache[$name][0][$cache[$name][1][1]] = sentence
       $cache[$name][1][0] = false
@@ -170,32 +138,19 @@ class ReposController < ApplicationController
 
 
 
-
-  #recieve the data and put it in the specific folder
-  def upload
-    data = request.body.read
-    File.open("db/temp.txt", 'wb') { |file| file.write(data) }
-    system("sed", "-i", "1,4d;$d", "db/temp.txt")
-    setup_repo
-    system("mv", "db/temp.txt", $path+"Data/Original/")
-
-    generate_seed
-
-  end
-
   #build input for each sentence with tracking the line number
   def _helper_build_sentence
 
     input = []
-    system("cp", $path+$sentence_path, "db/test.txt")
+    system("cp", $path+$sentence_path, $path+"test.txt")
     if $line_num != 1
       if $time >= 3
         $line_num += 1
       end
-      system("sed", "-i", "1,"+$line_num.to_s+"d", "db/test.txt")
+      system("sed", "-i", "1,"+$line_num.to_s+"d", $path+"test.txt")
     end
     $time += 1
-    File.readlines('db/test.txt').each do |line|
+    File.readlines($path+"test.txt").each do |line|
       if line == "\n"
         break
       end
@@ -203,45 +158,14 @@ class ReposController < ApplicationController
       word_tag = line.split
       input << {word: word_tag[1], tag:word_tag[0]}
     end
-    system("rm", "db/test.txt")
+    system("rm", $path+"test.txt")
+
+    @repo.update(status: update_status)
 
     [input, $entities.split]
 
   end
 
-
-
-
-
-
-  def setup_repo
-
-    Dir.chdir "db/HER-master"
-
-    system("mkdir", $name)
-    system('sh', 'Scripts/set_up.sh', $name)
-    system("cp", "Data/Gazatteers/GEO.gaz", $name + "/Data/Gazatteers/GEO.gaz")
-
-    Dir.chdir "../.."
-
-  end
-
-  def generate_seed
-
-    Dir.chdir $path
-
-    system("sh", "Scripts/prepare_original_texts.sh","Scripts/preprocess.py", $lg, "2>", "log.txt")
-    system("python","Scripts/rankSents.py","-corpus","Data/Prepared/fullCorpus.txt","-sort_method","random_seed",
-           "-topXsents",$seed_size.to_s,"-output","Data/Splits/fullCorpus.seed-"+$seed_size.to_s, "-annotate", "True")
-
-    out = `wc -l Data/Splits/*`
-
-    $seed_line_total = out.split[0].to_i
-    $corpus_line_total = out.split[2].to_i
-
-    Dir.chdir $return_path
-
-  end
 
   def feature_engineering_and_train
 
@@ -316,6 +240,57 @@ class ReposController < ApplicationController
 
   end
 
+  def update_status
+
+    return $line_num.to_s + " " + $prev_line_num.to_s + " " + $seed_status.to_s + " " + $seed_line_annotated.to_s+
+        " " + $seed_line_total.to_s + " " + $corpus_line_annotated.to_s + " " + $corpus_line_total.to_s + " " + $time.to_s
   end
+
+  private
+
+    def find_and_setup_repo
+      @user = User.find_by_username(params[:username])
+      ReposUser.where("user_id='"+@user.id.to_s+"'").find_each do |repo|
+        Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
+          if re.repo_name == params[:repo_name]
+            @repo = re
+            break
+          end
+        end
+
+      end
+
+      $name = @repo.id.to_s+"_"+@repo.repo_name
+      $entities = @repo.entities
+      $sortMethod = @repo.sort_method
+      $lg = @repo.language
+      $seed_size = @repo.seed_size.to_i
+
+      #Retrieve from database
+      status = @repo.status.split
+      $line_num = status[0].to_i
+      $prev_line_num = status[1].to_i
+      $seed_status = status[2] == "true"
+      $seed_line_annotated = status[3].to_i
+      $seed_line_total = status[4].to_i
+      $corpus_line_annotated = status[5].to_i
+      $corpus_line_total = status[6].to_i
+      $time = status[7].to_i
+
+      $path = "HER-data/"+$name+"/"
+      $return_path = "../.."
+      $seed_path = "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed"
+      $corpus_path = "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod
+      $sentence_path = $seed_path
+      $seed_status ? ($sentence_path = $seed_path) : ($sentence_path = $corpus_path)
+
+      if $cache[$name] != nil
+      else
+        $cache_data = []
+        $annotating_cache = [false, -999]
+        $cache[$name] = [$cache_data,$annotating_cache]
+      end
+    end
+
 end
 

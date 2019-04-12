@@ -16,20 +16,38 @@
 //= require turbolinks
 //= require_tree
 
-
-
 let uploadTagArray = [];
 let availableOptionArray = [];
 let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B"];
 
 $(document).ready(function () {
-    // data_from_server();
-    // update_cache();
+    welcome_alert();
+    data_from_server();
+    update_cache();
 });
 
-function data_from_server(){
+function welcome_alert(){
+
+    let url_path = window.location.pathname + "/";
+
     $.ajax({
-        url: "get_sentence", type: "GET", dataType: "json", success: function (msg) {
+        url: url_path+"welcome", type: "GET", dataType: "json", success: function (msg) {
+            if(msg.status){
+                alert("Welcome! Please finish annotating the seed!");
+            }else{
+                alert("Welcome! Already finished the seed! Go to the Corpus now!");
+            }
+        }
+    });
+}
+
+
+function data_from_server(){
+
+    let url_path = window.location.pathname + "/";
+
+    $.ajax({
+        url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
             generate_sentence(msg.sentence[0], msg.sentence[1]);
         }
     });
@@ -56,12 +74,16 @@ function generate_sentence(sentence, entities){
 }
 
 
+
+
 function send_data() {
+
     data_to_server();
 
     data_from_server();
 
     update_cache();
+
 }
 
 
@@ -71,21 +93,24 @@ function data_to_server(){
     uploadTagArray.forEach(function (element){
         jsonArrayStr += JSON.stringify(element) + " "
     });
+
+    let url_path = window.location.pathname + "/";
+
     $.ajax({
-        url: "send_sentence.json",
+        url: url_path + "send_sentence.json",
         type: "POST",
         data: jsonArrayStr,
-        async: false,
-        success: function () {
-            alert("send!!!!!");
-        }
+        async: false
     });
 }
 
 
 function update_cache(){
+
+    let url_path = window.location.pathname + "/";
+
     $.ajax({
-        url: "get_cache_data", type: "GET", dataType: "json", success: function (msg) {
+        url: url_path+"get_cache_data", type: "GET", dataType: "json", success: function (msg) {
             generate_cache_sentence(msg.sentence)
         }
     });
@@ -94,10 +119,10 @@ function update_cache(){
 
 function generate_cache_sentence(sentence){
 
-    $("#cache_block").empty();
+    $("#cache_data").empty();
 
     for (let i=0; i<sentence.length; i++){
-        let str_div = '<div id="cache'+i.toString()+'" onclick="cache_to_annotate(this)">';
+        let str_div = '<div class="history_record" id="cache'+i.toString()+'" onclick="cache_to_annotate(this)">';
 
 
         for (let j=0; j<sentence[i].length;j++){
@@ -112,12 +137,9 @@ function generate_cache_sentence(sentence){
             str_div += tempSpan;
         }
         str_div += '</div>';
-        $("#cache_block").append(str_div);
+        $("#cache_data").append(str_div);
     }
 }
-
-
-
 
 
 function tag_click(tagButton) {
@@ -131,34 +153,37 @@ function cache_to_annotate(sentence_div) {
     data_to_server();
 
 
+    let url_path = window.location.pathname + "/";
+
     $.ajax({
-        url: 'send_annotating_cache',
+        url: url_path+'send_annotating_cache',
         type: 'POST',
         data: parseInt(sentence_div.id.substring(5)),
         cache: false,
         processData: false,
         contentType: false,
-        async: false
-    });
-
-    $.ajax({
-        url: "get_cache_sentence", type: "GET", dataType: "json", async: false, success: function (msg) {
-            let sentence = msg.sentence[0];
-            let entities = msg.sentence[1];
-            let sent_map = [];
-            for (let j = 0; j < sentence.length; j++) {
-                let index = 0;
-                while (sentence[j][index] !== "\t") {
-                    index += 1;
+        async: false,
+        success: function(){
+            $.ajax({
+                url: url_path+"get_cache_sentence", type: "GET", dataType: "json", async: false, success: function (msg) {
+                    let sentence = msg.sentence[0];
+                    let entities = msg.sentence[1];
+                    let sent_map = [];
+                    for (let j = 0; j < sentence.length; j++) {
+                        let index = 0;
+                        while (sentence[j][index] !== "\t") {
+                            index += 1;
+                        }
+                        let tag = sentence[j].substring(0, index);
+                        let word = sentence[j].substring(index + 1);
+                        sent_map.push({word: word, tag: tag});
+                    }
+                    generate_sentence(sent_map, entities);
                 }
-                let tag = sentence[j].substring(0, index);
-                let word = sentence[j].substring(index + 1);
-                sent_map.push({word: word, tag: tag});
-            }
-            generate_sentence(sent_map, entities);
+            });
         }
-
     });
+
     update_cache();
 }
 
@@ -167,21 +192,26 @@ function update_data(){
     data_to_server();
     $("#cache_block").empty();
 
+    let url_path = window.location.pathname + "/";
+
     $.ajax({
-        url: 'update_to_file',
+        url: url_path+'update_to_file',
         type: 'POST',
         cache: false,
         processData: false,
         contentType: false
     });
+
     data_from_server();
-    get_status();
+    //get_status();
 }
 
 function get_status(){
 
+    let url_path = window.location.pathname + "/";
+
     $.ajax({
-        url: "get_status", type: "GET", dataType: "json", success: function (msg) {
+        url: url_path + "get_status", type: "GET", dataType: "json", success: function (msg) {
             if (msg.sentence[0]){
                 document.getElementById('annotating_status').innerHTML = "Annotating Seed";
             }else{
@@ -217,13 +247,8 @@ function getTagColor(tag, availableOptionArray) {
     return result;
 }
 
-
-
-
-
-
-
 function update_rank(){
+
     $.ajax({
         url: 'feature_engineering_and_train',
         type: 'POST',

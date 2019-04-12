@@ -42,6 +42,7 @@
       <h2>HISTORY</h2>
       <div id="cache_block">
         <span>
+          <div id="cache_data">
           <div class="history_record">
             If you're visiting this page, you're likely here because you're searching for a random sentence. Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play. By inputting the desired number, you can make a list of as many random sentences as you want or need. Producing random sentences can be helpful in a number of different ways.
           </div>
@@ -81,7 +82,7 @@
           <div class="history_record">
             Random sentences can also spur creativity in other types of projects being done. If you are trying to come up with a new concept, a new idea or a new product, a random sen
           </div>
-
+          </div>
         </span>
 
       </div>
@@ -106,10 +107,10 @@
     </div>
 
     <div id="button_space">
-      <div id="next_sentence_button" class="bottom_button">
+      <div id="next_sentence_button" class="bottom_button" onclick="send_data()">
         <%= image_tag("next_btn_img.png", height: '80', width: '80') %>
       </div>
-      <div id="update_to_file_button" class="bottom_button">
+      <div id="update_to_file_button" class="bottom_button" onclick="update_data()">
         <%= image_tag("upload_btn_img.png", height: '80', width: '80s') %>
       </div>
     </div>

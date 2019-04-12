@@ -20,12 +20,6 @@ let entity_num = 1;
 let user_num = 1;
 
 $(document).ready(function(){
-    // $(".left_frame_row").on('mouseenter',function () {
-    //     $(this).css("background-color", "#429AF5");
-    // }) ;
-    // $(".left_frame_row").on('mouseleave',function () {
-    //     $(this).css("background-color", "white");
-    // }) ;
 
 });
 
@@ -123,11 +117,6 @@ function delete_repo(button){
 
 function create_repo(){
 
-    // var files = $('#file_upload').prop('files');
-    // var data = new FormData();
-    // for(let i=0; i<files.length; i++) {
-    //     data.append(files[i].toString(), files[i]);
-    // }
     let repo_name = $("#repo_name").val();
     let language = $('#language').val();
     let sort_method = $('#sortMethod').val();
@@ -168,6 +157,21 @@ function create_repo(){
                 alert(gaz.length);
 
                 recursive_upload(gaz, 0, a+'cp_gaz');
+
+                let repo = JSON.stringify({name: repo_name});
+                $.ajax({
+                    url: a+"generate_seed",
+                    type: 'POST',
+                    data: repo,
+                    cache: false,
+                    async: false,
+                    processData: false,
+                    contentType: false,
+                    success: function(){
+                        alert("Repo Created.");
+                    }
+                });
+
             }
         }
     });

@@ -1,6 +1,6 @@
 require 'json'
 class UsersController < ApplicationController
-  before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz, :share_repo, :get_repo_user, :delete_repo]
+  before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz, :share_repo, :get_repo_user, :delete_repo, :generate_seed ]
   #before_action :set_repo_path, only: [:cp_file, :cp_gaz, :add_repo]
 
   layout "main_layout",:only => [:login]
@@ -24,17 +24,20 @@ class UsersController < ApplicationController
 
   end
 
+  def find_repo name
+
+    ReposUser.where("user_id='" +@user.id.to_s+"'").find_each do |repo|
+      Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
+        if re.repo_name == name
+          return re
+        end
+      end
+    end
+  end
 
   def repo_status_initializer
-    return "ssss"
-    $line_num = 1
-    $prev_line_num = 1
-    $seed_status = true
-    $seed_line_annotated = 0
-    $seed_line_total = 0
-    $corpus_line_annotated = 0
-    $corpus_line_total = 0
-    $time = 1
+
+    return "1 1 true 0 0 0 0 1"
 
   end
 
@@ -101,24 +104,40 @@ class UsersController < ApplicationController
     Dir.chdir "../HER-core"
     system('sh', 'Scripts/set_up.sh', "../HER-data/"+name)
 
-
-
-    # i = 0
-    # File.open("temp"+i.to_s+".txt", 'wb') { |file| file.write(files) }
-    # system("sed", "-i", "1,4d;$d", "temp"+i.to_s+".txt")
-    # system("mv", "temp"+i.to_s+".txt", name+"/Data/Original/")
-    # i += 1
-    #
-    #
-    # # gazs.each do |data|
-    # #   File.open("temp.txt", 'wb') { |file| file.write(data) }
-    # #   system("sed", "-i", "1,4d;$d", "temp.txt")
-    # #   system("mv", "temp.txt", name+"/Data/Gazatteers/")
-    # # end
-
     Dir.chdir "../"
 
   end
+
+  def generate_seed
+
+    info = JSON.parse(request.body.read)
+    name = info["name"]
+
+
+    re = find_repo name
+
+
+    path = "HER-data/"+re.id.to_s+"_"+re.repo_name + "/"
+    lg = re.language
+    seed_size = re.seed_size.to_i
+
+    Dir.chdir path
+
+    system("sh", "Scripts/prepare_original_texts.sh","Scripts/preprocess.py", lg, "2>", "log.txt")
+    system("python","Scripts/rankSents.py","-corpus","Data/Prepared/fullCorpus.txt","-sort_method","random_seed",
+           "-topXsents",seed_size.to_s,"-output","Data/Splits/fullCorpus.seed-"+seed_size.to_s, "-annotate", "True")
+
+    out = `wc -l Data/Splits/*`
+
+
+    status = re.status.split
+    update = status[0]+" "+status[1]+" "+status[2]+" "+status[3]+" "+out.split[0]+" "+status[5]+" "+out.split[2]+" "+status[7]
+
+    re.update(status: update)
+    Dir.chdir "../.."
+
+  end
+
 
 
 
@@ -168,15 +187,8 @@ class UsersController < ApplicationController
 
     repo_name = user_info[1]
 
-    ReposUser.where("user_id='" +@user.id.to_s+"'").find_each do |repo|
-
-
-      Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
-        if re.repo_name == repo_name
-          Repo.find(re.id).destroy
-        end
-      end
-    end
+    re = find_repo repo_name
+    Repo.find(re.id).destroy
 
 
     respond_to do |format|
@@ -210,29 +222,18 @@ class UsersController < ApplicationController
     success_s = ""
     fail_s = ""
 
-    ReposUser.where("user_id='" +User.find_by_username(username).id.to_s+"'").find_each do |repo|
+    re = find_repo repo_name
 
+    users.each do |name|
 
-      Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
+      if User.find_by_username(name).blank?
+        fail_s += name + " "
+      else
+        success_s += name + " "
 
-        puts re.repo_name
-
-        if re.repo_name == repo_name
-
-          puts "*****************************"
-          users.each do |name|
-
-            if User.find_by_username(name).blank?
-              fail_s += name + " "
-            else
-              success_s += name + " "
-
-              if re.users.include?(User.find_by_username(name))
-              else
-                re.users << User.find_by_username(name)
-              end
-            end
-          end
+        if re.users.include?(User.find_by_username(name))
+        else
+          re.users << User.find_by_username(name)
         end
       end
     end
@@ -261,17 +262,9 @@ class UsersController < ApplicationController
 
     users = ""
 
-    ReposUser.where("user_id='" +@user.id.to_s+"'").find_each do |repo|
-
-
-      Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
-        if re.repo_name == repo_name
-          re.users.each do |u|
-            puts u.username
-            users += u.username + " "
-          end
-        end
-      end
+    re = find_repo repo_name
+    re.users.each do |u|
+      users += u.username + " "
     end
 
 
@@ -351,6 +344,7 @@ class UsersController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_user
+
       @user = User.find_by_username(params[:username])
 
     end
