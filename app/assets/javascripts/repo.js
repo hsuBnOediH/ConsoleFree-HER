@@ -23,8 +23,8 @@ let availableOptionArray = [];
 let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B"];
 
 $(document).ready(function () {
-    data_from_server();
-    update_cache();
+    // data_from_server();
+    // update_cache();
 });
 
 function data_from_server(){

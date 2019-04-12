@@ -26,10 +26,9 @@
           </div>
         </div>
       </a>
-      <div data-toggle="modal" data-target="#shareModal"+<%= repo_url%>>Share</div>
-      <div data-toggle="modal" data-target="#addModal">Delete</div>
-
-      <div class="modal fade" id="shareModal"+<%= repo_url%> index="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div data-toggle="modal" data-target="#shareModal_<%= repo_info[3]%>">Share</div>
+      <div id="get_<%= repo_info[3]%>"  onclick="get_repo_user(this)" data-toggle="modal" data-target="#deleteModal_<%= repo_info[3]%>">Delete</div>
+      <div class="modal fade" id="shareModal_<%= repo_info[3]%>"  index="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <!--*****IMPORTANT*****-->
 
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -54,7 +53,37 @@
 
               <!--*****IMPORTANT*****-->
               <button onclick="_cancel()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button id="<%= repo_url%>"  onclick="share_repo(this)" type="button" class="btn btn-primary">Create Repo</button>
+              <button id="<%=repo_info[3]%>"  onclick="share_repo(this)" type="button" class="btn btn-primary">Add</button>
+              <!--*****IMPORTANT*****-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="deleteModal_<%=repo_info[3]%>" index="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <!--*****IMPORTANT*****-->
+
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+
+            <div class="modal-body">
+              <div class="md-form">
+                <!--*****IMPORTANT*****-->
+
+                <h1>Owns of this repository</h1>
+                <div id="users_repo"></div>
+
+                <h1>Are you sure to delete this repo?</h1>
+                <!--*****IMPORTANT*****-->
+
+              </div>
+            </div>
+            <div class="modal-footer">
+
+              <!--*****IMPORTANT*****-->
+              <button onclick="_cancel()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="delete_<%= repo_info[3]%>"  onclick="delete_repo(this)" type="button" class="btn btn-primary">Delete</button>
               <!--*****IMPORTANT*****-->
 
             </div>

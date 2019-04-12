@@ -48,9 +48,7 @@ function share_repo(button){
     }
 
     let user_info_json = JSON.stringify({users: users, url:button.id.toString()});
-
     let a = window.location.pathname+'/';
-
 
     $.ajax({
         url: a+'share_repo',
@@ -61,10 +59,66 @@ function share_repo(button){
         processData: false,
         contentType: false,
         success: function(msg){
-            alert("Successful Added: " + msg.success_s.toString());
+            alert("Successful Added: " + msg.success_s.toString() + " Failed Added: " + msg.fail_s.toString());
+            window.location.reload();
         }
     });
 }
+
+function get_repo_user(button){
+
+    let info_json = JSON.stringify({url: button.id.toString().substring(4)});
+
+    let a = window.location.pathname+'/';
+
+    $.ajax({
+        url: a+'get_repo_user',
+        type: 'POST',
+        data: info_json,
+        cache: false,
+        async: false,
+        processData: false,
+        contentType: false,
+        success: function(msg){
+
+            let names = msg.username.split(" ");
+
+            $('#users_repo').empty();
+            for (let i=0; i<names.length; i++){
+                $('#users_repo').append('<p>'+names[i]+'</p>');
+            }
+        }
+    });
+
+
+}
+
+function delete_repo(button){
+
+    let info_json = JSON.stringify({url: button.id.toString().substring(7)});
+
+    let a = window.location.pathname+'/';
+
+    $.ajax({
+        url: a+'delete_repo',
+        type: 'POST',
+        data: info_json,
+        cache: false,
+        async: false,
+        processData: false,
+        contentType: false,
+        success: function(msg){
+
+            if (msg.status){
+                alert("Delete Success");
+            }
+            window.location.reload();
+        }
+    });
+
+
+}
+
 
 
 function create_repo(){
@@ -146,4 +200,6 @@ function recursive_upload(data, index, path){
     });
 }
 
-
+function _cancel(){
+    window.location.reload();
+}

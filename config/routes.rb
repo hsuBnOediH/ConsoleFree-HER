@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/:username/:repo_name', to:"repos#main"
 
+  post '/:username/get_repo_user', to: "users#get_repo_user"
+  post '/:username/delete_repo', to: "users#delete_repo"
   post '/:username/share_repo', to: "users#share_repo"
   post '/:username/delete_repo', to: "users#delete_repo"
   post '/:username/add_repo', to: "users#add_repo"
