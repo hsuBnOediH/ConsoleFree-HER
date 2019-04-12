@@ -5,14 +5,44 @@
 <div class="container">
   <div id="info_center">
     <div id="project_info">
+      <div id="project_info_wrapper">
+        <h3>Repositories Name:</h3>
+        <p>REPO NAME</p>
+        <h4>ENTITY</h4>
+        <p>EGO,PRE,ABC,PPD</p>
+        <h4>LANGUAGE</h4>
+        <p>FN</p>
+        <h4>SORT METHOD</h4>
+        <p>Sort method 1</p>
+        <h4>SEED SIZE</h4>
+        <p>300</p>
+
+      </div>
     </div>
     <div id="progress">
+      <h3>PROGRESS</h3>
+      <h4>CORPUSE</h4>
+      <p>1000</p>
+      <h4>SEED</h4>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
     </div>
     <div id="sentence_history">
     </div>
+    <div id="extra_button_space">
+
+    </div>
   </div>
   <div id="work_space_wrapper">
-    <div id="button_space"></div>
+    <div id="button_space">
+      <div id="next_sentence_button" class="bottom_button">
+        <%=image_tag("next_btn_img.png", height: '80', width: '80') %>
+      </div>
+      <div id="update_to_file_button" class="bottom_button">
+        <%=image_tag("upload_btn_img.png", height: '80', width: '80s') %>
+      </div>
+    </div>
   </div>
 </div>
 <!--<div id="button_area" style="background: red">-->

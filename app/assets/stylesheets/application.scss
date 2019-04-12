@@ -340,11 +340,17 @@
   height: 100%;
   background: #4099F5;
   opacity: 0.7;
+  color: #fff;
 }
 
 #project_info{
   height:250px ;
   background: #2E2F30;
+}
+
+#info_center h3,h4,p{
+  margin: 0;
+  padding: 0;
 }
 #progress{
   height:250px ;
@@ -352,23 +358,50 @@
 }
 
 #sentence_history{
-  height:427px;
+  height:400px;
   background: aqua;
+}
+
+#extra_button_space{
+  height: 180px;
 }
 
 #work_space_wrapper{
   float: left;
-  width: 1645px;
-  height: 927px;
+  width: 1720px;
+  height: 1080px;
   background: aquamarine;
   position: relative;
 }
 
 #button_space{
   height: 100px;
-  width: 600px;
+  width: 500px;
   position: absolute;
   bottom: 0;
-  left: 500px;
+  left: 700px;
   background: #4099F5;
+}
+
+
+.bottom_button{
+  float: left;
+  height:100px;
+  width: 250px;
+}
+
+#next_sentence_button{
+  background: salmon;
+}
+.bottom_button img{
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 10px;
+}
+#update_to_file_button{
+  background: lightsteelblue;
+}
+
+#progress_bar{
+  opacity: 1;
 }

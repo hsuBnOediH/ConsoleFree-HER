@@ -12559,3 +12559,2042 @@ Processing by ReposController#main as HTML
 Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:26:09 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956730304120 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956730304120 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1301ms (Views: 1299.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:26:32 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:26:40 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956785890640 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956785890640 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:26:41 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1332ms (Views: 1330.5ms | ActiveRecord: 0.3ms)
+
+
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:26:55 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:26:59 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956785502840 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956785502840 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1412ms (Views: 1410.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:30:11 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956831215860 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956831215860 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1494ms (Views: 1491.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:31:18 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956794441960 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956794441960 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1458ms (Views: 1455.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:32:26 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956796644820 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956796644820 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1298ms (Views: 1295.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:32:44 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956830686300 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956830686300 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1295ms (Views: 1293.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:42:32 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956793979280 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956793979280 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1287ms (Views: 1285.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:42:59 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.7ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956796556540 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956796556540 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1242ms (Views: 1239.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:43:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956776605540 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956776605540 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1280ms (Views: 1278.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:43:36 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956799701380 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956799701380 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1280ms (Views: 1278.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:44:00 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956798582520 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956798582520 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1276ms (Views: 1274.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:50:17 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:50:44 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956830051500 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956830051500 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1361ms (Views: 1359.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:50:55 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956663840840 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956663840840 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1355ms (Views: 1353.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:51:43 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:52:16 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956787160860 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956787160860 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1516ms (Views: 1513.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:52:27 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956831184360 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956831184360 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1333ms (Views: 1331.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 17:52:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956785051980 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956785051980 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1418ms (Views: 1415.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:02:22 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956830008980 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/nmsl/RubymineProjects/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_html_erb___467972650889683800_69956830008980 at /home/nmsl/RubymineProjects/Her_Friendly_UI/app/views/layouts/application.html.erb:7)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1364ms (Views: 1362.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/upload_btn_img.png" for ::1 at 2019-04-11 18:02:23 -0400
+Started GET "/nmsl/next_bnt_img.png" for ::1 at 2019-04-11 18:02:23 -0400
+Processing by ReposController#main as PNG
+Processing by ReposController#main as PNG
+  Parameters: {"username"=>"nmsl", "repo_name"=>"upload_btn_img"}
+  Parameters: {"username"=>"nmsl", "repo_name"=>"next_bnt_img"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='upload_btn_img') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='next_bnt_img') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+Completed 406 Not Acceptable in 18ms (ActiveRecord: 0.2ms)
+
+
+ActionController::UnknownFormat (ReposController#main is missing a template for this request format and variant.
+
+request.formats: ["image/png"]
+request.variant: []):
+  
+  
+ActionController::UnknownFormat (ReposController#main is missing a template for this request format and variant.
+
+request.formats: ["image/png"]
+request.variant: []):
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:40:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:40:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:05:14 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/next_bnt_img.png" for ::1 at 2019-04-11 18:05:14 -0400
+Processing by UsersController#info as PNG
+Started GET "/upload_btn_img.png" for ::1 at 2019-04-11 18:05:14 -0400
+  Parameters: {"username"=>"next_bnt_img"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "next_bnt_img"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+
+Processing by UsersController#info as PNG
+  
+  Parameters: {"username"=>"upload_btn_img"}
+NoMethodError (undefined method `id' for nil:NilClass):
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "upload_btn_img"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+  
+app/controllers/users_controller.rb:13:in `info'
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:13:in `info'
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:05:51 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (63.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:06:04 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1424ms (Views: 1421.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:06:20 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:06:58 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1361ms (Views: 1359.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:07:02 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:07:02 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:07:02 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:07:27 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:07:50 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1392ms (Views: 1390.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:09:15 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 1308ms (Views: 1306.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:11:20 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "next_bnt_img.png" is not present in the asset pipeline.):
+    17:   <div id="work_space_wrapper">
+    18:     <div id="button_space">
+    19:       <div id="next_sentence_button" class="bottom_button">
+    20:         <%=image_tag("next_bnt_img.png", height: '80', width: '80') %>
+    21:       </div>
+    22:       <div id="update_to_file_button" class="bottom_button">
+    23:         <%=image_tag("upload_btn_img.png", height: '80', width: '80s') %>
+  
+app/views/repos/main.html.erb:20:in `_app_views_repos_main_html_erb___1135864662021626902_69956730649800'
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:11:46 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (73.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:12:24 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1302ms (Views: 1300.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:12:33 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1348ms (Views: 1345.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:14:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/" for ::1 at 2019-04-11 18:14:59 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"nmsl"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='18') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='19') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='20') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='21') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='22') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='23') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='24') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='25') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='26') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='27') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='28') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='29') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='30') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='31') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='32') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='33') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='34') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='36') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 12.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/nmsl" for ::1 at 2019-04-11 18:15:05 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"nmsl"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='18') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='19') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='20') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='21') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='22') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='23') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='24') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='25') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='26') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='27') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='28') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='29') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='30') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='31') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='32') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='33') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='34') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='36') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 14.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2019-04-11 18:15:11 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+  Rendered application/login.html.erb within layouts/application_no_header_footer (0.8ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-11 18:21:27 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/nmsl" for ::1 at 2019-04-11 18:21:27 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"nmsl"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='18') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='19') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='20') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='21') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='22') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='23') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='24') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='25') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='26') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='27') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='28') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='29') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='30') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='31') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='32') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='33') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='34') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='36') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 14.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:21:29 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:23:30 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1394ms (Views: 1391.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:24:15 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1324ms (Views: 1322.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:24:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:24:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:24:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:24:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:35:48 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1306ms (Views: 1303.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:36:08 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1389ms (Views: 1387.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:36:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:36:35 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1242ms (Views: 1240.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:36:47 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1329ms (Views: 1326.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:37:03 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1281ms (Views: 1278.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:37:22 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1267ms (Views: 1264.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:38:42 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1313ms (Views: 1310.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:39:06 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1288ms (Views: 1285.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:39:23 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1230ms (Views: 1228.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:39:33 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1242ms (Views: 1240.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:12 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1271ms (Views: 1269.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:16 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:25 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:36 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1262ms (Views: 1260.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:48 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1264ms (Views: 1261.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:40:52 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:41:13 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Incompatible units: 'px' and '%'.):
+    4:     <title>HerFriendlyUi</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:368
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___467972650889683800_69956518947520'
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:41:21 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1274ms (Views: 1271.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:43:04 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1260ms (Views: 1258.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:44:21 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1287ms (Views: 1285.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:45:36 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:45:53 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:45:55 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:46:08 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:47:29 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:47:44 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:48:32 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1294ms (Views: 1292.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:49:10 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:49:13 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:49:49 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1392ms (Views: 1389.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:50:12 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1273ms (Views: 1271.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:51:58 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:52:01 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:52:19 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1361ms (Views: 1359.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:52:23 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 18:52:23 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:30:56 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1307ms (Views: 1305.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:31:11 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:31:15 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:31:16 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1524ms (Views: 1522.2ms | ActiveRecord: 0.2ms)
+
+
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1332ms (Views: 1329.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:33:12 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:35:46 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:43:34 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:43:57 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:43:58 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:43:59 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:44:04 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:44:11 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:44:33 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:45:20 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:45:43 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:46:16 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1268ms (Views: 1265.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:47:49 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:48:41 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:48:42 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:48:42 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:48:42 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:48:42 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:48:43 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:49:12 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl" for ::1 at 2019-04-11 19:49:21 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"nmsl"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='2') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='1') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='9') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='13') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='14') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='15') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='16') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='17') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='18') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='19') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='20') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='21') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='22') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='23') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='24') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='25') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='26') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='27') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='28') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='29') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='30') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='31') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='32') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='33') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='34') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='36') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 13.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:49:25 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:50:00 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:50:41 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1295ms (Views: 1292.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 19:50:50 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 1352ms (Views: 1350.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 9], ["LIMIT", 11]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 9], ["LIMIT", 11]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "aabbcc"], ["created_at", "2019-04-11 23:54:50.442850"], ["updated_at", "2019-04-11 23:54:50.442850"]]
+  [1m[35m (70.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 10], ["LIMIT", 11]]
+Started GET "/nmsl/repohahahaha" for ::1 at 2019-04-11 20:03:14 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"repohahahaha"}
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='repohahahaha') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='2' AND user_id='1') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "repos"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (91.8ms)[0m  [1m[35mCREATE TABLE "repos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "repo_name" varchar, "seed_size" integer, "language" varchar, "entities" varchar, "sort_method" varchar, "status" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "repos_users"[0m
+  [1m[35m (141.8ms)[0m  [1m[35mCREATE TABLE "repos_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "repo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (91.5ms)[0m  [1m[35mCREATE  INDEX "index_repos_users_on_repo_id" ON "repos_users" ("repo_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_repos_users_on_repo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_repos_users_on_repo_id' AND type='index'
+[0m
+  [1m[35m (91.0ms)[0m  [1m[35mCREATE  INDEX "index_repos_users_on_user_id" ON "repos_users" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (125.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (82.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (62.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190410024123)[0m
+  [1m[35m (57.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190410021208),
+(20190410020948),
+(20190410023042);
+
+[0m
+  [1m[35m (70.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-12 00:20:48.505498"], ["updated_at", "2019-04-12 00:20:48.505498"]]
+  [1m[35m (59.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "repos"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (68.7ms)[0m  [1m[35mCREATE TABLE "repos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "repo_name" varchar, "seed_size" integer, "language" varchar, "entities" varchar, "sort_method" varchar, "status" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "repos_users"[0m
+  [1m[35m (83.2ms)[0m  [1m[35mCREATE TABLE "repos_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "repo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (82.6ms)[0m  [1m[35mCREATE  INDEX "index_repos_users_on_repo_id" ON "repos_users" ("repo_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_repos_users_on_repo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_repos_users_on_repo_id' AND type='index'
+[0m
+  [1m[35m (83.6ms)[0m  [1m[35mCREATE  INDEX "index_repos_users_on_user_id" ON "repos_users" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (82.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (83.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (58.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190410024123)[0m
+  [1m[35m (57.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190410021208),
+(20190410020948),
+(20190410023042);
+
+[0m
+  [1m[35m (57.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-12 00:20:49.233211"], ["updated_at", "2019-04-12 00:20:49.233211"]]
+  [1m[35m (56.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-04-12 00:20:49.291507"], ["key", "environment"]]
+  [1m[35m (48.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "123"], ["created_at", "2019-04-12 00:21:19.481238"], ["updated_at", "2019-04-12 00:21:19.481238"]]
+  [1m[35m (77.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "123"], ["created_at", "2019-04-12 00:22:07.799637"], ["updated_at", "2019-04-12 00:22:07.799637"]]
+  [1m[35m (70.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "as"], ["created_at", "2019-04-12 00:24:26.746670"], ["updated_at", "2019-04-12 00:24:26.746670"]]
+  [1m[35m (70.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "as"], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["repo_name", "as_demo"], ["created_at", "2019-04-12 00:27:24.952100"], ["updated_at", "2019-04-12 00:27:24.952100"]]
+  [1m[35m (52.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["repo_name", "as_creat_repo"], ["created_at", "2019-04-12 00:28:38.218223"], ["updated_at", "2019-04-12 00:28:38.218223"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["repo_id", 2], ["created_at", "2019-04-12 00:28:38.263468"], ["updated_at", "2019-04-12 00:28:38.263468"]]
+  [1m[35m (53.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" INNER JOIN "repos_users" ON "repos"."id" = "repos_users"."repo_id" WHERE "repos_users"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-04-11 20:33:36 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+  Rendered application/login.html.erb within layouts/application_no_header_footer (107.8ms)
+Completed 200 OK in 141ms (Views: 137.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-11 20:33:39 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-11 20:33:40 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+  Rendered application/login.html.erb within layouts/application_no_header_footer (0.8ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-11 20:33:45 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'nmsl' and password = '123')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/create" for ::1 at 2019-04-11 20:33:47 -0400
+Processing by UsersController#create as */*
+  Parameters: {"{\"username\":\"nmsl\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "nmsl"]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "nmsl"], ["password", "123"], ["created_at", "2019-04-12 00:33:47.279085"], ["updated_at", "2019-04-12 00:33:47.279085"]]
+  [1m[35m (69.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 78ms (Views: 0.1ms | ActiveRecord: 69.9ms)
+
+
+Started GET "/nmsl" for ::1 at 2019-04-11 20:33:47 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"nmsl"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='4') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 25.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/nmsl/add_repo" for ::1 at 2019-04-11 20:33:53 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"username"=>"nmsl"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "Demo"], ["seed_size", 100], ["language", "English"], ["entities", "GEO "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-12 00:33:53.250080"], ["updated_at", "2019-04-12 00:33:53.250080"]]
+  [1m[35m (58.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["repo_id", 3], ["created_at", "2019-04-12 00:33:53.325093"], ["updated_at", "2019-04-12 00:33:53.325093"]]
+  [1m[35m (58.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 159ms (Views: 0.1ms | ActiveRecord: 118.3ms)
+
+
+Started GET "/nmsl" for ::1 at 2019-04-11 20:33:54 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"nmsl"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='4') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='3') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/nmsl/Demo" for ::1 at 2019-04-11 20:33:55 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"nmsl", "repo_name"=>"Demo"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='Demo') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "nmsl"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='3' AND user_id='4') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-11 20:34:07 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+  Rendered application/login.html.erb within layouts/application_no_header_footer (1.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/validate" for ::1 at 2019-04-11 20:34:29 -0400
+Processing by UsersController#validate as */*
+  Parameters: {"{\"username\":\"asdf\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'asdf' and password = '123')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/create" for ::1 at 2019-04-11 20:34:31 -0400
+Processing by UsersController#create as */*
+  Parameters: {"{\"username\":\"asdf\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "asdf"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asdf"], ["password", "123"], ["created_at", "2019-04-12 00:34:31.910159"], ["updated_at", "2019-04-12 00:34:31.910159"]]
+  [1m[35m (55.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 58ms (Views: 0.1ms | ActiveRecord: 56.4ms)
+
+
+Started GET "/asdf" for ::1 at 2019-04-11 20:34:31 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"asdf"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asdf"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='5') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/asdf/add_repo" for ::1 at 2019-04-11 20:34:42 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"username"=>"asdf"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asdf"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "34545"], ["seed_size", 100], ["language", "English"], ["entities", "GEO "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-12 00:34:42.545059"], ["updated_at", "2019-04-12 00:34:42.545059"]]
+  [1m[35m (58.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["repo_id", 4], ["created_at", "2019-04-12 00:34:42.607157"], ["updated_at", "2019-04-12 00:34:42.607157"]]
+  [1m[35m (72.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 0.1ms | ActiveRecord: 131.9ms)
+
+
+Started GET "/asdf" for ::1 at 2019-04-11 20:34:44 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"asdf"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asdf"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='5') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='4') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/asdf/34545" for ::1 at 2019-04-11 20:34:45 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"asdf", "repo_name"=>"34545"}
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='34545') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "asdf"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='4' AND user_id='5') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
