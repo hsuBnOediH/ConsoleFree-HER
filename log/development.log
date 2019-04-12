@@ -14598,3 +14598,145 @@ Processing by ReposController#main as HTML
 Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2019-04-11 20:44:20 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+Started GET "/" for ::1 at 2019-04-11 20:44:24 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_application_login_html_erb___3128352753796756166_69914954397500 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/application/login.html.erb:32)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_application_login_html_erb___3128352753796756166_69914853392920 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/application/login.html.erb:32)
+Started GET "/" for ::1 at 2019-04-11 20:44:32 -0400
+Processing by ApplicationController#login as HTML
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_application_login_html_erb___3128352753796756166_69914853392920 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/application/login.html.erb:32)
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_application_login_html_erb___3128352753796756166_69914954397500 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/application/login.html.erb:32)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_application_login_html_erb___3128352753796756166_69914984242620 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/application/login.html.erb:32)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_application_login_html_erb___3128352753796756166_69914984242620 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/application/login.html.erb:32)
+  Rendered application/login.html.erb within layouts/application_no_header_footer (10861.0ms)
+  Rendered application/login.html.erb within layouts/application_no_header_footer (14680.5ms)
+Completed 200 OK in 11027ms (Views: 11024.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 14859ms (Views: 14852.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered application/login.html.erb within layouts/application_no_header_footer (4539.4ms)
+Completed 200 OK in 4588ms (Views: 4586.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-11 20:48:45 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+  Rendered application/login.html.erb within layouts/application_no_header_footer (3.9ms)
+Completed 200 OK in 193ms (Views: 190.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-11 20:49:35 -0400
+Processing by ApplicationController#login as HTML
+  Rendering application/login.html.erb within layouts/application_no_header_footer
+  Rendered application/login.html.erb within layouts/application_no_header_footer (2.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_no_header_footer_html_erb__249364790812396561_69914972634160 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/layouts/application_no_header_footer.html.erb:8)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.css.scss to /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/assets/stylesheets/_bootstrap-sprockets.scss. (called from _app_views_layouts_application_no_header_footer_html_erb__249364790812396561_69914972634160 at /home/fyk327545164/Desktop/workspace/Her_Friendly_UI/app/views/layouts/application_no_header_footer.html.erb:8)
+Completed 200 OK in 3266ms (Views: 3263.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/create" for ::1 at 2019-04-11 20:49:45 -0400
+Processing by UsersController#create as */*
+  Parameters: {"{\"username\":\"opop\",\"password\":\"123\"}"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "opop"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "opop"], ["password", "123"], ["created_at", "2019-04-12 00:49:45.704596"], ["updated_at", "2019-04-12 00:49:45.704596"]]
+  [1m[35m (36.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 55ms (Views: 0.3ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/opop" for ::1 at 2019-04-11 20:49:45 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"opop"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "opop"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.1ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='6') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 44.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/opop/add_repo" for ::1 at 2019-04-11 20:49:48 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"username"=>"opop"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "opop"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "Demo"], ["seed_size", 100], ["language", "English"], ["entities", "GEO "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-12 00:49:48.164748"], ["updated_at", "2019-04-12 00:49:48.164748"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["repo_id", 5], ["created_at", "2019-04-12 00:49:48.209986"], ["updated_at", "2019-04-12 00:49:48.209986"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.3ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 23.7ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ dir_s_chdir - HER-data):
+  
+app/controllers/users_controller.rb:96:in `chdir'
+app/controllers/users_controller.rb:96:in `repo_directory_setup'
+app/controllers/users_controller.rb:149:in `add_repo'
+Started GET "/opop" for ::1 at 2019-04-11 20:49:48 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"opop"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "opop"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.2ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='6') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='5') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/opop/Demo" for ::1 at 2019-04-11 20:50:01 -0400
+Processing by ReposController#main as HTML
+  Parameters: {"username"=>"opop", "repo_name"=>"Demo"}
+  [1m[36mRepo Load (0.4ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (repo_name='Demo') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "opop"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.7ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='3' AND user_id='6') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "opop"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (repo_id='5' AND user_id='6') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering repos/main.html.erb within layouts/application
+  Rendered repos/main.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 46.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/opop/add_repo" for ::1 at 2019-04-11 20:51:38 -0400
+Processing by UsersController#add_repo as */*
+  Parameters: {"username"=>"opop"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "opop"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "repos" ("repo_name", "seed_size", "language", "entities", "sort_method", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["repo_name", "Demo"], ["seed_size", 100], ["language", "English"], ["entities", "GEO "], ["sort_method", "Pretag_Delax"], ["status", "ssss"], ["created_at", "2019-04-12 00:51:38.729205"], ["updated_at", "2019-04-12 00:51:38.729205"]]
+  [1m[35m (37.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "repos_users" ("user_id", "repo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["repo_id", 6], ["created_at", "2019-04-12 00:51:38.773583"], ["updated_at", "2019-04-12 00:51:38.773583"]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRepo Load (0.5ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" ORDER BY "repos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 0.4ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/opop" for ::1 at 2019-04-11 20:51:39 -0400
+Processing by UsersController#info as HTML
+  Parameters: {"username"=>"opop"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "opop"], ["LIMIT", 1]]
+  [1m[36mReposUser Load (0.3ms)[0m  [1m[34mSELECT  "repos_users".* FROM "repos_users" WHERE (user_id='6') ORDER BY "repos_users"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.2ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='5') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mRepo Load (0.1ms)[0m  [1m[34mSELECT  "repos".* FROM "repos" WHERE (id='6') ORDER BY "repos"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  Rendering users/info.html.erb within layouts/application
+  Rendered users/info.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 0.8ms)
+
+

@@ -18,19 +18,26 @@
 
 
 $(document).ready(function(){
-    $("#sign_up_return_button").on('click',function () {
+    $("#sign_up_button").off("click");
+    $("#signup_login_button").off("click");
+    $("#signup_login_button").on('click',function () {
         changeToSignUp();
     }) ;
+    $("#sign_up_button").on("click",function () {
+        sendLogIn();
+    });
 });
 
 
 function changeToSignUp(){
     $("#right_box_top_sign_in").html("Sign Up");
     $("#right_box_body_confirm_password").show();
-    $("#sign_up_return_button span").html("Have Account?");
+    $("#signup_login_button span").html("Have Account?");
     $("#sign_up_button span").html("Sign Up");
-    $("#sign_up_return_button").off("click");
-    $("#sign_up_return_button").on("click",function () {
+
+
+    $("#signup_login_button").off("click");
+    $("#signup_login_button").on("click",function(){
         changeToLogIn();
     });
     $("#sign_up_button").off("click");
@@ -44,10 +51,12 @@ function changeToSignUp(){
 function changeToLogIn(){
     $("#right_box_top_sign_in").html("Log In");
     $("#right_box_body_confirm_password").hide();
-    $("#sign_up_return_button span").html("Sign In Now!");
+    $("#signup_login_button span").html("Sign Up Now!");
     $("#sign_up_button span").html("Log In");
-    $("#sign_up_return_button").off("click");
-    $("#sign_up_return_button").on("click",function () {
+
+
+    $("#signup_login_button").off("click");
+    $("#signup_login_button").on("click",function () {
         changeToSignUp();
     });
     $("#sign_up_button").off("click");
@@ -113,5 +122,6 @@ function sendSignUp() {
         window.location.reload();
     }
 }
+
 
 
