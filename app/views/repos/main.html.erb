@@ -6,41 +6,111 @@
   <div id="info_center">
     <div id="project_info">
       <div id="project_info_wrapper">
-        <h3>Repositories Name:</h3>
+        <h2>PROJECT INFO</h2>
+        <h3>REPOSITORY NAME:</h3>
         <p>REPO NAME</p>
-        <h4>ENTITY</h4>
+        <h4>ENTITY:</h4>
         <p>EGO,PRE,ABC,PPD</p>
-        <h4>LANGUAGE</h4>
+        <h4>LANGUAGE:</h4>
         <p>FN</p>
-        <h4>SORT METHOD</h4>
-        <p>Sort method 1</p>
-        <h4>SEED SIZE</h4>
+        <h4>SORT METHOD:</h4>
+        <p>SORT METHOD</p>
+        <h4>SEED SIZE:</h4>
         <p>300</p>
+        <h4>STATUS:</h4>
+        <p><span class="dot"></span></p>
 
       </div>
     </div>
+
+    <hr>
+
     <div id="progress">
-      <h3>PROGRESS</h3>
+      <h2>PROGRESS</h2>
       <h4>CORPUSE</h4>
       <p>1000</p>
       <h4>SEED</h4>
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress" id="progress_bar">
+        <div id="progress_bar_finished" class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
+
+    <hr>
+
+
     <div id="sentence_history">
+      <h2>HISTORY</h2>
+      <div id="cache_block">
+        <span>
+          <div class="history_record">
+            If you're visiting this page, you're likely here because you're searching for a random sentence. Sometimes a random word just isn't enough, and that is where the random sentence generator comes into play. By inputting the desired number, you can make a list of as many random sentences as you want or need. Producing random sentences can be helpful in a number of different ways.
+          </div>
+          <div class="history_record">
+            For writers, a random sentence can help them get their creative juices flowing. Since the
+          </div>
+          <div class="history_record">
+            be creative when the sentence appears. There are a number of different ways a writer can use the ran
+          </div>
+          <div class="history_record">
+            For those writers who have writers' block, this can be an excellent way to take a step to crumbling those walls. By takin
+          </div>
+          <div class="history_record">
+            the project they're working on in a different light and perspective. Sometimes all it takes is to get that first sent
+          </div>
+          <div class="history_record">
+            s, a random sentence can help them get their creative juices flowing. Since the topic of the se
+          </div>
+          <div class="history_record">
+            Random sentences can also spur creativity in other types of projects being done. If you are trying to come up with a new concept, a new idea or a new product, a random sen
+          </div>
+          <div class="history_record">
+            Random sentences can also spur creativity in other types of projects being done. If you are trying to come up with a new concept, a new idea or a new product, a random sen
+          </div>
+          <div class="history_record">
+            es can also spur creativity in other types of projects
+          </div>
+          <div class="history_record">
+            es can also spur creativity in other types of projects
+          </div>
+          <div class="history_record">
+            es can also spur creativity in other types of projects
+          </div>
+          <div class="history_record">
+            es can also spur creativity in other types of projects
+          </div>
+          <div class="history_record">
+            Random sentences can also spur creativity in other types of projects being done. If you are trying to come up with a new concept, a new idea or a new product, a random sen
+          </div>
+
+        </span>
+
+      </div>
     </div>
+
+    <hr>
     <div id="extra_button_space">
 
+      <h2>MORE OPTIONS</h2>
+      <div id="extra_button_wrapper">
+        <button type="button" class="btn btn-light extra_button">RANK</button>
+        <button type="button" class="btn btn-light extra_button" >EVALUATE</button>
+        <button type="button" class="btn btn-light extra_button">INFERENCE</button>
+      </div>
     </div>
   </div>
   <div id="work_space_wrapper">
+    <div id="sentence_block">
+      <p><span>be creative when the sentence appears. There are a number of different ways a writer can use the ran
+</span></p>
+
+    </div>
+
     <div id="button_space">
       <div id="next_sentence_button" class="bottom_button">
-        <%=image_tag("next_btn_img.png", height: '80', width: '80') %>
+        <%= image_tag("next_btn_img.png", height: '80', width: '80') %>
       </div>
       <div id="update_to_file_button" class="bottom_button">
-        <%=image_tag("upload_btn_img.png", height: '80', width: '80s') %>
+        <%= image_tag("upload_btn_img.png", height: '80', width: '80s') %>
       </div>
     </div>
   </div>

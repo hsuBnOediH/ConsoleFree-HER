@@ -163,7 +163,7 @@
 }
 
 /*# sourceMappingURL=users.css.map */
-.navbar{
+.navbar {
   margin-bottom: 0;
 }
 
@@ -265,9 +265,9 @@
   float: right;
 }
 
-#add_repo{
+#add_repo {
   margin-top: 50px;
-  margin-left:160px;
+  margin-left: 160px;
   width: 140px;
   height: 140px;
   border-radius: 70px;
@@ -276,32 +276,35 @@
   color: #4099F5;
 }
 
-#add_repo p{
+#add_repo p {
   margin: auto 0;
   text-align: center;
 }
 
 
-.file-field{
+.file-field {
   margin-top: 15px;
 }
 
-.file-path-wrapper{
+.file-path-wrapper {
   margin-top: 10px;
 }
 
 
-#text_window {
+
+#sentence_block {
+  text-align: center;
+  position: relative;
+  top: 350px;
+  font-weight: bolder;
+  font-size: 40px;
 }
 
-#sentence_block{
-  background: hotpink;
-}
-#sentence_block span{
-  font-size: 30px;
-  line-height: 50px;
+#sentence_block p {
+  font-size: 50px;
+  line-height: 100px;
   padding-right: 15px;
-  padding-left: 15px ;
+  padding-left: 15px;
 }
 
 .dropdown {
@@ -321,60 +324,90 @@
   display: block;
 }
 
-.dropdown-content p{
+.dropdown-content p {
   margin: 0;
 }
 
 
 #repo_card_space a {
-  color:#000;
+  color: #000;
 }
 
 
 /***********/
 
 
-#info_center{
+#info_center {
   float: left;
   width: 260px;
   height: 100%;
-  background: #4099F5;
-  opacity: 0.7;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   color: #fff;
 }
 
-#project_info{
-  height:250px ;
-  background: #2E2F30;
+#project_info {
+  height: 350px;
+  border-radius: 0px 0px 10px 10px;
+  background: #5284B8;
 }
 
-#info_center h3,h4,p{
+#info_center h3, h4, p,h2{
   margin: 0;
-  padding: 0;
-}
-#progress{
-  height:250px ;
-  background: salmon;
+  padding: 5px 0 0;
 }
 
-#sentence_history{
-  height:400px;
-  background: aqua;
+#info_center h3, h4{
+  font-weight: bolder;
+  padding-left: 20px;
+  color: #ffddab;
+  font-size: 15px;
 }
 
-#extra_button_space{
-  height: 180px;
+#info_center p {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bolder;
+  padding-left: 30px;
 }
 
-#work_space_wrapper{
+#info_center h2{
+  font-size: 22px;
+  font-weight: bolder;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+#progress {
+  height: 150px;
+  background: #5284B8;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#sentence_history {
+  height: 450px;
+  background: #5284B8;
+  border-radius: 10px 10px 10px 10px;
+
+}
+
+#extra_button_space {
+  height: 124px;
+  border-radius: 10px 10px 0px 0px;
+  background: #5284B8;
+
+
+
+}
+
+#work_space_wrapper {
   float: left;
   width: 1720px;
   height: 1080px;
-  background: aquamarine;
   position: relative;
+  background: #e0e0e0;
 }
 
-#button_space{
+#button_space {
   height: 100px;
   width: 500px;
   position: absolute;
@@ -384,24 +417,88 @@
 }
 
 
-.bottom_button{
+.bottom_button {
   float: left;
-  height:100px;
+  height: 100px;
   width: 250px;
 }
 
-#next_sentence_button{
+#next_sentence_button {
   background: salmon;
 }
-.bottom_button img{
+
+.bottom_button img {
   margin-left: 75px;
   margin-right: 75px;
   margin-top: 10px;
 }
-#update_to_file_button{
+
+#update_to_file_button {
   background: lightsteelblue;
 }
 
-#progress_bar{
+#progress_bar {
   opacity: 1;
+  width: 240px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#progress_bar_finished {
+  background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: #ffffff;
+  margin: 0;
+}
+
+.dot {
+  height: 17px;
+  width: 17px;
+  background-color: #A30000;
+  background-color: #17ff17;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#cache_block{
+  overflow-y: auto;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 240px;
+  height: 350px;
+}
+
+.history_record{
+  overflow: hidden;
+  min-width: 0;
+  text-align: left;
+  white-space: nowrap;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  font-size: 13px;
+}
+#extra_button_wrapper{
+  height: 50px;
+}
+
+.extra_button{
+  margin-left: 7px;
+ background: #092b4e;
+  border-radius: 15px;
+  padding-left: 8px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  width: 77px;
+  height: 73px;
+}
+
+.extra_button:hover{
+  color: black;
+
 }
