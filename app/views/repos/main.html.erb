@@ -8,17 +8,17 @@
       <div id="project_info_wrapper">
         <h2>PROJECT INFO</h2>
         <h3>REPOSITORY NAME:</h3>
-        <p>REPO NAME</p>
+        <p><%= @repo.repo_name %></p>
         <h4>ENTITY:</h4>
-        <p>EGO,PRE,ABC,PPD</p>
+        <p><%= @repo.entities %></p>
         <h4>LANGUAGE:</h4>
-        <p>FN</p>
+        <p><%= @repo.language %></p>
         <h4>SORT METHOD:</h4>
-        <p>SORT METHOD</p>
+        <p><%= @repo.sort_method %></p>
         <h4>SEED SIZE:</h4>
-        <p>300</p>
+        <p><%= @repo.seed_size %></p>
         <h4>STATUS:</h4>
-        <p><span class="dot"></span></p>
+        <p><span class="dot"></span><span id="current_status"><%=  @repo.status.split[2]?("  Annotating Seed"):("  Annotating Corpus")  %></span></p>
 
       </div>
     </div>
@@ -28,10 +28,10 @@
     <div id="progress">
       <h2>PROGRESS</h2>
       <h4>CORPUSE</h4>
-      <p>1000</p>
+      <p id="corpus_progress"><%= @repo.status.split[3]+" / "+@repo.status.split[6] %></p>
       <h4>SEED</h4>
       <div class="progress" id="progress_bar">
-        <div id="progress_bar_finished" class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+        <div id="progress_bar_finished" class="progress-bar bg-success" role="progressbar" style="width: <%= @repo.status.split[5].to_f/@repo.status.split[6].to_f%>" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
 
@@ -95,7 +95,7 @@
       <div id="extra_button_wrapper">
         <button type="button" class="btn btn-light extra_button">RANK</button>
         <button type="button" class="btn btn-light extra_button" >EVALUATE</button>
-        <button type="button" class="btn btn-light extra_button">INFERENCE</button>
+        <button data-toggle="modal" data-target="#odal" type="button" class="btn btn-light extra_button">Result</button>
       </div>
     </div>
   </div>
@@ -116,6 +116,60 @@
     </div>
   </div>
 </div>
+
+
+<div class="modal fade" id="odal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <!--*****IMPORTANT*****-->
+
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+
+      <div class="modal-body">
+        <ul class="nav nav-pills">
+          <li class="active nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">R1</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">R2</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">R3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gazatteers</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">G1</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">G2</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">G3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Inference</a>
+            <div class="dropdown-menu">
+
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <!--*****IMPORTANT*****-->
+        <button onclick="_cancel()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button onclick="create_repo()" type="button" class="btn btn-primary">Create Repo</button>
+        <!--*****IMPORTANT*****-->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!--<div id="button_area" style="background: red">-->
 <!--  <button onclick="send_data()">send data to sever!</button>-->
 <!--  <button onclick="update_data()">Update data to file</button>-->

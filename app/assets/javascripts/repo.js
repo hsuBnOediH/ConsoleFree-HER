@@ -19,6 +19,7 @@
 let uploadTagArray = [];
 let availableOptionArray = [];
 let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B"];
+let url_path = window.location.pathname + "/";
 
 $(document).ready(function () {
     welcome_alert();
@@ -27,8 +28,6 @@ $(document).ready(function () {
 });
 
 function welcome_alert(){
-
-    let url_path = window.location.pathname + "/";
 
     $.ajax({
         url: url_path+"welcome", type: "GET", dataType: "json", success: function (msg) {
@@ -44,11 +43,15 @@ function welcome_alert(){
 
 function data_from_server(){
 
-    let url_path = window.location.pathname + "/";
-
     $.ajax({
         url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
-            generate_sentence(msg.sentence[0], msg.sentence[1]);
+            if(msg.status){
+                generate_sentence(msg.sentence[0], msg.sentence[1]);
+            }else{
+                alert("Seed Finished! Doing Cross Validation and Ranking now! Please wait for seconds!");
+
+                update_after_seed();
+            }
         }
     });
 }
@@ -78,12 +81,25 @@ function generate_sentence(sentence, entities){
 
 function send_data() {
 
-    data_to_server();
+    let jsonArrayStr="";
+    uploadTagArray.forEach(function (element){
+        jsonArrayStr += JSON.stringify(element) + " "
+    });
 
-    data_from_server();
-
-    update_cache();
-
+    $.ajax({
+        url: url_path + "send_sentence.json",
+        type: "POST",
+        data: jsonArrayStr,
+        async: false,
+        success: function(){
+            $.ajax({
+                url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
+                    generate_sentence(msg.sentence[0], msg.sentence[1]);
+                    update_cache();
+                    }
+            });
+        }
+    });
 }
 
 
@@ -93,8 +109,6 @@ function data_to_server(){
     uploadTagArray.forEach(function (element){
         jsonArrayStr += JSON.stringify(element) + " "
     });
-
-    let url_path = window.location.pathname + "/";
 
     $.ajax({
         url: url_path + "send_sentence.json",
@@ -106,8 +120,6 @@ function data_to_server(){
 
 
 function update_cache(){
-
-    let url_path = window.location.pathname + "/";
 
     $.ajax({
         url: url_path+"get_cache_data", type: "GET", dataType: "json", success: function (msg) {
@@ -152,9 +164,6 @@ function cache_to_annotate(sentence_div) {
 
     data_to_server();
 
-
-    let url_path = window.location.pathname + "/";
-
     $.ajax({
         url: url_path+'send_annotating_cache',
         type: 'POST',
@@ -190,35 +199,33 @@ function cache_to_annotate(sentence_div) {
 function update_data(){
 
     data_to_server();
-    $("#cache_block").empty();
-
-    let url_path = window.location.pathname + "/";
+    $("#cache_data").empty();
 
     $.ajax({
         url: url_path+'update_to_file',
         type: 'POST',
         cache: false,
         processData: false,
-        contentType: false
+        contentType: false,
+        success: function(){
+            data_from_server();
+        }
     });
 
-    data_from_server();
-    //get_status();
+    get_status();
 }
 
 function get_status(){
 
-    let url_path = window.location.pathname + "/";
-
     $.ajax({
         url: url_path + "get_status", type: "GET", dataType: "json", success: function (msg) {
-            if (msg.sentence[0]){
-                document.getElementById('annotating_status').innerHTML = "Annotating Seed";
+            if (msg.status[2] === "true"){
+                $('#current_status').text("  Annotating Seed");
             }else{
-                document.getElementById('annotating_status').innerHTML = "Annotating Corpus";
+                $('#current_status').text("  Annotating Corpus");
             }
-            document.getElementById('seed_status').innerHTML = msg.sentence[1].toString() + "/" + msg.sentence[2].toString();
-            document.getElementById('corpus_status').innerHTML = msg.sentence[3].toString() + "/" + msg.sentence[4].toString();
+            $('#corpus_progress').text(msg.status[5]+" / "+msg.status[6]);
+            $('#progress_bar_finished').css('width', (100*parseFloat(msg.status[3])/parseFloat(msg.status[4])).toString()+"%");
         }
     });
 }
@@ -255,5 +262,21 @@ function update_rank(){
         cache: false,
         processData: false,
         contentType: false
+    });
+}
+
+function update_after_seed(){
+
+    $.ajax({
+        url: url_path + 'train_and_rank_seed',
+        type: 'POST',
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(msg){
+            if(msg.status) {
+                alert("You can either check the result or continue annotating the most useful sentences");
+            }
+        }
     });
 }

@@ -10,6 +10,7 @@ class ReposController < ApplicationController
   def temp
 
   end
+
   def welcome
 
     respond_to do |format|
@@ -58,21 +59,36 @@ class ReposController < ApplicationController
   end
 
 
-  def check_end_condition
-
-  end
-
   def get_sentence
 
-    input = _helper_build_sentence
+    if $seed_status and $line_num >= $seed_line_total
 
-    respond_to do |format|
+      update_to_file
+      $seed_status = false
+      $line_num = 1
+      $prev_line_num = 1
+      $time = 1
+      @repo.update(status, update_status)
 
-      msg = {:status => "ok", :message => "Success!",
-             :sentence => input}
+      respond_to do |format|
 
-      format.json {render :json => msg}
+        msg = {:status => false}
 
+        format.json {render :json => msg}
+
+      end
+
+    else
+      input = _helper_build_sentence
+
+      respond_to do |format|
+
+        msg = {:status => true, :message => "Success!",
+               :sentence => input}
+
+        format.json {render :json => msg}
+
+      end
     end
 
   end
@@ -81,9 +97,7 @@ class ReposController < ApplicationController
 
     respond_to do |format|
 
-      msg = {:status => "ok", :message => "Success!",
-             :sentence => [$seed_status, $seed_line_annotated, $seed_line_total,
-                           $corpus_line_annotated, $corpus_line_total]}
+      msg = {:status => @repo.status.split}
 
       format.json {render :json => msg}
 
@@ -107,6 +121,7 @@ class ReposController < ApplicationController
     $seed_status ? ($seed_line_annotated = $prev_line_num) : ($corpus_line_annotated = $prev_line_num)
 
     $cache[$name][0] = []
+    $cache[$name][1] = [false, -999]
 
     @repo.update(status: update_status)
 
@@ -144,9 +159,9 @@ class ReposController < ApplicationController
     input = []
     system("cp", $path+$sentence_path, $path+"test.txt")
     if $line_num != 1
-      if $time >= 3
-        $line_num += 1
-      end
+       if $time >= 3
+         $line_num += 1
+       end
       system("sed", "-i", "1,"+$line_num.to_s+"d", $path+"test.txt")
     end
     $time += 1
@@ -166,6 +181,48 @@ class ReposController < ApplicationController
 
   end
 
+  def train_and_rank_seed
+
+
+    Dir.chdir $path
+
+    system("cp", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed",
+           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".alwaysTrain")
+    system("python", "Scripts/update_gazatteers.py", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed",
+           "Data/Gazatteers/*")
+
+    system("python", "Scripts/cross_validation.py", "-testable", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed",
+           "-fullCorpus", "Data/Prepared/fullCorpus.txt", "-identify_best_feats", "True", "-train_best",
+           "True", "-unannotated", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated")
+
+    system("sh", "Scripts/tag_get_final_results.sh", "0", "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod,
+           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".alwaysTrain", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated",
+           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed", "Data/Prepared/fullCorpus.txt",
+           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.pred", "Results/fullCorpus.final.txt",
+           "Results/fullCorpus.final-list.txt", "crf")
+    system("cp","-r", "Data/Gazatteers", "Results/Gazatteers")
+    system("cp", "-rf", "Results", "Results_seed")
+    system("rm", "-rf", "Results")
+    system("mkdir", "Results")
+
+    system("sh", "Scripts/tag_and_rank.sh", "Models/CRF/best_seed.cls", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.fts",
+           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.probs", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.fts",
+           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed.fts", $sortMethod, "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod,
+           "None", $entities)
+    system("python Scripts/pre-tag_gazatteers.py Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod + " " +
+               $entities+" Data/Gazatteers/* > Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod+".preTagged")
+    system("mv", "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod+".preTagged",
+           "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod)
+
+
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
+  end
 
   def feature_engineering_and_train
 
@@ -284,11 +341,8 @@ class ReposController < ApplicationController
       $sentence_path = $seed_path
       $seed_status ? ($sentence_path = $seed_path) : ($sentence_path = $corpus_path)
 
-      if $cache[$name] != nil
-      else
-        $cache_data = []
-        $annotating_cache = [false, -999]
-        $cache[$name] = [$cache_data,$annotating_cache]
+      if $cache[$name] == nil
+        $cache[$name] = [[],[false,-999]]
       end
     end
 
