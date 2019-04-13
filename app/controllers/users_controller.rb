@@ -1,33 +1,39 @@
 require 'json'
 class UsersController < ApplicationController
-  before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz, :share_repo, :get_repo_user, :delete_repo, :generate_seed ]
+  before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz, :share_repo, :get_repo_user, :delete_repo, :generate_seed]
   #before_action :set_repo_path, only: [:cp_file, :cp_gaz, :add_repo]
 
-  layout "main_layout",:only => [:login]
+  layout "main_layout", :only => [:login]
 
 
   def info
     @user_repo_array = []
     @user_repo_info = []
-    @user_repo_path_no_slash = []
+    @card_color_array = []
+    @card_color_set = %w(#2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3 #2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3
+#2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3 #2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3
+#2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3
+#2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3
+#2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3
+#2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #DDDDDD #8379fb #31f5b5 #ffcb33 #ff6a33 #31f3f3)
 
-    ReposUser.where("user_id='"+@user.id.to_s+"'").find_each do |repo|
+    ReposUser.where("user_id='" + @user.id.to_s + "'").find_each do |repo|
 
-      Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
-
+      Repo.where("id='" + repo.repo_id.to_s + "'").find_each do |re|
+        color = @card_color_set.pop
         url = @user.username + "/" + re.repo_name
         @user_repo_array << url
-        @user_repo_info << [re.repo_name, re.entities, re.language, @user.username + "_" + re.repo_name]
+        @user_repo_info << [re.repo_name, re.entities, re.language, @user.username + "_" + re.repo_name, color]
       end
 
     end
 
   end
 
-  def find_repo name
+  def find_repo(name)
 
-    ReposUser.where("user_id='" +@user.id.to_s+"'").find_each do |repo|
-      Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
+    ReposUser.where("user_id='" + @user.id.to_s + "'").find_each do |repo|
+      Repo.where("id='" + repo.repo_id.to_s + "'").find_each do |re|
         if re.repo_name == name
           return re
         end
@@ -48,13 +54,13 @@ class UsersController < ApplicationController
     name = @user.repos[-1].id.to_s + "_" + @user.repos[-1].repo_name
 
     dir = 'HER-data/' + name + "/Data/Gazatteers/"
-    file_count = Dir[File.join(dir, '**', '*')].count { |file| File.file?(file) }
+    file_count = Dir[File.join(dir, '**', '*')].count {|file| File.file?(file)}
 
     Dir.chdir 'HER-data/'
 
-    File.open("temp"+file_count.to_s+".txt", 'wb') { |file| file.write(data) }
-    system("sed", "-i", "1,4d;$d", "temp"+file_count.to_s+".txt")
-    system("mv", "temp"+file_count.to_s+".txt", name+"/Data/Gazatteers/")
+    File.open("temp" + file_count.to_s + ".txt", 'wb') {|file| file.write(data)}
+    system("sed", "-i", "1,4d;$d", "temp" + file_count.to_s + ".txt")
+    system("mv", "temp" + file_count.to_s + ".txt", name + "/Data/Gazatteers/")
 
     Dir.chdir '../'
 
@@ -75,13 +81,13 @@ class UsersController < ApplicationController
     name = @user.repos[-1].id.to_s + "_" + @user.repos[-1].repo_name
 
     dir = 'HER-data/' + name + "/Data/Original/"
-    file_count = Dir[File.join(dir, '**', '*')].count { |file| File.file?(file) }
+    file_count = Dir[File.join(dir, '**', '*')].count {|file| File.file?(file)}
 
     Dir.chdir 'HER-data/'
 
-    File.open("temp"+file_count.to_s+".txt", 'wb') { |file| file.write(data) }
-    system("sed", "-i", "1,4d;$d", "temp"+file_count.to_s+".txt")
-    system("mv", "temp"+file_count.to_s+".txt", name+"/Data/Original/")
+    File.open("temp" + file_count.to_s + ".txt", 'wb') {|file| file.write(data)}
+    system("sed", "-i", "1,4d;$d", "temp" + file_count.to_s + ".txt")
+    system("mv", "temp" + file_count.to_s + ".txt", name + "/Data/Original/")
 
     Dir.chdir '../'
     puts "**************************"
@@ -102,7 +108,7 @@ class UsersController < ApplicationController
     name = repo.id.to_s + "_" + repo.repo_name.to_s
     system("mkdir", name)
     Dir.chdir "../HER-core"
-    system('sh', 'Scripts/set_up.sh', "../HER-data/"+name)
+    system('sh', 'Scripts/set_up.sh', "../HER-data/" + name)
 
     Dir.chdir "../"
 
@@ -117,30 +123,26 @@ class UsersController < ApplicationController
     re = find_repo name
 
 
-    path = "HER-data/"+re.id.to_s+"_"+re.repo_name + "/"
+    path = "HER-data/" + re.id.to_s + "_" + re.repo_name + "/"
     lg = re.language
     seed_size = re.seed_size.to_i
 
     Dir.chdir path
 
-    system("sh", "Scripts/prepare_original_texts.sh","Scripts/preprocess.py", lg, "2>", "log.txt")
-    system("python","Scripts/rankSents.py","-corpus","Data/Prepared/fullCorpus.txt","-sort_method","random_seed",
-           "-topXsents",seed_size.to_s,"-output","Data/Splits/fullCorpus.seed-"+seed_size.to_s, "-annotate", "True")
+    system("sh", "Scripts/prepare_original_texts.sh", "Scripts/preprocess.py", lg, "2>", "log.txt")
+    system("python", "Scripts/rankSents.py", "-corpus", "Data/Prepared/fullCorpus.txt", "-sort_method", "random_seed",
+           "-topXsents", seed_size.to_s, "-output", "Data/Splits/fullCorpus.seed-" + seed_size.to_s, "-annotate", "True")
 
     out = `wc -l Data/Splits/*`
 
 
     status = re.status.split
-    update = status[0]+" "+status[1]+" "+status[2]+" "+status[3]+" "+out.split[0]+" "+status[5]+" "+out.split[2]+" "+status[7]
+    update = status[0] + " " + status[1] + " " + status[2] + " " + status[3] + " " + out.split[0] + " " + status[5] + " " + out.split[2] + " " + status[7]
 
     re.update(status: update)
     Dir.chdir "../.."
 
   end
-
-
-
-
 
 
   def add_repo
@@ -200,7 +202,6 @@ class UsersController < ApplicationController
     end
 
 
-
   end
 
 
@@ -249,7 +250,6 @@ class UsersController < ApplicationController
   end
 
 
-
   def get_repo_user
 
     user_info = request.body.read
@@ -280,8 +280,6 @@ class UsersController < ApplicationController
   end
 
 
-
-
   def create
 
     account_info = request.body.read
@@ -292,9 +290,9 @@ class UsersController < ApplicationController
     status = true
 
     if User.where(:username => username).blank?
-        User.new(:username => username, :password=>password).save
-     else
-        status = false
+      User.new(:username => username, :password => password).save
+    else
+      status = false
     end
 
     respond_to do |format|
@@ -342,20 +340,20 @@ class UsersController < ApplicationController
 
   private
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
 
-      @user = User.find_by_username(params[:username])
+    @user = User.find_by_username(params[:username])
 
-    end
+  end
 
-    def set_repo_path
+  def set_repo_path
 
-    end
+  end
 
-    def user_params
-      params.require(:user).permit(:username, :password)
-    end
+  def user_params
+    params.require(:user).permit(:username, :password)
+  end
 
 end
 

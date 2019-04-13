@@ -71,8 +71,10 @@ function generate_sentence(sentence, entities){
 
         let tempSpan = '<span style="background-color:' + getTagColor(sentence[i].tag, availableOptionArray)
             + '"' + ' class ="word" id = "word' + i.toString() + '">' + sentence[i].word + '</span>';
-        let tempBlock = '<div class="dropdown">' + tempSpan + getDropDown(availableOptionArray, i.toString()) + '</div>';
+        let tempBlock = '<div class="dropdown" id="dropdown_'+ i.toString() + '">' + tempSpan +'</div>';
         $("#sentence_block").append(tempBlock);
+        let dropdownBlock = getDropDown(availableOptionArray, i.toString());
+        $("#dropdown_" + i).append(dropdownBlock);
     }
 }
 
@@ -144,8 +146,7 @@ function generate_cache_sentence(sentence){
             }
             let tag = sentence[i][j].substring(0,index);
             let word = sentence[i][j].substring(index+1) + "";
-            let tempSpan = '<span style="background-color:' + getTagColor(tag, availableOptionArray)
-                + '"' + ' class ="word" id = "words' + i.toString() + '">' + word + '</span>';
+            let tempSpan = '<span class="history_record_span">' + word + '</span>';
             str_div += tempSpan;
         }
         str_div += '</div>';
@@ -155,8 +156,9 @@ function generate_cache_sentence(sentence){
 
 
 function tag_click(tagButton) {
-    uploadTagArray[parseInt(tagButton.className)].tag = tagButton.innerHTML;
-    $("#word" + tagButton.className).css("background-color", getTagColor(tagButton.innerHTML, availableOptionArray));
+    let id = tagButton.className.substring(40);
+    uploadTagArray[parseInt(id)].tag = tagButton.innerHTML;
+    $("#word" + id).css("background-color", getTagColor(tagButton.innerHTML, availableOptionArray));
 }
 
 
@@ -209,10 +211,10 @@ function update_data(){
         contentType: false,
         success: function(){
             data_from_server();
+            get_status();
+
         }
     });
-
-    get_status();
 }
 
 function get_status(){
@@ -225,6 +227,8 @@ function get_status(){
                 $('#current_status').text("  Annotating Corpus");
             }
             $('#corpus_progress').text(msg.status[5]+" / "+msg.status[6]);
+            alert(100*parseFloat(msg.status[3]).toString());
+            alert(parseFloat(msg.status[4]).toString());
             $('#progress_bar_finished').css('width', (100*parseFloat(msg.status[3])/parseFloat(msg.status[4])).toString()+"%");
         }
     });
@@ -234,10 +238,10 @@ function get_status(){
 
 function getDropDown(availableOptionArray, id) {
     let result = '';
-    result += ' <div class="dropdown-content">';
+    let word_length = $("#word"+ id).outerWidth();
+    result += ' <div class="dropdown-content" style="width:' + word_length + 'px">';
     availableOptionArray.forEach(function (p) {
-        result += '<button class="' + id.toString() +
-            '" onclick="tag_click(this)" class= "dropdown-content-block" style="background-color:' + p.color + '">' + p.tag + '</button>';
+        result += '<button onclick="tag_click(this)" class= "dropdown-content-block drop_down_button_'+ id+'" style="background-color:' + p.color + '">' + p.tag + '</button>';
     });
     result += '</div>';
     return result;

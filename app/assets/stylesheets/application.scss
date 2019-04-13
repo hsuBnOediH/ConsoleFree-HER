@@ -235,13 +235,53 @@
   min-height: 800px;
 }
 
-.card {
+
+.card_container{
   float: left;
   min-width: 470px;
   min-height: 250px;
   margin-left: 60px;
   margin-top: 60px;
-  background: #4099F5;
+}
+
+
+.card {
+  float: left;
+  min-width: 400px;
+  min-height: 250px;
+
+}
+
+
+.card_button_space{
+  float: left;
+  width: 70px;
+  height: 250px;
+}
+
+
+.card_button_space p{
+  padding-top: 40px;
+  text-align: center;
+}
+.card_button_share{
+  background: #808080;
+  font-size: 15px;
+  font-weight: bold;
+  width: 70px;
+  height: 125px;
+  color: #fff;
+  vertical-align: center;
+}
+
+.card_button_delete{
+  background: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  width: 70px;
+  height: 125px;
+  color: #808080;
+
 }
 
 .card-title {
@@ -249,7 +289,7 @@
 }
 
 .card-body {
-  min-height: 150px;
+  min-height: 200px;
   margin-left: 30px;
   margin-right: 30px;
   margin-top: 30px;
@@ -265,6 +305,7 @@
   bottom: 10px;
   float: right;
 }
+
 
 #add_repo {
   margin-top: 50px;
@@ -282,6 +323,9 @@
   text-align: center;
 }
 
+#card_for_add_repo{
+  background: #4099F5;
+}
 
 .file-field {
   margin-top: 15px;
@@ -313,13 +357,7 @@
   display: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 50px;
-  z-index: 1;
-}
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -459,8 +497,6 @@ hr {
 .dot {
   height: 17px;
   width: 17px;
-  background-color: #A30000;
-  background-color: #17ff17;
   border-radius: 50%;
   display: inline-block;
 }
@@ -471,6 +507,11 @@ hr {
   margin-top: 20px;
   width: 240px;
   height: 350px;
+}
+
+.history_record_span{
+  font-size: 15px;
+  padding-left: 3px;
 }
 
 .history_record{
@@ -520,8 +561,14 @@ hr {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 50px;
+  max-width: 600px;
   z-index: 1;
 }
+.dropdown-content-block{
+  width: 100%;
+  min-width: 150px;
+}
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -529,4 +576,7 @@ hr {
 
 .dropdown-content p{
   margin: 0;
+}
+.drop_down_button{
+  min-height: 50px;
 }
