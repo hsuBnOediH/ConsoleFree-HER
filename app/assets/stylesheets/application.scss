@@ -177,13 +177,25 @@
   font-size: 27px;
 }
 
+#header_citation{
+  position: relative;
+  right: 250px;
+  top: 15px;
+  float: right;
+  height: 50px;
+  font-size: 20px;
+}
+
+#header_citation:hover{
+
+}
 
 #sign_out {
   position: relative;
   right: 150px;
-  top: 10px;
+  top: 15px;
   width: 100px;
-  height: 30px;
+  height: 50px;
   float: right;
   font-size: 20px;
 }
