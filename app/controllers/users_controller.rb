@@ -176,25 +176,43 @@ class UsersController < ApplicationController
     seed_size = repo_info["seed_size"]
     sort_method = repo_info["sort_method"]
     entities = repo_info["entities"]
+    status = true
+    @user.repos.each do |r|
+      if r.repo_name == repo_name
+        status = false
+        break
+      end
+    end
 
+    if status
 
-    Repo.new(:repo_name => repo_name,
-             :language => language,
-             :seed_size => seed_size.to_i,
-             :sort_method => sort_method,
-             :entities => entities,
-             :status => repo_status_initializer).save
+      Repo.new(:repo_name => repo_name,
+               :language => language,
+               :seed_size => seed_size.to_i,
+               :sort_method => sort_method,
+               :entities => entities,
+               :status => repo_status_initializer).save
 
-    @user.repos << Repo.last
+      @user.repos << Repo.last
 
-    repo_directory_setup Repo.last
+      repo_directory_setup Repo.last
 
-    respond_to do |format|
+      respond_to do |format|
 
-      msg = {:status => true}
+        msg = {:status => true}
 
-      format.json {render :json => msg}
+        format.json {render :json => msg}
 
+      end
+
+    else
+      respond_to do |format|
+
+        msg = {:status => false}
+
+        format.json {render :json => msg}
+
+      end
     end
   end
 

@@ -191,6 +191,8 @@ function create_repo(){
                     }
                 });
 
+            }else{
+                alert("Repo Name duplicated. Please try another name.");
             }
         }
     });
