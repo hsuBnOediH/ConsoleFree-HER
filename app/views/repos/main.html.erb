@@ -57,7 +57,7 @@
       <div id="extra_button_wrapper">
         <button onclick="evaluate_inference()" type="button" class="btn btn-light extra_button">EVALUATE</button>
         <button onclick="generate_new_rank()" type="button" class="btn btn-light extra_button">RANK</button>
-        <button data-toggle="modal" data-target="#odal" type="button" class="btn btn-light extra_button">Result</button>
+        <button data-toggle="modal" data-target="#result_modal" type="button" class="btn btn-light extra_button">Result</button>
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@
 </div>
 
 
-<div class="modal fade" id="odal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="result_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <!--*****IMPORTANT*****-->
 
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -87,34 +87,28 @@
 
 
       <div class="modal-body">
-        <ul class="nav nav-pills">
-          <li class="active nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Results</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">R1</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">R2</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">R3</a>
-            </div>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a onclick="get_result_files()" class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-cv-result" role="tab" aria-controls="pills-home" aria-selected="true">CV-Results</a>
           </li>
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gazatteers</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">G1</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">G2</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">G3</a>
-            </div>
+          <li class="nav-item">
+            <a onclick="get_gaz_files()" class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-gaz" role="tab" aria-controls="pills-profile" aria-selected="false">Gazatteers</a>
           </li>
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Inference</a>
-            <div class="dropdown-menu">
-
-            </div>
+          <li class="nav-item">
+            <a onclick="get_inf_files()" class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-inf-result" role="tab" aria-controls="pills-contact" aria-selected="false">Inf-Results</a>
           </li>
         </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-cv-result" role="tabpanel" aria-labelledby="pills-home-tab">
+
+          </div>
+          <div class="tab-pane fade" id="pills-gaz" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+          </div>
+          <div class="tab-pane fade" id="pills-inf-result" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+          </div>
+        </div>
 
       </div>
 
@@ -160,7 +154,7 @@
     <div class="modal-content">
 
       <div class="modal-body">
-        <h1>Evaluating....Please wait for seconds.</h1>
+        <h1 class="waiting_message">Evaluating....Please wait for seconds.</h1>
       </div>
 
     </div>
@@ -172,7 +166,47 @@
     <div class="modal-content">
 
       <div class="modal-body">
-        <h1>Updating Seed....Doing Cross-Validation....Ranking Corpus....Please wait.</h1>
+        <h1 class="waiting_message">Updating Seed....Doing Cross-Validation....Ranking Corpus....Please wait.</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="after_rank_alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h1 class="waiting_message">Finish ranking the corpus!</h1>
+        <h1 class="waiting_message">Click any to continue!</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="after_evaluate_alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h1 class="waiting_message">Finish Evaluating!</h1>
+        <h1 class="waiting_message">Click any to continue!</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="after_seed_finish_alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h1 class="waiting_message">Finish ranking the corpus based on the seed!</h1>
+        <h1 class="waiting_message">Click any to continue!</h1>
       </div>
 
     </div>
