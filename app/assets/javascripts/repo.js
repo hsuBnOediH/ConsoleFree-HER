@@ -47,6 +47,9 @@ function data_from_server(){
     $.ajax({
         url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
             if(msg.seed_status){
+                if (msg.sentence[0].length === 0){
+                    alert("This is an empty line.");
+                }
                 generate_sentence(msg.sentence[0], msg.sentence[1]);
             }else{
                 $('#seed_finish_alert').modal({backdrop: 'static', keyboard: false});
@@ -96,6 +99,9 @@ function send_data() {
             $.ajax({
                 url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
                     if(msg.seed_status){
+                        if (msg.sentence[0].length === 0){
+                            alert("This is an empty line.");
+                        }
                         generate_sentence(msg.sentence[0], msg.sentence[1]);
                         update_cache();
                     }else{
@@ -237,8 +243,6 @@ function get_status(){
                 $('#current_status').text("  Annotating Corpus");
             }
             $('#corpus_progress').text(msg.status[5]+" / "+msg.status[6]);
-            alert(100*parseFloat(msg.status[3]).toString());
-            alert(parseFloat(msg.status[4]).toString());
             $('#progress_bar_finished').css('width', (100*parseFloat(msg.status[3])/parseFloat(msg.status[4])).toString()+"%");
         }
     });

@@ -65,8 +65,10 @@ class ReposController < ApplicationController
 
     status = true
 
-    if $seed_status && (input[0].length == 0)
+    # puts input[0].length.to_s
+    # puts "****************************************"
 
+    if $seed_status && input[2]
       $time = 1
       update_to_file
       $seed_status = false
@@ -163,28 +165,95 @@ class ReposController < ApplicationController
   def _helper_build_sentence
 
     input = []
+
+    seed_finish = true
+
     system("cp", $path+$sentence_path, $path+"test.txt")
-    if $line_num != 1
-       if $time >= 3
-         $line_num += 1
-       end
-      system("sed", "-i", "1,"+$line_num.to_s+"d", $path+"test.txt")
-    end
-    $time += 1
-    File.readlines($path+"test.txt").each do |line|
-      if line == "\n"
-        break
+
+    if $line_num == 1
+      File.readlines($path+"test.txt").each do |line|
+        seed_finish = false
+        # puts "*************************line 1"
+        # puts line
+        if line == "\n"
+          break
+        end
+        $line_num += 1
+        $time += 1
+        word_tag = line.split
+        input << {word: word_tag[1], tag:word_tag[0]}
       end
-      $line_num += 1
-      word_tag = line.split
-      input << {word: word_tag[1], tag:word_tag[0]}
+    else
+      system("sed", "-i", "1,"+$line_num.to_s+"d", $path+"test.txt")
+
+      File.readlines($path+"test.txt").each do |line|
+        seed_finish = false
+        # puts "*************************line 2"
+        # puts line
+        if line == "\n"
+          $line_num += 1
+          # puts "***************"+$line_num.to_s
+          break
+        end
+        $line_num += 1
+        $time += 1
+        word_tag = line.split
+        input << {word: word_tag[1], tag:word_tag[0]}
+      end
     end
 
     system("rm", $path+"test.txt")
-
     @repo.update(status: update_status)
+    [input, $entities.split, seed_finish]
 
-    [input, $entities.split]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # input = []
+    # puts $line_num.to_s + "************************"
+    # t=0
+    # system("cp", $path+$sentence_path, $path+"test.txt")
+    # if $line_num != 1
+    #    if $time >= 3
+    #      $line_num += 1
+    #    end
+    #   system("sed", "-i", "1,"+$line_num.to_s+"d", $path+"test.txt")
+    # end
+    # $time += 1
+    # File.readlines($path+"test.txt").each do |line|
+    #   if (line == "\n") && (t!=0)
+    #     break
+    #   end
+    #   t += 1
+    #   $line_num += 1
+    #   word_tag = line.split
+    #   input << {word: word_tag[1], tag:word_tag[0]}
+    # end
+    # puts $line_num.to_s + "************************"
+    # system("rm", $path+"test.txt")
+    #
+    # @repo.update(status: update_status)
+    #
+    # [input, $entities.split]
 
   end
 
