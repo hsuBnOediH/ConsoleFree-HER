@@ -61,34 +61,29 @@ class ReposController < ApplicationController
 
   def get_sentence
 
-    if $seed_status and $line_num >= $seed_line_total
+    input = _helper_build_sentence
 
+    status = true
+
+    if $seed_status && (input[0].length == 0)
+
+      $time = 1
       update_to_file
       $seed_status = false
       $line_num = 1
       $prev_line_num = 1
-      $time = 1
-      @repo.update(status, update_status)
+      @repo.update(status: update_status)
 
-      respond_to do |format|
+      status = false
+    end
 
-        msg = {:status => false}
+    respond_to do |format|
 
-        format.json {render :json => msg}
+      msg = {:seed_status => status ,:message => "Success!",
+             :sentence => input}
 
-      end
+      format.json {render :json => msg}
 
-    else
-      input = _helper_build_sentence
-
-      respond_to do |format|
-
-        msg = {:status => true, :message => "Success!",
-               :sentence => input}
-
-        format.json {render :json => msg}
-
-      end
     end
 
   end
@@ -124,6 +119,17 @@ class ReposController < ApplicationController
     $cache[$name][1] = [false, -999]
 
     @repo.update(status: update_status)
+
+    if $time == 1
+      return
+    end
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
 
   end
 
@@ -173,6 +179,7 @@ class ReposController < ApplicationController
       word_tag = line.split
       input << {word: word_tag[1], tag:word_tag[0]}
     end
+
     system("rm", $path+"test.txt")
 
     @repo.update(status: update_status)
@@ -214,6 +221,7 @@ class ReposController < ApplicationController
     system("mv", "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod+".preTagged",
            "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod)
 
+    Dir.chdir $return_path
 
     respond_to do |format|
 
@@ -222,45 +230,13 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-  end
-
-  def feature_engineering_and_train
-
-    Dir.chdir $path
-
-    system("cp", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed",
-           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".alwaysTrain")
-    system("python", "Scripts/update_gazatteers.py", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed",
-           "Data/Gazatteers/*")
-
-    system("python", "Scripts/cross_validation.py", "-testable", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed",
-           "-fullCorpus", "Data/Prepared/fullCorpus.txt", "-identify_best_feats", "True", "-train_best",
-           "True", "-unannotated", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated")
-
-    system("sh", "Scripts/tag_get_final_results.sh", "0", "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod,
-           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".alwaysTrain", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated",
-           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed", "Data/Prepared/fullCorpus.txt",
-           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.pred", "Results/fullCorpus.final.txt",
-           "Results/fullCorpus.final-list.txt", "crf")
-    system("cp","-r", "Data/Gazatteers", "Results/Gazatteers")
-    system("cp", "-rf", "Results", "Results_seed")
-    system("rm", "-rf", "Results")
-    system("mkdir", "Results")
-
-    Dir.chdir $return_path
-
-    rank_and_annotate
 
   end
 
-  def rank_and_annotate
+  def generate_new_rank
 
     Dir.chdir $path
 
-    system("sh", "Scripts/tag_and_rank.sh", "Models/CRF/best_seed.cls", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.fts",
-           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.probs", "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".unannotated.fts",
-           "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed.fts", $sortMethod, "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod,
-           "None", $entities)
     system("python Scripts/pre-tag_gazatteers.py Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod + " " +
                $entities+" Data/Gazatteers/* > Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod+".preTagged")
     system("mv", "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod+".preTagged",
@@ -268,9 +244,17 @@ class ReposController < ApplicationController
 
     Dir.chdir $return_path
 
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
+
   end
 
-  def inference_and_evaluate
+  def evaluate_inference
 
     lines_annotated=$line_num
 
@@ -295,11 +279,18 @@ class ReposController < ApplicationController
 
     Dir.chdir $return_path
 
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
   end
 
   def update_status
 
-    return $line_num.to_s + " " + $prev_line_num.to_s + " " + $seed_status.to_s + " " + $seed_line_annotated.to_s+
+    $line_num.to_s + " " + $prev_line_num.to_s + " " + $seed_status.to_s + " " + $seed_line_annotated.to_s+
         " " + $seed_line_total.to_s + " " + $corpus_line_annotated.to_s + " " + $corpus_line_total.to_s + " " + $time.to_s
   end
 

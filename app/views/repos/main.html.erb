@@ -2,7 +2,7 @@
 <!--<h1>repo name: <%#= @repo.repo_name %></h1>-->
 <!--<h1>seed_size: <%#= @repo.seed_size.to_s %></h1>-->
 <!--<h1>owner: <%#= @repo.users.first.username %></h1>-->
-<div class="container">
+<div id="main_container" class="container">
   <div id="info_center">
     <div id="project_info">
       <div id="project_info_wrapper">
@@ -55,8 +55,8 @@
 
       <h2>MORE OPTIONS</h2>
       <div id="extra_button_wrapper">
-        <button type="button" class="btn btn-light extra_button">RANK</button>
-        <button type="button" class="btn btn-light extra_button" >EVALUATE</button>
+        <button onclick="evaluate_inference()" type="button" class="btn btn-light extra_button">EVALUATE</button>
+        <button onclick="generate_new_rank()" type="button" class="btn btn-light extra_button">RANK</button>
         <button data-toggle="modal" data-target="#odal" type="button" class="btn btn-light extra_button">Result</button>
       </div>
     </div>
@@ -130,6 +130,54 @@
   </div>
 </div>
 
+
+<div class="modal fade" id="update_alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h1>Updating data to file....Please wait.</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="rank_alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h1>Ranking....Please wait for seconds.</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="evaluate_alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h1>Evaluating....Please wait for seconds.</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="seed_finish_alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h1>Updating Seed....Doing Cross-Validation....Ranking Corpus....Please wait.</h1>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!--<div id="button_area" style="background: red">-->
 <!--  <button onclick="send_data()">send data to sever!</button>-->

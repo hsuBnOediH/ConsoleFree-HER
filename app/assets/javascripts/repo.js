@@ -45,12 +45,11 @@ function data_from_server(){
 
     $.ajax({
         url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
-            if(msg.status){
+            alert(msg.seed_status);
+            if(msg.seed_status){
                 generate_sentence(msg.sentence[0], msg.sentence[1]);
             }else{
-                alert("Seed Finished! Doing Cross Validation and Ranking now! Please wait for seconds!");
 
-                update_after_seed();
             }
         }
     });
@@ -79,8 +78,6 @@ function generate_sentence(sentence, entities){
 }
 
 
-
-
 function send_data() {
 
     let jsonArrayStr="";
@@ -96,9 +93,17 @@ function send_data() {
         success: function(){
             $.ajax({
                 url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
-                    generate_sentence(msg.sentence[0], msg.sentence[1]);
-                    update_cache();
+                    alert(msg.seed_status);
+                    if(msg.seed_status){
+                        generate_sentence(msg.sentence[0], msg.sentence[1]);
+                        update_cache();
+                    }else{
+                        alert("sssssssss");
+                        $('#seed_finish_alert').modal({backdrop: 'static', keyboard: false});
+
+                        //update_after_seed();
                     }
+                }
             });
         }
     });
@@ -198,20 +203,25 @@ function cache_to_annotate(sentence_div) {
     update_cache();
 }
 
-function update_data(){
+function update_data() {
+
+    $('#update_alert').modal({backdrop: 'static', keyboard: false});
+
 
     data_to_server();
+
     $("#cache_data").empty();
 
     $.ajax({
-        url: url_path+'update_to_file',
+        url: url_path + 'update_to_file',
         type: 'POST',
         cache: false,
         processData: false,
         contentType: false,
-        success: function(){
+        success: function () {
             data_from_server();
             get_status();
+            $('#update_alert').modal('hide');
 
         }
     });
@@ -233,7 +243,6 @@ function get_status(){
         }
     });
 }
-
 
 
 function getDropDown(availableOptionArray, id) {
@@ -258,16 +267,6 @@ function getTagColor(tag, availableOptionArray) {
     return result;
 }
 
-function update_rank(){
-
-    $.ajax({
-        url: 'feature_engineering_and_train',
-        type: 'POST',
-        cache: false,
-        processData: false,
-        contentType: false
-    });
-}
 
 function update_after_seed(){
 
@@ -279,8 +278,47 @@ function update_after_seed(){
         contentType: false,
         success: function(msg){
             if(msg.status) {
-                alert("You can either check the result or continue annotating the most useful sentences");
+                $("#seed_finish_alert").modal('hide');
             }
         }
     });
 }
+
+function evaluate_inference(){
+
+    $('#evaluate_alert').modal({backdrop: 'static', keyboard: false});
+
+    $.ajax({
+        url: url_path + 'evaluate_inference',
+        type: 'POST',
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(msg){
+            if(msg.status) {
+                $("#evaluate_alert").modal('hide');
+
+            }
+        }
+    });
+}
+
+function generate_new_rank(){
+
+    $('#rank_alert').modal({backdrop: 'static', keyboard: false});
+
+    $.ajax({
+        url: url_path + 're_rank',
+        type: 'POST',
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(msg){
+            if(msg.status) {
+                $("#rank_alert").modal('hide');
+            }
+        }
+    });
+
+}
+

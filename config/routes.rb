@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   post '/users/create',to:"users#create"
   post '/users/validate',to:"users#validate"
 
+  post '/:username/:repo_name/generate_new_rank', to: "repos#generate_new_rank"
+  post '/:username/:repo_name/evaluate_inference', to: "repos#evaluate_inference"
   post '/:username/:repo_name/train_and_rank_seed', to: "repos#train_and_rank_seed"
   post '/:username/:repo_name/send_annotating_cache', to: "repos#send_annotating_cache"
   post '/:username/:repo_name/send_sentence', to: "repos#send_sentence"
