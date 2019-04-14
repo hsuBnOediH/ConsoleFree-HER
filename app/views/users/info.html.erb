@@ -14,6 +14,7 @@
 
   </div>
 
+
   <div id="repo_card_space">
 
     <% @user_repo_array.zip(@user_repo_info).each do |repo_url, repo_info| %>
@@ -155,7 +156,7 @@
           <label for="sortMethod">SortMethod</label>
 
           <!--*****IMPORTANT*****-->
-          <input id="sortMethod" value="Pretag_Delax" type="text" class="form-control">
+          <input id="sortMethod" value="preTag_delex" type="text" class="form-control">
           <!--*****IMPORTANT*****-->
 
           <label for="seed_size">Seed Size</label>
@@ -212,8 +213,3 @@
     </div>
   </div>
 </div>
-
-<button id="upload_alert" class="btn btn-primary" type="button" disabled hidden>
-  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  Upload files....Setup Repository....Please wait.
-</button>

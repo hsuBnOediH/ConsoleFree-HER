@@ -10,11 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require rails-ujs
 //= require bootstrap
 //= require turbolinks
-//= require_tree
+
 
 let uploadTagArray = [];
 let availableOptionArray = [];
@@ -45,11 +46,12 @@ function data_from_server(){
 
     $.ajax({
         url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
-            alert(msg.seed_status);
             if(msg.seed_status){
                 generate_sentence(msg.sentence[0], msg.sentence[1]);
             }else{
+                $('#seed_finish_alert').modal({backdrop: 'static', keyboard: false});
 
+                update_after_seed();
             }
         }
     });
@@ -93,15 +95,13 @@ function send_data() {
         success: function(){
             $.ajax({
                 url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
-                    alert(msg.seed_status);
                     if(msg.seed_status){
                         generate_sentence(msg.sentence[0], msg.sentence[1]);
                         update_cache();
                     }else{
-                        alert("sssssssss");
                         $('#seed_finish_alert').modal({backdrop: 'static', keyboard: false});
 
-                        //update_after_seed();
+                        update_after_seed();
                     }
                 }
             });
@@ -278,7 +278,10 @@ function update_after_seed(){
         contentType: false,
         success: function(msg){
             if(msg.status) {
+                update_cache();
+                get_status();
                 $("#seed_finish_alert").modal('hide');
+                $("#after_seed_finish_alert").modal('toggle');
             }
         }
     });
@@ -297,6 +300,7 @@ function evaluate_inference(){
         success: function(msg){
             if(msg.status) {
                 $("#evaluate_alert").modal('hide');
+                $("#after_evaluate_alert").modal('toggle');
 
             }
         }
@@ -308,7 +312,7 @@ function generate_new_rank(){
     $('#rank_alert').modal({backdrop: 'static', keyboard: false});
 
     $.ajax({
-        url: url_path + 're_rank',
+        url: url_path + 'generate_new_rank',
         type: 'POST',
         cache: false,
         processData: false,
@@ -316,9 +320,50 @@ function generate_new_rank(){
         success: function(msg){
             if(msg.status) {
                 $("#rank_alert").modal('hide');
+                $("#after_rank_alert").modal('toggle');
+
             }
         }
     });
 
 }
 
+
+function get_result_files(){
+
+    $('#pills-cv-result').empty();
+
+    // $.ajax({
+    //     url: url_path+"get-cv-result", type: "GET", dataType: "json", async: false, success: function (msg) {
+    //
+    //     }
+    // });
+
+}
+
+function get_gaz_files(){
+
+    $('#pills-gaz').empty();
+
+    $.ajax({
+        url: url_path+"get_gaz", type: "GET", dataType: "json", async: false, success: function (msg) {
+            for (let i=0; i<msg.files.length; i++){
+                $('#pills-gaz').append('<p><a href="'+url_path+'repos/download/'+msg.files[i]+'">'+msg.files[i]+'</a></p>');
+            }
+        }
+    });
+
+}
+
+function get_inf_files(){
+
+    $('#pills-inf-result').empty();
+
+    $.ajax({
+        url: url_path+"get_inf_result", type: "GET", dataType: "json", async: false, success: function (msg) {
+            for (let i=0; i<msg.files.length; i++){
+                $('#pills-inf-result').append('<p><a href="'+url_path+'repos/download/'+msg.files[i]+'">'+msg.files[i]+'</a></p>');
+            }
+        }
+    });
+}

@@ -364,19 +364,15 @@ class UsersController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_user
+    def set_user
 
-    @user = User.find_by_username(params[:username])
+      @user = User.find_by_username(params[:username])
 
-  end
+    end
 
-  def set_repo_path
-
-  end
-
-  def user_params
-    params.require(:user).permit(:username, :password)
-  end
+    def user_params
+      params.require(:user).permit(:username, :password)
+    end
 
 end
 

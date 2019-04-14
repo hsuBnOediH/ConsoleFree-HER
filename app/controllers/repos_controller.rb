@@ -288,6 +288,85 @@ class ReposController < ApplicationController
     end
   end
 
+  def get_cv_result
+
+    files = []
+    Dir.each_child($path) do |x|
+      if x.includes("Results_")
+        Dir.each_child($path + x) do |f|
+
+        end
+
+      end
+    end
+
+  end
+
+  def download_gaz
+    send_file($path + params[:f1] + "/" +"Gazatteers/"+ params[:file] + ".gaz")
+  end
+
+  def download_inf_result1
+
+    send_file($path + params[:f1] + "/" + "fullCorpus.final.txt")
+
+  end
+
+  def download_inf_result2
+
+    send_file($path + params[:f1] + "/" + "fullCorpus.final-list.txt")
+
+  end
+
+  def get_gaz
+
+    files = []
+    Dir.each_child($path) do |x|
+      if x.to_s.include?("Results_")
+        Dir.each_child($path+x+"/Gazatteers/") do |f|
+          files << x+"/Gazatteers/"+f
+        end
+
+      end
+    end
+
+    respond_to do |format|
+
+      msg = {:files => files}
+
+      format.json {render :json => msg}
+
+    end
+
+
+  end
+
+
+  def get_inf_result
+
+    files = []
+    Dir.each_child($path) do |x|
+      if x.to_s.include?("Results_")
+        files << x + "/fullCorpus.final.txt"
+        files << x + "/fullCorpus.final-list.txt"
+
+      end
+    end
+
+    respond_to do |format|
+
+      msg = {:files => files}
+
+      format.json {render :json => msg}
+
+    end
+
+  end
+
+
+
+
+
   def update_status
 
     $line_num.to_s + " " + $prev_line_num.to_s + " " + $seed_status.to_s + " " + $seed_line_annotated.to_s+
