@@ -77,9 +77,9 @@ function get_repo_user(button){
 
             let names = msg.username.split(" ");
 
-            $('#users_repo').empty();
+            $('#users_repo_list').empty();
             for (let i=0; i<names.length; i++){
-                $('#users_repo').append('<p>'+names[i]+'</p>');
+                $('#users_repo_list').append('<p>'+names[i]+'</p>');
             }
         }
     });
