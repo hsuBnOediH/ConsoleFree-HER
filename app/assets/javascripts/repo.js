@@ -371,3 +371,7 @@ function get_inf_files(){
         }
     });
 }
+
+function refresh_page(){
+    window.location.reload();
+}
