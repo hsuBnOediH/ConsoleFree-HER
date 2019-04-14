@@ -175,7 +175,7 @@ class UsersController < ApplicationController
     language = repo_info["language"]
     seed_size = repo_info["seed_size"]
     sort_method = repo_info["sort_method"]
-    entities = repo_info["entities"]
+    entities = repo_info["entities"].slice(0..-1)
     status = true
     @user.repos.each do |r|
       if r.repo_name == repo_name

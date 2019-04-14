@@ -37,7 +37,7 @@ class ReposController < ApplicationController
     respond_to do |format|
 
       msg = {:status => "ok", :message => "Success!",
-             :sentence => [$cache[$name][0][$cache[$name][1][1]],$entities.split]}
+             :sentence => [$cache[$name][0][$cache[$name][1][1]],$entities.split('_')]}
 
       format.json {render :json => msg}
 
@@ -204,56 +204,8 @@ class ReposController < ApplicationController
 
     system("rm", $path+"test.txt")
     @repo.update(status: update_status)
-    [input, $entities.split, seed_finish]
+    [input, $entities.split('_'), seed_finish]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # input = []
-    # puts $line_num.to_s + "************************"
-    # t=0
-    # system("cp", $path+$sentence_path, $path+"test.txt")
-    # if $line_num != 1
-    #    if $time >= 3
-    #      $line_num += 1
-    #    end
-    #   system("sed", "-i", "1,"+$line_num.to_s+"d", $path+"test.txt")
-    # end
-    # $time += 1
-    # File.readlines($path+"test.txt").each do |line|
-    #   if (line == "\n") && (t!=0)
-    #     break
-    #   end
-    #   t += 1
-    #   $line_num += 1
-    #   word_tag = line.split
-    #   input << {word: word_tag[1], tag:word_tag[0]}
-    # end
-    # puts $line_num.to_s + "************************"
-    # system("rm", $path+"test.txt")
-    #
-    # @repo.update(status: update_status)
-    #
-    # [input, $entities.split]
 
   end
 

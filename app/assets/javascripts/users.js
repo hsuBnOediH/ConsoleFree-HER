@@ -128,7 +128,7 @@ function create_repo(){
 
     for(let i=0; i<entity_num; i++){
 
-        entities +=　$('#entity_' + i.toString()).val() + " ";
+        entities +=　$('#entity_' + i.toString()).val() + "_";
     }
 
 
