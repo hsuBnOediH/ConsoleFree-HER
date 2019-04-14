@@ -151,26 +151,42 @@ function create_repo(){
         processData: false,
         contentType: false,
         success: function(msg){
-            if(msg.status){
+            let filesInfo;
+            if (msg.status) {
                 let file = $('#file_upload').prop('files');
 
-                recursive_upload(file, 0, a+'cp_file');
+                recursive_upload(file, 0, a + 'cp_file');
 
                 let gaz = $('#gaz_upload').prop('files');
-                alert(gaz.length);
 
-                recursive_upload(gaz, 0, a+'cp_gaz');
+                recursive_upload(gaz, 0, a + 'cp_gaz');
 
-                let repo = JSON.stringify({name: repo_name});
+
+                filesInfo = {};
+                filesInfo.name= repo_name;
+
+                let fileArray = [];
+                let gazArray=[];
+                for (let i = 0; i < file.length; i++) {
+                    fileArray.push(file[i].name.toString())
+                }
+                for(let i= 0; i<gaz.length;i++){
+                    gazArray.push(gaz[i].name.toString())
+                }
+
+                filesInfo.fileArray = fileArray;
+                filesInfo.gazArray = gazArray;
+
+                let repo = JSON.stringify(filesInfo);
                 $.ajax({
-                    url: a+"generate_seed",
+                    url: a + "generate_seed",
                     type: 'POST',
                     data: repo,
                     cache: false,
                     async: false,
                     processData: false,
                     contentType: false,
-                    success: function(){
+                    success: function () {
                         alert("Repo Created.");
                     }
                 });

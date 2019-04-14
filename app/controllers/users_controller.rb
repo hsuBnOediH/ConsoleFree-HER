@@ -58,6 +58,7 @@ class UsersController < ApplicationController
 
     Dir.chdir 'HER-data/'
 
+
     File.open("temp" + file_count.to_s + ".txt", 'wb') {|file| file.write(data)}
     system("sed", "-i", "1,4d;$d", "temp" + file_count.to_s + ".txt")
     system("mv", "temp" + file_count.to_s + ".txt", name + "/Data/Gazatteers/")
@@ -83,14 +84,16 @@ class UsersController < ApplicationController
     dir = 'HER-data/' + name + "/Data/Original/"
     file_count = Dir[File.join(dir, '**', '*')].count {|file| File.file?(file)}
 
+
     Dir.chdir 'HER-data/'
+
 
     File.open("temp" + file_count.to_s + ".txt", 'wb') {|file| file.write(data)}
     system("sed", "-i", "1,4d;$d", "temp" + file_count.to_s + ".txt")
     system("mv", "temp" + file_count.to_s + ".txt", name + "/Data/Original/")
 
     Dir.chdir '../'
-    puts "**************************"
+
 
     respond_to do |format|
 
@@ -118,7 +121,8 @@ class UsersController < ApplicationController
 
     info = JSON.parse(request.body.read)
     name = info["name"]
-
+    file_name_array = info["fileArray"]
+    gaz_name_array = info["gazArray"]
 
     re = find_repo name
 
@@ -128,6 +132,21 @@ class UsersController < ApplicationController
     seed_size = re.seed_size.to_i
 
     Dir.chdir path
+
+    index = 0
+    file_name_array.each do |file_name|
+      system("mv","Data/Original/temp"+index.to_s+".txt", "Data/Original/"+file_name.to_s)
+      index += 1
+    end
+
+
+    index = 0
+    gaz_name_array.each do |file_name|
+      system("mv","Data/Gazatteers/temp"+index.to_s+".txt", "Data/Gazatteers/"+file_name.to_s)
+      index += 1
+    end
+
+
 
     system("sh", "Scripts/prepare_original_texts.sh", "Scripts/preprocess.py", lg, "2>", "log.txt")
     system("python", "Scripts/rankSents.py", "-corpus", "Data/Prepared/fullCorpus.txt", "-sort_method", "random_seed",
@@ -182,15 +201,19 @@ class UsersController < ApplicationController
   def delete_repo
 
     user_info = request.body.read
-
     user_info = JSON.parse(user_info)
-
     user_info = user_info["url"].split("_")
 
     repo_name = user_info[1]
-
     re = find_repo repo_name
+    folder_name = re.id.to_s + '_' + re.repo_name.to_s
+
+    Dir.chdir "HER-data"
+    system("rm", "-rf", folder_name)
+    Dir.chdir "../"
+
     Repo.find(re.id).destroy
+
 
 
     respond_to do |format|
