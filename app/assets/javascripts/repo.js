@@ -18,7 +18,7 @@
 
 let uploadTagArray = [];
 let availableOptionArray = [];
-let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B"];
+let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B","#FF9179","#FF79c5","#FFFF79","#d281FF","#caff79","#a089ff","#e8ff79"];
 let url_path = window.location.pathname + "/";
 
 $(document).ready(function () {
