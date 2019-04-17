@@ -18,14 +18,21 @@
 
 
 $(document).ready(function(){
-    $("#sign_up_button").off("click");
-    $("#signup_login_button").off("click");
-    $("#signup_login_button").on('click',function () {
-        changeToSignUp();
-    }) ;
-    $("#sign_up_button").on("click",function () {
-        sendLogIn();
-    });
+    if(window.location.pathname === "/") {
+        $("html").css("zoom","0.58");
+        $("#sign_up_button").off("click");
+        $("#signup_login_button").off("click");
+        $("#signup_login_button").on('click', function () {
+            changeToSignUp();
+        });
+        $("#sign_up_button").on("click", function () {
+            sendLogIn();
+        });
+    }else{
+        $("html").css("zoom","0.81");
+    }
+
+
 });
 
 
