@@ -232,8 +232,6 @@ class UsersController < ApplicationController
 
     Repo.find(re.id).destroy
 
-
-
     respond_to do |format|
 
       msg = {:status => true}

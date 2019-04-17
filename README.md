@@ -1,16 +1,15 @@
-# User-Friendly Interface for Humanity Entity Recognizer ---- An Active Learning annotation System for NER annotators
+# ConsoleFree HER
+A well-visualized tool for Humanity Entity Recognizer
 
-## Presentation
-### Introduction
---- NER  
---- Annotation Task  
---- HER approach  
---- Pipeline
-### Demo
-### Details
---- back-end  
---- server-enKd  
---- front-end
-### Problems and Solutions
-### What next
-### Question, Conclusion, and Acknowledgement
+## Introduction
+
+## Background
+
+## Front-End
+
+## Server-End
+
+## Future work
+
+## Acknowledgement
+

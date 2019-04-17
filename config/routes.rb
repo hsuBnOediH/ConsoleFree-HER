@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get '/:username', to:"users#info"
   get '/:username/:repo_name', to:"repos#main"
 

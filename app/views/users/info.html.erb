@@ -132,52 +132,91 @@
       <div class="modal-body">
         <div class="md-form">
 
-          <label for="repo_name">Repository Name</label>
+          <h1 style="font-size: 17px; font-weight: bold; color: #080808;">Repository Name</h1>
 
           <!--*****IMPORTANT*****-->
           <input id="repo_name" value="Demo" type="text" class="form-control">
-          <!--*****IMPORTANT*****-->
 
-          <label for="language">Language</label>
+          <h1></h1>
+          <div>
+            <div style="float: left"><span class="repo_form_select" id="language">Language: en - English</span></div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Language
+            </button>
+            <div class="dropdown-menu">
+              <div class="dropdown-item btn" onclick="change_language(this)">ca - Catalan</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">cs - Czech</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">de - German</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">el - Modern Greek</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">en - English</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">es - Spanish</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">fi - Finnish</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">fr - French</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">ga - Irish</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">hu - Hungarian</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">is - Icelandic</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">it - Italian</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">lt - Lithuanian</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">lv - Latvian</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">nl - Dutch</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">pl - Polish</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">pt - Portuguese</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">ro - Romanian</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">ru - Russian</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">sk - Slovak</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">sl - Slovenian</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">sv - Swedish</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">ta - Tamil</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">yue - Cantonese</div>
+              <div class="dropdown-item btn" onclick="change_language(this)">zh - Mandarin</div>
+            </div>
+          </div>
+          </div>
 
-          <!--*****IMPORTANT*****-->
-          <input id="language" value="English" type="text" class="form-control">
-          <!--*****IMPORTANT*****-->
+          <h1></h1>
 
-          <label for="entities">Entities And Colors</label>
+          <h1></h1>
+          <div>
+            <div style="float: left"><span class="repo_form_select" id="sortMethod">SortMethod: preTag_delex</span></div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select SortMethod
+            </button>
+            <div class="dropdown-menu">
+              <div class="dropdown-item btn" onclick="change_sortMethod(this)">preTag_delex</div>
+              <div class="dropdown-item btn" onclick="change_sortMethod(this)">hardCappedUNKs</div>
+              <div class="dropdown-item btn" onclick="change_sortMethod(this)">rapidEntityDiversity</div>
+              <div class="dropdown-item btn" onclick="change_sortMethod(this)">rapidUncertainty</div>
+              <div class="dropdown-item btn" onclick="change_sortMethod(this)">random</div>
+            </div>
+          </div>
+          </div>
+          <h1></h1>
 
-          <!--*****IMPORTANT*****-->
+
+          <h1 style="font-size: 17px; font-weight: bold; color: #080808;">Entity Types</h1>
+
           <div id="entities"><input id="entity_0" value="GEO" type="text" class="form-control"></div>
+          <p></p>
           <div>
             <button onclick="add_entity()" type="button" class="btn btn-outline-secondary">Add More</button>
           </div>
-          <!--*****IMPORTANT*****-->
 
-          <label for="sortMethod">SortMethod</label>
+          <h1></h1>
 
-          <!--*****IMPORTANT*****-->
-          <input id="sortMethod" value="preTag_delex" type="text" class="form-control">
-          <!--*****IMPORTANT*****-->
-
-          <label for="seed_size">Seed Size</label>
-
-          <!--*****IMPORTANT*****-->
+          <h1 style="font-size: 17px; font-weight: bold; color: #080808;">Seed Size</h1>
           <input id="seed_size" value="100" type="text" class="form-control">
-          <!--*****IMPORTANT*****-->
 
 
           <form class="md-form" action="#">
             <div class="file-field">
               <div class="btn btn-primary btn-sm float-left choose_file">
-                <span>Choose files</span>
-
-                <!--*****IMPORTANT*****-->
+                <span>Upload Original Texts</span>
                 <input id="file_upload" name="file" type="file" multiple>
-                <!--*****IMPORTANT*****-->
-
               </div>
               <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                <p style="font-size: 15px; font-weight: bold; color: #080808;">Files should end with .txt or .html</p>
               </div>
             </div>
           </form>
@@ -186,21 +225,17 @@
           <form class="md-form" action="#">
             <div class="file-field">
               <div class="btn btn-primary btn-sm float-left choose_file">
-                <span>Choose files</span>
-
-                <!--*****IMPORTANT*****-->
+                <span>Upload Gazatteers</span>
                 <input id="gaz_upload" name="gaz" type="file" multiple>
-                <!--*****IMPORTANT*****-->
-
               </div>
               <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                <p style="font-size: 15px; font-weight: bold; color: #080808;">Files should end with .gaz</p>
               </div>
             </div>
           </form>
-
 
         </div>
+
       </div>
       <div class="modal-footer">
 

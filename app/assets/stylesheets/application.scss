@@ -190,6 +190,7 @@
   float: right;
   height: 50px;
   font-size: 20px;
+  color: #FFF;
 }
 
 #header_citation:hover{
@@ -612,4 +613,13 @@ hr {
 #users_repo_list{
   font-size: 20px;
   font-weight: bold;
+}
+
+.repo_form_select{
+  position: relative;
+  top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #080808;
+  padding-right: 20px;
 }

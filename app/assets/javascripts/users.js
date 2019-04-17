@@ -121,8 +121,8 @@ function create_repo(){
 
 
     let repo_name = $("#repo_name").val();
-    let language = $('#language').val();
-    let sort_method = $('#sortMethod').val();
+    let language = $('#language').text().substring(10,12);
+    let sort_method = $('#sortMethod').text().substring(12);
     let seed_size = $('#seed_size').val();
     let entities = "";
 
@@ -225,6 +225,19 @@ function recursive_upload(data, index, path){
     });
 }
 
+
 function _cancel(){
     window.location.reload();
+}
+
+function change_language(language_selection){
+
+    $("#language").text("Language: " + language_selection.innerHTML.toString());
+
+}
+
+function change_sortMethod(sortMethod_selection){
+
+    $("#sortMethod").text("SortMethod: " + sortMethod_selection.innerHTML.toString());
+
 }
