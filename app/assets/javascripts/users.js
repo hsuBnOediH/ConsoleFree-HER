@@ -14,15 +14,9 @@
 //= require rails-ujs
 //= require bootstrap
 //= require turbolinks
-//= require_tree
 
 let entity_num = 1;
 let user_num = 1;
-
-$(document).ready(function(){
-
-});
-
 
 function add_entity(){
     $('#entities').append('<input id="entity_'+entity_num.toString()+'" value="" type="text" class="form-control">');
@@ -116,7 +110,6 @@ function delete_repo(button){
 
 
 function create_repo(){
-
 
 
 

@@ -23,9 +23,12 @@ let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B","#FF9179","#FF79c5","#
 let url_path = window.location.pathname + "/";
 
 $(document).ready(function () {
-    welcome_alert();
-    data_from_server();
-    update_cache();
+
+    if (window.location.pathname.split('/').length-1 === 2) {
+        welcome_alert();
+        data_from_server();
+        update_cache();
+    }
 });
 
 function welcome_alert(){
