@@ -29,7 +29,7 @@ A well-visualized tool for Humanity Entity Recognizer
 * Li, Feng ---- li.8906@osu.edu  
 * Chen, Xiaoyuan ---- chen.6400@osu.edu
 
-*All contributors have equally contributions to this work.*
+*All contributors have equal contributions to this work.*
 
 #### Information
 * This project is developed by FeatureNotBug as a class project in CSE3901(SP19 8117)
