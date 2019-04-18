@@ -18,13 +18,10 @@
         <h4>SEED SIZE:</h4>
         <p><%= @repo.seed_size %></p>
         <h4>STATUS:</h4>
-        <p><span class="dot"></span><span id="current_status"><%=  @repo.status.split[2]?("  Annotating Seed"):("  Annotating Corpus")  %></span></p>
-
+        <p><span class="dot"></span><span id="current_status"><%=  @repo.status.split[2]?("Annotating Seed"):("Annotating Corpus")  %></span></p>
       </div>
     </div>
-
     <hr>
-
     <div id="progress">
       <h2>PROGRESS</h2>
       <h4>CORPUSE</h4>
@@ -34,10 +31,7 @@
         <div id="progress_bar_finished" class="progress-bar bg-success" role="progressbar" style="width: <%= @repo.status.split[5].to_f/@repo.status.split[6].to_f%>" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
-
     <hr>
-
-
     <div id="sentence_history">
       <h2>HISTORY</h2>
       <div id="cache_block">
@@ -52,21 +46,17 @@
 
     <hr>
     <div id="extra_button_space">
-
       <h2>MORE OPTIONS</h2>
       <div id="extra_button_wrapper">
-        <button onclick="evaluate_inference()" type="button" class="btn btn-light extra_button">EVAL</button>
-        <button onclick="generate_new_rank()" type="button" class="btn btn-light extra_button">RANK</button>
-        <button data-toggle="modal" data-target="#result_modal" type="button" class="btn btn-light extra_button">Result</button>
+        <button onclick="evaluate_and_rank()" type="button" class="btn btn-light extra_button" style="width: 120px">EVAL && RANK</button>
+        <button data-toggle="modal" data-target="#result_modal" type="button" class="btn btn-light extra_button" style="width: 120px">Result</button>
       </div>
     </div>
   </div>
   <div id="work_space_wrapper">
     <div id="sentence_block">
       <p><span onclick="refresh_page()">Click Here to Start</span></p>
-
     </div>
-
     <div id="button_space">
       <div id="next_sentence_button" class="bottom_button" onclick="send_data()">
         <%= image_tag("next_btn_img.png", height: '80', width: '80') %>
@@ -78,13 +68,10 @@
   </div>
 </div>
 
-
 <div class="modal fade" id="result_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <!--*****IMPORTANT*****-->
 
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-
 
       <div class="modal-body">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -207,38 +194,3 @@
     </div>
   </div>
 </div>
-
-<!--<div id="button_area" style="background: red">-->
-<!--  <button onclick="send_data()">send data to sever!</button>-->
-<!--  <button onclick="update_data()">Update data to file</button>-->
-<!--  <button onclick="update_rank()">finish seed, update and rank</button>-->
-<!--</div>-->
-<!--<div id="annotating_status">-->
-<!--  None-->
-<!--</div>-->
-<!--<div id="seed_status">-->
-<!--  None-->
-<!--</div>-->
-<!--<div id="corpus_status">-->
-<!--  None-->
-<!--</div>-->
-
-
-<!--<div id="text_window">-->
-<!--  <div id="sentence_block">-->
-<!--    <span class="word" id="word1">word1</span>-->
-<!--    <span class="word" id="word2">word2</span>-->
-<!--    <span class="word" id="word3">word3</span>-->
-<!--    <span class="word" id="word4">word4</span>-->
-<!--  </div>-->
-<!--  <div id="cache_block">-->
-<!--    <span class="word" id="word5">word5</span>-->
-<!--    <span class="word" id="word6">word6</span>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-<!--<form>-->
-<!--  <input type="file" id="avatar" name="avatar">-->
-<!--  <button type="button" onclick="upload()">保存</button>-->
-<!--</form>-->

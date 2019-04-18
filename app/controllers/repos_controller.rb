@@ -30,6 +30,14 @@ class ReposController < ApplicationController
 
     $cache[$name][1] = [true, id.to_i]
 
+    respond_to do |format|
+
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
+
   end
 
   def get_cache_sentence
@@ -157,8 +165,13 @@ class ReposController < ApplicationController
       $cache[$name][0] << sentence
     end
 
+    respond_to do |format|
 
-    puts "********************************************"
+      msg = {:status => true}
+
+      format.json {render :json => msg}
+
+    end
   end
 
 

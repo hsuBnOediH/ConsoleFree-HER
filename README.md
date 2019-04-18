@@ -13,9 +13,10 @@ A well-visualized tool for Humanity Entity Recognizer
 
 
 ## Implementation Details
-#### Front-End
-#### Server-End
-#### Future work
+### Front-End
+### Server-End
+
+## Future work
 
 
 
@@ -32,7 +33,7 @@ A well-visualized tool for Humanity Entity Recognizer
 *All contributors have equal contributions to this work.*
 
 #### Information
-* This project is developed by FeatureNotBug as a class project in CSE3901(SP19 8117)
+* This project is developed by FeatureNotBug as a class project in CSE3901(SP19 8117).
 * This project is a Web-UI for Alex's HER system.  
 * This project should be used for Academic Purpose, ONLY.  
 #### Back-End HER --- Supported by Alexander Erdmann
