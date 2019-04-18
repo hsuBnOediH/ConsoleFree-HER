@@ -153,10 +153,12 @@ class ReposController < ApplicationController
 
       $cache[$name][0][$cache[$name][1][1]] = sentence
       $cache[$name][1][0] = false
-    else
+    elsif sentence.length != 0
       $cache[$name][0] << sentence
     end
 
+
+    puts "********************************************"
   end
 
 
@@ -277,7 +279,7 @@ class ReposController < ApplicationController
 
   def evaluate_inference
 
-    lines_annotated=$line_num
+    lines_annotated=$prev_line_num
 
     Dir.chdir $path
 
@@ -299,6 +301,12 @@ class ReposController < ApplicationController
     system("mkdir", "Results")
 
     Dir.chdir $return_path
+
+    $line_num = 1
+    $prev_line_num = 1
+    $time = 1
+
+    @repo.update(status: update_status)
 
     respond_to do |format|
 
@@ -429,7 +437,6 @@ class ReposController < ApplicationController
       $return_path = "../.."
       $seed_path = "Data/Splits/fullCorpus.seed-"+$seed_size.to_s+".seed"
       $corpus_path = "Models/RankedSents/fullCorpus.seed-"+$seed_size.to_s+"."+$sortMethod
-      $sentence_path = $seed_path
       $seed_status ? ($sentence_path = $seed_path) : ($sentence_path = $corpus_path)
 
       if $cache[$name] == nil

@@ -47,11 +47,10 @@ function data_from_server(){
     $.ajax({
         url: url_path+"get_sentence", type: "GET", dataType: "json", success: function (msg) {
             if(msg.seed_status){
-                if (msg.sentence[0].length === 0){
-                    alert("This is an empty line.");
-                }
                 generate_sentence(msg.sentence[0], msg.sentence[1]);
             }else{
+                generate_sentence(msg.sentence[0], msg.sentence[1]);
+
                 $('#seed_finish_alert').modal({backdrop: 'static', keyboard: false});
 
                 update_after_seed();
@@ -105,6 +104,7 @@ function send_data() {
                         generate_sentence(msg.sentence[0], msg.sentence[1]);
                         update_cache();
                     }else{
+                        generate_sentence(msg.sentence[0], msg.sentence[1]);
                         $('#seed_finish_alert').modal({backdrop: 'static', keyboard: false});
 
                         update_after_seed();
@@ -293,22 +293,43 @@ function update_after_seed(){
 
 function evaluate_inference(){
 
-    $('#evaluate_alert').modal({backdrop: 'static', keyboard: false});
+    $('#update_alert').modal({backdrop: 'static', keyboard: false});
+
+    data_to_server();
+
+    $("#cache_data").empty();
 
     $.ajax({
-        url: url_path + 'evaluate_inference',
+        url: url_path + 'update_to_file',
         type: 'POST',
         cache: false,
         processData: false,
         contentType: false,
-        success: function(msg){
-            if(msg.status) {
-                $("#evaluate_alert").modal('hide');
-                $("#after_evaluate_alert").modal('toggle');
+        success: function () {
+            $("#sentence_block").empty();
+            uploadTagArray = [];
+            availableOptionArray = [];
+            get_status();
+            $('#update_alert').modal('hide');
+            $('#evaluate_alert').modal({backdrop: 'static', keyboard: false});
 
-            }
+            $.ajax({
+                url: url_path + 'evaluate_inference',
+                type: 'POST',
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(msg){
+                    if(msg.status) {
+                        $("#evaluate_alert").modal('hide');
+                        $("#after_evaluate_alert").modal('toggle');
+
+                    }
+                }
+            });
         }
     });
+
 }
 
 function generate_new_rank(){
