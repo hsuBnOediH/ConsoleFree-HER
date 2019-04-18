@@ -40,6 +40,6 @@ A well-visualized tool for Humanity Entity Recognizer
 Alexander Erdmann, David Joseph Wrisley, Benjamin Allen, Christopher Brown, Sophie Cohen Bodénès, Micha Elsner, Yukun Feng, Brian Joseph, Béatrice Joyeaux-Prunel and Marie-Catherine de Marneffe. 2019. [“Practical, Efficient, and Customizable Active Learning for Named Entity Recognition in the Digital Humanities.”](https://github.com/alexerdmann/HER/blob/master/HER_NAACL2019_preprint.pdf) In Proceedings of North American Association of Computational Linguistics (NAACL 2019). Minneapolis, Minnesota.
 
 #### Special Thanks:
-* Herodotus Group of Linguistic Department in OSU
+* [Herodotus Group](https://u.osu.edu/herodotos/) of Linguistic Department in OSU
 * Senior UI Designer: Xiangru Chen
-* Deepin Operating System
+* [Deepin](https://www.deepin.org/en/) Operating System
