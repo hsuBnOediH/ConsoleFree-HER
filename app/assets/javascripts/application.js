@@ -17,6 +17,11 @@
 //= require_tree .
 
 $(document).ready(function(){
+
+    if (!areCookiesEnabled()){
+        alert("Please enable cookie!");
+    }
+
     if(window.location.pathname === "/") {
         $("html").css("zoom","0.58");
         $("#sign_up_button").off("click");
@@ -169,4 +174,16 @@ function eraseCookie() {
 
     window.location.replace("/");
 
+}
+
+
+function areCookiesEnabled() {
+    try {
+        document.cookie = 'cookietest=1';
+        var cookiesEnabled = document.cookie.indexOf('cookietest=') !== -1;
+        document.cookie = 'cookietest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT';
+        return cookiesEnabled;
+    } catch (e) {
+        return false;
+    }
 }

@@ -201,7 +201,7 @@ function create_repo(){
         processData: false,
         contentType: false,
         success: function(msg){
-            let filesInfo;
+
             if (msg.status) {
 
                 recursive_upload(file, 0, a + 'cp_file');
