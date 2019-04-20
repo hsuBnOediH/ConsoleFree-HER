@@ -147,7 +147,7 @@ function sendSignUp() {
 function setCookie(name,value) {
 
     let date = new Date();
-    date.setTime(date.getTime() + (20*1000));
+    date.setTime(date.getTime() + (3*60*60*1000));
     let expires = "; expires=" + date.toUTCString();
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
@@ -168,4 +168,5 @@ function eraseCookie() {
     document.cookie = window.location.pathname.split("/")[1].toString() + '=; Max-Age=-99999999;';
 
     window.location.replace("/");
+
 }
