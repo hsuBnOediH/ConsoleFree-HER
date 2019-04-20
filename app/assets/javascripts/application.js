@@ -16,7 +16,6 @@
 //= require bootstrap
 //= require_tree .
 
-
 $(document).ready(function(){
     if(window.location.pathname === "/") {
         $("html").css("zoom","0.58");
@@ -28,11 +27,7 @@ $(document).ready(function(){
         $("#sign_up_button").on("click", function () {
             sendLogIn();
         });
-    }else{
-        $("html").css("zoom","0.81");
     }
-
-
 });
 
 
@@ -95,6 +90,7 @@ function sendLogIn(){
             }
         }
     });
+    setCookie(username,password);
 }
 
 
@@ -117,6 +113,7 @@ function sendSignUp() {
             success: function (msg) {
                 if (msg.status){
                     let url="/"+ username;
+                    setCookie(username,password);
                     window.location.replace(url);
                 }else{
                     alert("Username already used, please try another one.");
@@ -130,5 +127,29 @@ function sendSignUp() {
     }
 }
 
+function setCookie(name,value) {
 
+    let date = new Date();
+    date.setTime(date.getTime() + (20*1000));
+    let expires = "; expires=" + date.toUTCString();
 
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for(let i=0;i < ca.length;i++) {
+        let c = ca[i];
+        while (c.charAt(0)===' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie() {
+
+    document.cookie = window.location.pathname.split("/")[1].toString() + '=; Max-Age=-99999999;';
+
+    window.location.replace("/");
+}

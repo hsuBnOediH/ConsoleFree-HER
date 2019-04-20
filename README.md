@@ -4,18 +4,9 @@ A well-visualized tool for Humanity Entity Recognizer
 ## Background
 ## Introduction
 ## Functionality
-
-
-
-
-
-
-
-
 ## Implementation Details
 ### Front-End
 ### Server-End
-
 ## Future work
 
 

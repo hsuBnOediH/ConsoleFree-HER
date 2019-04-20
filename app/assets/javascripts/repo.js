@@ -24,10 +24,17 @@ let url_path = window.location.pathname + "/";
 
 $(document).ready(function () {
 
-    if (window.location.pathname.split('/').length - 1 === 2) {
-        welcome_alert();
-        data_from_server();
-        update_cache();
+    if (window.location.pathname.split('/').length  === 3) {
+        let x = getCookie(window.location.pathname.split("/")[1].toString());
+        if (x) {
+            $("html").css("zoom","0.81");
+            welcome_alert();
+            data_from_server();
+            update_cache();
+        }else{
+            $("#main_page").hide();
+            window.location.replace("/");
+        }
     }
 
 });
@@ -44,9 +51,6 @@ function welcome_alert(){
         }
     });
 }
-
-
-
 
 function send_data() {
 
@@ -243,14 +247,6 @@ function evaluate_and_rank(){
         }
     });
 }
-
-
-
-
-
-
-
-
 
 function generate_new_rank(){
 
