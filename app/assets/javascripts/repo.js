@@ -37,6 +37,16 @@ $(document).ready(function () {
         }
     }
 
+    $("body").keypress(function (event) {
+        let key = event.which;
+        if (key === 13) {
+            $('#next_sentence_button').trigger('click');
+        }else if(key === 117){
+            $('#update_to_file_button').trigger('click');
+        }
+    });
+
+
 });
 
 function welcome_alert(){

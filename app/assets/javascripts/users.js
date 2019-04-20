@@ -15,6 +15,7 @@
 //= require bootstrap
 //= require turbolinks
 
+
 let entity_num = 1;
 let user_num = 1;
 
@@ -125,9 +126,6 @@ function delete_repo(button){
 
 
 function create_repo(){
-
-
-
     let repo_name = $("#repo_name").val();
     let language = $('#language').text().substring(10,12);
     let sort_method = $('#sortMethod').text().substring(12);

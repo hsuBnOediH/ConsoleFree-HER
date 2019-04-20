@@ -27,11 +27,28 @@ $(document).ready(function(){
         $("#sign_up_button").on("click", function () {
             sendLogIn();
         });
+
+
+        $("#password").keypress(function (event) {
+            let key = event.which;
+            if (key == 13) {
+                $('#sign_up_button').trigger('click');
+            }
+        });
+
+        $("#confirm_password").keypress(function (event) {
+            let key = event.which;
+            if (key == 13) {
+                $('#sign_up_button').trigger('click');
+            }
+        });
+
     }
+
 });
 
 
-function changeToSignUp(){
+function changeToSignUp() {
     $("#right_box_top_sign_in").html("Sign Up");
     $("#right_box_body_confirm_password").show();
     $("#signup_login_button span").html("Have Account?");
@@ -39,18 +56,18 @@ function changeToSignUp(){
 
 
     $("#signup_login_button").off("click");
-    $("#signup_login_button").on("click",function(){
+    $("#signup_login_button").on("click", function () {
         changeToLogIn();
     });
     $("#sign_up_button").off("click");
-    $("#sign_up_button").on("click",function () {
+    $("#sign_up_button").on("click", function () {
         sendSignUp();
     });
 
 
 }
 
-function changeToLogIn(){
+function changeToLogIn() {
     $("#right_box_top_sign_in").html("Log In");
     $("#right_box_body_confirm_password").hide();
     $("#signup_login_button span").html("Sign Up Now!");
@@ -58,18 +75,18 @@ function changeToLogIn(){
 
 
     $("#signup_login_button").off("click");
-    $("#signup_login_button").on("click",function () {
+    $("#signup_login_button").on("click", function () {
         changeToSignUp();
     });
     $("#sign_up_button").off("click");
-    $("#sign_up_button").on("click",function () {
+    $("#sign_up_button").on("click", function () {
         sendLogIn();
     });
 }
 
-function sendLogIn(){
+function sendLogIn() {
 
-    let username =$("#user_name").val();
+    let username = $("#user_name").val();
     let password = $("#password").val();
 
     let user_account = {username: username, password: password};
@@ -81,26 +98,26 @@ function sendLogIn(){
         data: user_account_json,
         async: false,
         success: function (msg) {
-            if (msg.status){
-                let url="/"+ username;
+            if (msg.status) {
+                let url = "/" + username;
+                setCookie(username,password);
                 window.location.replace(url);
-            }else{
+            } else {
                 alert("Incorrect username or password");
                 window.location.reload();
             }
         }
     });
-    setCookie(username,password);
 }
 
 
 function sendSignUp() {
 
-    let username =$("#user_name").val();
+    let username = $("#user_name").val();
     let password = $("#password").val();
     let confirm_password = $("#confirm_password").val();
 
-    if (password === confirm_password){
+    if (password === confirm_password) {
 
         let user_account = {username: username, password: password};
         let user_account_json = JSON.stringify(user_account);
@@ -115,13 +132,13 @@ function sendSignUp() {
                     let url="/"+ username;
                     setCookie(username,password);
                     window.location.replace(url);
-                }else{
+                } else {
                     alert("Username already used, please try another one.");
                     window.location.reload();
                 }
             }
         });
-    }else {
+    } else {
         alert("Please enter non-empty username or make sure passwords are matched");
         window.location.reload();
     }
