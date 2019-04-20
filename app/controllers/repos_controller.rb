@@ -1,16 +1,22 @@
 class ReposController < ApplicationController
   before_action :find_and_setup_repo, except: [:temp]
 
+
+  #cache sentence for each repository
   $cache = {}
 
+
+  #function to display the main page
   def main
-
   end
 
+
+  #functino to test
   def temp
-
   end
 
+
+  #functino to send status for welcome alert
   def welcome
 
     respond_to do |format|
@@ -19,11 +25,10 @@ class ReposController < ApplicationController
 
       format.json {render :json => msg}
     end
-
   end
 
 
-
+  #function to update annotating cache
   def send_annotating_cache
 
     id = request.body.read
@@ -37,9 +42,10 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
+
+  #function to send cache sentence for annotation
   def get_cache_sentence
 
     respond_to do |format|
@@ -50,9 +56,10 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
+
+  #function to send cache sentences
   def get_cache_data
 
     respond_to do |format|
@@ -63,18 +70,15 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
 
+  #function to send a sentence for annotation
   def get_sentence
 
     input = _helper_build_sentence
 
     status = true
-
-    # puts input[0].length.to_s
-    # puts "****************************************"
 
     if $seed_status && input[2]
       $time = 1
@@ -95,9 +99,10 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
+
+  #function to send repository status
   def get_status
 
     respond_to do |format|
@@ -107,9 +112,10 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
+
+  #function to update sentences to file
   def update_to_file
 
     $cache[$name][0].each do |sentence|
@@ -133,6 +139,7 @@ class ReposController < ApplicationController
     if $time == 1
       return
     end
+
     respond_to do |format|
 
       msg = {:status => true}
@@ -140,9 +147,10 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
+
+  #function to update an annotated sentence
   def send_sentence
 
     require 'json'
@@ -175,8 +183,7 @@ class ReposController < ApplicationController
   end
 
 
-
-  #build input for each sentence with tracking the line number
+  #functino to build input for each sentence
   def _helper_build_sentence
 
     input = []
@@ -221,11 +228,11 @@ class ReposController < ApplicationController
     @repo.update(status: update_status)
     [input, $entities.split('_'), seed_finish]
 
-
   end
 
-  def train_and_rank_seed
 
+  #function to train and rank after annotating the seed
+  def train_and_rank_seed
 
     Dir.chdir $path
 
@@ -269,6 +276,8 @@ class ReposController < ApplicationController
 
   end
 
+
+  #function to rank the rest of the corpus
   def generate_new_rank
 
     Dir.chdir $path
@@ -287,9 +296,10 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
+
+  #function to evaluate
   def evaluate_inference
 
     lines_annotated=$prev_line_num
@@ -330,36 +340,32 @@ class ReposController < ApplicationController
     end
   end
 
+
+  #function to send cv-result, will be updated in the future
   def get_cv_result
-
-    files = []
-    Dir.each_child($path) do |x|
-      if x.includes("Results_")
-        Dir.each_child($path + x) do |f|
-
-        end
-
-      end
-    end
 
   end
 
+
+  #function to download gazatteer
   def download_gaz
     send_file($path + params[:f1] + "/" +"Gazatteers/"+ params[:file] + ".gaz")
   end
 
+
+  #function to download final result
   def download_inf_result1
-
     send_file($path + params[:f1] + "/" + "fullCorpus.final.txt")
-
   end
 
+
+  #function to download final result list
   def download_inf_result2
-
     send_file($path + params[:f1] + "/" + "fullCorpus.final-list.txt")
-
   end
 
+
+  #function to send gazatteers information
   def get_gaz
 
     files = []
@@ -379,11 +385,10 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
-
   end
 
 
+  #function to send final result information
   def get_inf_result
 
     files = []
@@ -402,21 +407,20 @@ class ReposController < ApplicationController
       format.json {render :json => msg}
 
     end
-
   end
 
 
-
-
-
+  #function to update status, for the update in the database
   def update_status
 
     $line_num.to_s + " " + $prev_line_num.to_s + " " + $seed_status.to_s + " " + $seed_line_annotated.to_s+
         " " + $seed_line_total.to_s + " " + $corpus_line_annotated.to_s + " " + $corpus_line_total.to_s + " " + $time.to_s
   end
 
+
   private
 
+    #before action to set up the repository
     def find_and_setup_repo
       @user = User.find_by_username(params[:username])
 
@@ -435,15 +439,10 @@ class ReposController < ApplicationController
         end
       end
 
-
-
       if @repo == "nil_repo"
         render :file => 'public/404.html', :status => :not_found, :layout => false
         return
       end
-
-
-
 
       $name = @repo.id.to_s+"_"+@repo.repo_name
       $entities = @repo.entities
@@ -472,6 +471,7 @@ class ReposController < ApplicationController
         $cache[$name] = [[],[false,-999]]
       end
     end
+
 
 end
 

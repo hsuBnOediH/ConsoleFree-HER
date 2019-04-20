@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   layout "main_layout", :only => [:login]
 
 
+  #function to generate the user page
   def info
-
 
     @user_repo_array = []
     @user_repo_info = []
@@ -32,6 +32,8 @@ class UsersController < ApplicationController
 
   end
 
+
+  #function to find the specific repository
   def find_repo(name)
 
     ReposUser.where("user_id='" + @user.id.to_s + "'").find_each do |repo|
@@ -43,12 +45,16 @@ class UsersController < ApplicationController
     end
   end
 
+
+  #function to initializer repository status
   def repo_status_initializer
 
     return "1 1 true 0 0 0 0 1"
 
   end
 
+
+  #function to copy gazatteer files
   def cp_gaz
 
     data = request.body.read
@@ -59,7 +65,6 @@ class UsersController < ApplicationController
     file_count = Dir[File.join(dir, '**', '*')].count {|file| File.file?(file)}
 
     Dir.chdir 'HER-data/'
-
 
     File.open("temp" + file_count.to_s + ".txt", 'wb') {|file| file.write(data)}
     system("sed", "-i", "1,4d;$d", "temp" + file_count.to_s + ".txt")
@@ -77,6 +82,7 @@ class UsersController < ApplicationController
   end
 
 
+  #function to copy data files
   def cp_file
 
     data = request.body.read
@@ -86,16 +92,13 @@ class UsersController < ApplicationController
     dir = 'HER-data/' + name + "/Data/Original/"
     file_count = Dir[File.join(dir, '**', '*')].count {|file| File.file?(file)}
 
-
     Dir.chdir 'HER-data/'
-
 
     File.open("temp" + file_count.to_s + ".txt", 'wb') {|file| file.write(data)}
     system("sed", "-i", "1,4d;$d", "temp" + file_count.to_s + ".txt")
     system("mv", "temp" + file_count.to_s + ".txt", name + "/Data/Original/")
 
     Dir.chdir '../'
-
 
     respond_to do |format|
 
@@ -107,6 +110,8 @@ class UsersController < ApplicationController
 
   end
 
+
+  #function to setup repository space
   def repo_directory_setup repo
 
     Dir.chdir "HER-data"
@@ -119,6 +124,8 @@ class UsersController < ApplicationController
 
   end
 
+
+  #function to generate seed data after files uploaded
   def generate_seed
 
     info = JSON.parse(request.body.read)
@@ -127,7 +134,6 @@ class UsersController < ApplicationController
     gaz_name_array = info["gazArray"]
 
     re = find_repo name
-
 
     path = "HER-data/" + re.id.to_s + "_" + re.repo_name + "/"
     lg = re.language
@@ -141,20 +147,17 @@ class UsersController < ApplicationController
       index += 1
     end
 
-
     index = 0
     gaz_name_array.each do |file_name|
       system("mv", "Data/Gazatteers/temp" + index.to_s + ".txt", "Data/Gazatteers/" + file_name.to_s)
       index += 1
     end
 
-
     system("sh", "Scripts/prepare_original_texts.sh", "Scripts/preprocess.py", lg, "2>", "log.txt")
     system("python", "Scripts/rankSents.py", "-corpus", "Data/Prepared/fullCorpus.txt", "-sort_method", "random_seed",
            "-topXsents", seed_size.to_s, "-output", "Data/Splits/fullCorpus.seed-" + seed_size.to_s, "-annotate", "True")
 
     out = `wc -l Data/Splits/*`
-
 
     status = re.status.split
     update = status[0] + " " + status[1] + " " + status[2] + " " + status[3] + " " + out.split[0] + " " + status[5] + " " + out.split[2] + " " + status[7]
@@ -165,6 +168,7 @@ class UsersController < ApplicationController
   end
 
 
+  #function to create a repository
   def add_repo
 
     repo_info = request.body.read
@@ -217,6 +221,8 @@ class UsersController < ApplicationController
     end
   end
 
+
+  #function to delete a repository
   def delete_repo
 
     user_info = request.body.read
@@ -241,10 +247,10 @@ class UsersController < ApplicationController
 
     end
 
-
   end
 
 
+  #function to share a repository with other users
   def share_repo
 
     user_info = request.body.read
@@ -290,6 +296,7 @@ class UsersController < ApplicationController
   end
 
 
+  #function to retrieve the user information of a specific repository
   def get_repo_user
 
     user_info = request.body.read
@@ -307,7 +314,6 @@ class UsersController < ApplicationController
       users += u.username + " "
     end
 
-
     respond_to do |format|
 
       msg = {:username => users}
@@ -316,10 +322,10 @@ class UsersController < ApplicationController
 
     end
 
-
   end
 
 
+  #function for user sign up
   def create
 
     account_info = request.body.read
@@ -345,6 +351,8 @@ class UsersController < ApplicationController
 
   end
 
+
+  #function for user sign in
   def validate
 
     account_info = request.body.read
@@ -372,27 +380,21 @@ class UsersController < ApplicationController
 
       end
 
-
     end
-
 
   end
 
+
   private
 
-  # Use callbacks to share common setup or constraints between actions.
+  #before action to set up the user
   def set_user
 
     @user = User.find_by_username(params[:username])
 
-
     if @user.class.to_s == "NilClass"
       render :file => 'public/404.html', :status => :not_found, :layout => false
     end
-  end
-
-  def user_params
-    params.require(:user).permit(:username, :password)
   end
 
 end

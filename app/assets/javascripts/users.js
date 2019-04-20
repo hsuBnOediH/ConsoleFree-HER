@@ -19,8 +19,9 @@
 let entity_num = 1;
 let user_num = 1;
 
-$(document).ready(function(){
 
+//ready function to determine if the user is allowed to access the user page
+$(document).ready(function(){
 
     if(window.location.pathname.split('/').length < 3 && window.location.pathname.split('/')[1].length>0){
         let x = getCookie(window.location.pathname.split("/")[1].toString());
@@ -31,25 +32,21 @@ $(document).ready(function(){
             window.location.replace("../422");
         }
     }
-
-
 });
 
 
-function add_entity(){
-    $('#entities').append('<input id="entity_'+entity_num.toString()+'" value="" type="text" class="form-control">');
-    entity_num += 1;
-}
-
+//function to add a user space when sharing repository
 function add_user(){
     $('#users').append('<input id="user_'+user_num.toString()+'" value="" type="text" class="form-control">');
     user_num += 1;
 }
 
+
+//function to share repository with other users
 function share_repo(button){
+
     let users = "";
     for(let i=0; i<entity_num; i++){
-
         users += $('#user_' + i.toString()).val() + " ";
     }
 
@@ -71,6 +68,8 @@ function share_repo(button){
     });
 }
 
+
+//function to show users that have access to this repo, for deleting repository function
 function get_repo_user(button){
 
     let info_json = JSON.stringify({url: button.id.toString().substring(4)});
@@ -97,6 +96,8 @@ function get_repo_user(button){
     });
 }
 
+
+//function to delete a repository
 function delete_repo(button){
 
     let info_json = JSON.stringify({url: button.id.toString().substring(7)});
@@ -119,14 +120,34 @@ function delete_repo(button){
             window.location.reload();
         }
     });
+}
 
+
+//function to add an entity space when creating repository
+function add_entity(){
+    $('#entities').append('<input id="entity_'+entity_num.toString()+'" value="" type="text" class="form-control">');
+    entity_num += 1;
+}
+
+
+//function to select language when creating repository
+function change_language(language_selection){
+
+    $("#language").text("Language: " + language_selection.innerHTML.toString());
 
 }
 
 
+//function to select sortMethod when creating repository
+function change_sortMethod(sortMethod_selection){
 
+    $("#sortMethod").text("SortMethod: " + sortMethod_selection.innerHTML.toString());
+
+}
+
+
+//function to create a repository
 function create_repo(){
-
 
     let file = $('#file_upload').prop('files');
     let gaz = $('#gaz_upload').prop('files');
@@ -227,11 +248,11 @@ function create_repo(){
             }
         }
     });
-
     window.location.reload();
 }
 
 
+//function to upload files when creating repository
 function recursive_upload(data, index, path){
 
     if (index >= data.length){
@@ -257,18 +278,7 @@ function recursive_upload(data, index, path){
 }
 
 
+//cancel function for each modal
 function _cancel(){
     window.location.reload();
-}
-
-function change_language(language_selection){
-
-    $("#language").text("Language: " + language_selection.innerHTML.toString());
-
-}
-
-function change_sortMethod(sortMethod_selection){
-
-    $("#sortMethod").text("SortMethod: " + sortMethod_selection.innerHTML.toString());
-
 }

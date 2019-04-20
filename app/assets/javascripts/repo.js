@@ -17,11 +17,14 @@
 //= require turbolinks
 
 
+//define global variable for displaying, updating sentences
 let uploadTagArray = [];
 let availableOptionArray = [];
 let color_list = ["#ffffff","#7FDBFF","#FF851B","#FF9179","#FF79c5","#FFFF79","#d281FF","#caff79","#a089ff","#e8ff79","#0074D9"];
 let url_path = window.location.pathname + "/";
 
+
+//ready function to determine if the user is allowed to access the main page
 $(document).ready(function () {
 
     if (window.location.pathname.split('/').length  === 3) {
@@ -44,10 +47,10 @@ $(document).ready(function () {
             window.location.replace("../422");
         }
     }
-
-
 });
 
+
+//function to tell the user the current status
 function welcome_alert(){
 
     $.ajax({
@@ -61,6 +64,8 @@ function welcome_alert(){
     });
 }
 
+
+//function to send sentence to the server
 function send_data() {
 
     let jsonArrayStr="";
@@ -100,6 +105,9 @@ function send_data() {
     });
 }
 
+
+//function to require a cache sentence to annotate
+//send sentence --> send annotating cache --> get cache sentence --> generate sentence
 function cache_to_annotate(sentence_div) {
 
     let jsonArrayStr="";
@@ -155,6 +163,8 @@ function cache_to_annotate(sentence_div) {
     });
 }
 
+
+//function to update current sentence and cache sentences to file
 function update_data() {
 
     $('#update_alert').modal({backdrop: 'static', keyboard: false});
@@ -196,6 +206,8 @@ function update_data() {
     });
 }
 
+
+//function to evaluate and re-rank the corpus
 function evaluate_and_rank(){
 
     $('#update_alert').modal({backdrop: 'static', keyboard: false});
@@ -251,12 +263,13 @@ function evaluate_and_rank(){
                         });
                     }
                 });
-
             }
         }
     });
 }
 
+
+//function for eval and re-rank function
 function generate_new_rank(){
 
     $('#rank_alert').modal({backdrop: 'static', keyboard: false});
@@ -278,6 +291,8 @@ function generate_new_rank(){
 
 }
 
+
+//function to get and generate a sentence from server
 function data_from_server(){
 
     $.ajax({
@@ -299,6 +314,8 @@ function data_from_server(){
     });
 }
 
+
+//function to update corpus after finishing the seed
 function update_after_seed(){
 
     $.ajax({
@@ -319,6 +336,7 @@ function update_after_seed(){
 }
 
 
+//function to update cache sentences
 function update_cache(){
 
     $.ajax({
@@ -328,6 +346,8 @@ function update_cache(){
     });
 }
 
+
+//function to get current status from server
 function get_status(){
 
     $.ajax({
@@ -344,8 +364,7 @@ function get_status(){
 }
 
 
-
-
+//function to generate a sentence for annotation
 function generate_sentence(sentence, entities){
 
     $("#sentence_block").empty();
@@ -368,6 +387,8 @@ function generate_sentence(sentence, entities){
     }
 }
 
+
+//function to generate cache sentences
 function generate_cache_sentence(sentence){
 
     $("#cache_data").empty();
@@ -391,6 +412,8 @@ function generate_cache_sentence(sentence){
     }
 }
 
+
+//function for dropdown in the sentence generation
 function getDropDown(availableOptionArray, id) {
     let result = '';
     let word_length = $("#word"+ id).outerWidth();
@@ -402,6 +425,8 @@ function getDropDown(availableOptionArray, id) {
     return result;
 }
 
+
+//function for tagcolor in the sentence generation
 function getTagColor(tag, availableOptionArray) {
     let result = "";
     availableOptionArray.forEach(function (p) {
@@ -413,12 +438,16 @@ function getTagColor(tag, availableOptionArray) {
     return result;
 }
 
+
+//function to change tag color every time the user clicks
 function tag_click(tagButton) {
     let id = tagButton.className.substring(40);
     uploadTagArray[parseInt(id)].tag = tagButton.innerHTML;
     $("#word" + id).css("background-color", getTagColor(tagButton.innerHTML, availableOptionArray));
 }
 
+
+//function to display cv-results, will be updated in the future
 function get_result_files(){
 
     $('#pills-cv-result').empty();
@@ -431,6 +460,8 @@ function get_result_files(){
 
 }
 
+
+//function to display gazatteer files
 function get_gaz_files(){
 
     $('#pills-gaz').empty();
@@ -445,6 +476,8 @@ function get_gaz_files(){
 
 }
 
+
+//function to display final results
 function get_inf_files(){
 
     $('#pills-inf-result').empty();
@@ -458,6 +491,8 @@ function get_inf_files(){
     });
 }
 
+
+//function to refresh the page
 function refresh_page(){
     window.location.reload();
 }

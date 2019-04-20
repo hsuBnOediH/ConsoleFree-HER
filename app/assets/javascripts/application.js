@@ -16,6 +16,11 @@
 //= require bootstrap
 //= require_tree .
 
+
+//Ready function
+//check if cookie is enabled in this page
+//check if it is in the login page
+//set up buttons if in the login page
 $(document).ready(function(){
 
     if (!areCookiesEnabled()){
@@ -53,12 +58,12 @@ $(document).ready(function(){
 });
 
 
+//function to change signin mode to signup mode
 function changeToSignUp() {
     $("#right_box_top_sign_in").html("Sign Up");
     $("#right_box_body_confirm_password").show();
     $("#signup_login_button span").html("Have Account?");
     $("#sign_up_button span").html("Sign Up");
-
 
     $("#signup_login_button").off("click");
     $("#signup_login_button").on("click", function () {
@@ -68,16 +73,15 @@ function changeToSignUp() {
     $("#sign_up_button").on("click", function () {
         sendSignUp();
     });
-
-
 }
 
+
+//function to change signup mode to signin mode
 function changeToLogIn() {
     $("#right_box_top_sign_in").html("Log In");
     $("#right_box_body_confirm_password").hide();
     $("#signup_login_button span").html("Sign Up Now!");
     $("#sign_up_button span").html("Log In");
-
 
     $("#signup_login_button").off("click");
     $("#signup_login_button").on("click", function () {
@@ -89,6 +93,8 @@ function changeToLogIn() {
     });
 }
 
+
+//function for user login
 function sendLogIn() {
 
     let username = $("#user_name").val();
@@ -116,6 +122,7 @@ function sendLogIn() {
 }
 
 
+//function for user sign up
 function sendSignUp() {
 
     let username = $("#user_name").val();
@@ -149,14 +156,20 @@ function sendSignUp() {
     }
 }
 
+
+
+//function to store username in the cookie every time the user login successful
 function setCookie(name,value) {
 
     let date = new Date();
     date.setTime(date.getTime() + (3*60*60*1000));
     let expires = "; expires=" + date.toUTCString();
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+
 }
 
+
+//function to determine whether the user is allowed to access the page, by finding the username in the cookie
 function getCookie(name) {
     let nameEq = name + "=";
     let ca = document.cookie.split(';');
@@ -168,6 +181,8 @@ function getCookie(name) {
     return null;
 }
 
+
+//function to erase cookie every time the user log out
 function eraseCookie() {
 
     document.cookie = window.location.pathname.split("/")[1].toString() + '=; Max-Age=-99999999;';
@@ -177,6 +192,7 @@ function eraseCookie() {
 }
 
 
+//function to check if cookie is allowed in the page, if not, give an alert
 function areCookiesEnabled() {
     try {
         document.cookie = 'cookietest=1';
