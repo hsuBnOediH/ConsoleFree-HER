@@ -14,7 +14,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require bootstrap
-//= require_tree .
+//= require_tree
 
 
 $(document).ready(function () {
@@ -36,8 +36,6 @@ $(document).ready(function () {
                 $('#sign_up_button').trigger('click');
             }
         });
-
-
 
         $("#confirm_password").keypress(function (event) {
             let key = event.which;
