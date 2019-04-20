@@ -7,6 +7,8 @@ class UsersController < ApplicationController
 
 
   def info
+
+
     @user_repo_array = []
     @user_repo_info = []
     @card_color_array = []
@@ -135,17 +137,16 @@ class UsersController < ApplicationController
 
     index = 0
     file_name_array.each do |file_name|
-      system("mv","Data/Original/temp"+index.to_s+".txt", "Data/Original/"+file_name.to_s)
+      system("mv", "Data/Original/temp" + index.to_s + ".txt", "Data/Original/" + file_name.to_s)
       index += 1
     end
 
 
     index = 0
     gaz_name_array.each do |file_name|
-      system("mv","Data/Gazatteers/temp"+index.to_s+".txt", "Data/Gazatteers/"+file_name.to_s)
+      system("mv", "Data/Gazatteers/temp" + index.to_s + ".txt", "Data/Gazatteers/" + file_name.to_s)
       index += 1
     end
-
 
 
     system("sh", "Scripts/prepare_original_texts.sh", "Scripts/preprocess.py", lg, "2>", "log.txt")
@@ -380,15 +381,19 @@ class UsersController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
-    def set_user
+  def set_user
 
-      @user = User.find_by_username(params[:username])
+    @user = User.find_by_username(params[:username])
 
+
+    if @user.class.to_s == "NilClass"
+      render :file => 'public/404.html', :status => :not_found, :layout => false
     end
+  end
 
-    def user_params
-      params.require(:user).permit(:username, :password)
-    end
+  def user_params
+    params.require(:user).permit(:username, :password)
+  end
 
 end
 

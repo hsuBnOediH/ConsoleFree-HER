@@ -419,6 +419,13 @@ class ReposController < ApplicationController
 
     def find_and_setup_repo
       @user = User.find_by_username(params[:username])
+
+      if @user.class.to_s == "NilClass"
+        render :file => 'public/404.html', :status => :not_found, :layout => false
+        return
+      end
+
+      @repo = "nil_repo"
       ReposUser.where("user_id='"+@user.id.to_s+"'").find_each do |repo|
         Repo.where("id='"+repo.repo_id.to_s+"'").find_each do |re|
           if re.repo_name == params[:repo_name]
@@ -426,8 +433,17 @@ class ReposController < ApplicationController
             break
           end
         end
-
       end
+
+
+
+      if @repo == "nil_repo"
+        render :file => 'public/404.html', :status => :not_found, :layout => false
+        return
+      end
+
+
+
 
       $name = @repo.id.to_s+"_"+@repo.repo_name
       $entities = @repo.entities

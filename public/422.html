@@ -4,64 +4,231 @@
   <title>The change you wanted was rejected (422)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+    .rails-default-error-page {
+      background-color: #EFEFEF;
+      color: #2E2F30;
+      text-align: center;
+      font-family: arial, sans-serif;
+      margin: 0;
+    }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    .rails-default-error-page div.dialog {
+      width: 95%;
+      max-width: 33em;
+      margin: 4em auto 0;
+    }
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    .rails-default-error-page div.dialog > div {
+      border: 1px solid #CCC;
+      border-right-color: #999;
+      border-left-color: #999;
+      border-bottom-color: #BBB;
+      border-top: #B00100 solid 4px;
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+      background-color: white;
+      padding: 7px 12% 0;
+      box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+    }
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+    .rails-default-error-page h1 {
+      font-size: 100%;
+      color: #730E15;
+      line-height: 1.5em;
+    }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    .rails-default-error-page div.dialog > p {
+      margin: 0 0 1em;
+      padding: 1em;
+      background-color: #F7F7F7;
+      border: 1px solid #CCC;
+      border-right-color: #999;
+      border-left-color: #999;
+      border-bottom-color: #999;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-color: #DADADA;
+      color: #666;
+      box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+    }
+
+
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+    @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
+    .error-container {
+      text-align: center;
+      font-size: 180px;
+      font-family: 'Catamaran', sans-serif;
+      font-weight: 800;
+      margin: 20px 15px;
+    }
+    .error-container > span {
+      display: inline-block;
+      line-height: 0.7;
+      position: relative;
+      color: #FFB485;
+    }
+    .error-container > span {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+    }
+    .error-container > span:nth-of-type(1) {
+      color: #D1F2A5;
+      animation: colordancing 4s infinite;
+    }
+    .error-container > span:nth-of-type(3) {
+      color: #F56991;
+      animation: colordancing2 4s infinite;
+    }
+
+    .error-container > span:nth-of-type(2):before,
+    .error-container > span:nth-of-type(2):after {
+      border-radius: 0%;
+      content:"";
+      position: absolute;
+      top: 0; left: 0;
+      width: inherit; height: inherit;
+      border-radius: 999px;
+      box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+      inset 0 30px 0 rgba(239, 250, 180, 0.4),
+      inset -30px 0 0 rgba(255, 196, 140, 0.4),
+      inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+      animation: shadowsdancing 4s infinite;
+    }
+    .error-container > span:nth-of-type(2):before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .screen-reader-text {
+      position: absolute;
+      top: -9999em;
+      left: -9999em;
+    }
+    @keyframes shadowsdancing {
+      0% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+      }
+      25% {
+        box-shadow: inset 30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 30px 0 rgba(209, 242, 165, 0.4),
+        inset -30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 -30px 0 rgba(255, 196, 140, 0.4);
+      }
+      50% {
+        box-shadow: inset 30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 30px 0 rgba(245, 105, 145, 0.4),
+        inset -30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 -30px 0 rgba(239, 250, 180, 0.4);
+      }
+      75% {
+        box-shadow: inset 30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 30px 0 rgba(255, 196, 140, 0.4),
+        inset -30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 -30px 0 rgba(209, 242, 165, 0.4);
+      }
+      100% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+      }
+    }
+    @keyframes colordancing {
+      0% {
+        color: #D1F2A5;
+      }
+      25% {
+        color: #F56991;
+      }
+      50% {
+        color: #FFC48C;
+      }
+      75% {
+        color: #EFFAB4;
+      }
+      100% {
+        color: #D1F2A5;
+      }
+    }
+    @keyframes colordancing2 {
+      0% {
+        color: #FFC48C;
+      }
+      25% {
+        color: #EFFAB4;
+      }
+      50% {
+        color: #D1F2A5;
+      }
+      75% {
+        color: #F56991;
+      }
+      100% {
+        color: #FFC48C;
+      }
+    }
+
+    /* demo stuff */
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #416475;
+      margin-bottom: 50px;
+    }
+    html, button, input, select, textarea {
+      font-family: 'Montserrat', Helvetica, sans-serif;
+      color: #92a4ad;
+    }
+    h1 {
+      text-align: center;
+      margin: 30px 15px;
+    }
+    .zoom-area {
+      max-width: 490px;
+      margin: 30px auto 30px;
+      font-size: 19px;
+      text-align: center;
+    }
+    .link-container {
+      text-align: center;
+    }
+    a.more-link {
+      text-transform: uppercase;
+      font-size: 13px;
+      background-color: #92a4ad;
+      padding: 10px 15px;
+      border-radius: 0;
+      color: #416475;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      text-decoration: none;
+      margin-top: 50px;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/422.html -->
-  <div class="dialog">
-    <div>
-      <h1>The change you wanted was rejected.</h1>
-      <p>Maybe you tried to change something you didn't have access to.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
-</html>
+<!-- This file lives in public/404.html -->
+<h1>422 Error Page </h1>
+<p class="zoom-area"><b>Sorry </b> You don't right to this page</p>
+<section class="error-container">
+  <span>4</span>
+  <span>2</span>
+  <span>2</span>
+</section>
+
+<div class="link-container">
+  <a target="_blank" href="../" class="more-link">Visit the original article</a>
+</div>
