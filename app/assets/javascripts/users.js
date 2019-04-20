@@ -19,6 +19,23 @@
 let entity_num = 1;
 let user_num = 1;
 
+$(document).ready(function(){
+
+
+    if(window.location.pathname.split('/').length < 3 && window.location.pathname.split('/')[1].length>0){
+        let x = getCookie(window.location.pathname.split("/")[1].toString());
+        if (x) {
+            $("html").css("zoom","0.81");
+        }else{
+            $("#main_page").hide();
+            window.location.replace("/");
+        }
+    }
+
+
+});
+
+
 function add_entity(){
     $('#entities').append('<input id="entity_'+entity_num.toString()+'" value="" type="text" class="form-control">');
     entity_num += 1;
@@ -78,8 +95,6 @@ function get_repo_user(button){
             }
         }
     });
-
-
 }
 
 function delete_repo(button){
