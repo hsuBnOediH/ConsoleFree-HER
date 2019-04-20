@@ -31,14 +31,14 @@ $(document).ready(function(){
 
         $("#password").keypress(function (event) {
             let key = event.which;
-            if (key == 13) {
+            if (key === 13) {
                 $('#sign_up_button').trigger('click');
             }
         });
 
         $("#confirm_password").keypress(function (event) {
             let key = event.which;
-            if (key == 13) {
+            if (key === 13) {
                 $('#sign_up_button').trigger('click');
             }
         });
@@ -149,17 +149,16 @@ function setCookie(name,value) {
     let date = new Date();
     date.setTime(date.getTime() + (20*1000));
     let expires = "; expires=" + date.toUTCString();
-
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
 
 function getCookie(name) {
-    let nameEQ = name + "=";
+    let nameEq = name + "=";
     let ca = document.cookie.split(';');
     for(let i=0;i < ca.length;i++) {
         let c = ca[i];
         while (c.charAt(0)===' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+        if (c.indexOf(nameEq) === 0) return c.substring(nameEq.length,c.length);
     }
     return null;
 }

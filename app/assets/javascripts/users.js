@@ -28,7 +28,7 @@ $(document).ready(function(){
             $("html").css("zoom","0.81");
         }else{
             $("#main_page").hide();
-            window.location.replace("/");
+            window.location.replace("../422");
         }
     }
 
@@ -126,14 +126,58 @@ function delete_repo(button){
 
 
 function create_repo(){
+
+
+    let file = $('#file_upload').prop('files');
+    let gaz = $('#gaz_upload').prop('files');
     let repo_name = $("#repo_name").val();
     let language = $('#language').text().substring(10,12);
     let sort_method = $('#sortMethod').text().substring(12);
     let seed_size = $('#seed_size').val();
     let entities = "";
 
+    if (file.length === 0 ){
+        alert("Please upload at least one data file.");
+    }
+
+    let filesInfo = {};
+    filesInfo.name= repo_name;
+
+    let fileArray = [];
+    let gazArray=[];
+
+    for (let i = 0; i < file.length; i++) {
+
+        if(file[i].name.split('.')[file[i].name.split('.').length-1] !== "txt" && file[i].name.split('.')[file[i].name.split('.').length-1] !=="html"){
+            alert("Please upload files ending with '.txt' or '.html'");
+            window.location.reload();
+        }else {
+            fileArray.push(file[i].name.toString());
+        }
+    }
+
+    for(let i= 0; i<gaz.length;i++){
+        if(gaz[i].name.split('.')[gaz[i].name.split('.').length-1] !== "gaz"){
+            alert("Please upload gaz files ending with '.gaz'");
+            window.location.reload();
+        }else {
+            gazArray.push(gaz[i].name.toString());
+        }
+    }
+
+    filesInfo.fileArray = fileArray;
+    filesInfo.gazArray = gazArray;
+
+    if (file.length === 0 ){
+        alert("Please upload at least one data file.");
+    }
+
     for(let i=0; i<entity_num; i++){
 
+        if(!gazArray.includes($('#entity_' + i.toString()).val()+".gaz")){
+            alert("Please upload a gaz file for each entity for you define");
+            window.location.reload();
+        }
         entities +=　$('#entity_' + i.toString()).val() + "_";
     }
 
@@ -159,29 +203,10 @@ function create_repo(){
         success: function(msg){
             let filesInfo;
             if (msg.status) {
-                let file = $('#file_upload').prop('files');
 
                 recursive_upload(file, 0, a + 'cp_file');
 
-                let gaz = $('#gaz_upload').prop('files');
-
                 recursive_upload(gaz, 0, a + 'cp_gaz');
-
-
-                filesInfo = {};
-                filesInfo.name= repo_name;
-
-                let fileArray = [];
-                let gazArray=[];
-                for (let i = 0; i < file.length; i++) {
-                    fileArray.push(file[i].name.toString())
-                }
-                for(let i= 0; i<gaz.length;i++){
-                    gazArray.push(gaz[i].name.toString())
-                }
-
-                filesInfo.fileArray = fileArray;
-                filesInfo.gazArray = gazArray;
 
                 let repo = JSON.stringify(filesInfo);
                 $.ajax({

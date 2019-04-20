@@ -19,7 +19,7 @@
 
 let uploadTagArray = [];
 let availableOptionArray = [];
-let color_list = ["#ffffff","#7FDBFF","#0074D9","#FF851B","#FF9179","#FF79c5","#FFFF79","#d281FF","#caff79","#a089ff","#e8ff79"];
+let color_list = ["#ffffff","#7FDBFF","#FF851B","#FF9179","#FF79c5","#FFFF79","#d281FF","#caff79","#a089ff","#e8ff79","#0074D9"];
 let url_path = window.location.pathname + "/";
 
 $(document).ready(function () {
@@ -31,20 +31,19 @@ $(document).ready(function () {
             welcome_alert();
             data_from_server();
             update_cache();
+            $("body").keypress(function (event) {
+                let key = event.which;
+                if (key === 13) {
+                    $('#next_sentence_button').trigger('click');
+                }else if(key === 117){
+                    $('#update_to_file_button').trigger('click');
+                }
+            });
         }else{
             $("#main_page").hide();
-            window.location.replace("/");
+            window.location.replace("../422");
         }
     }
-
-    $("body").keypress(function (event) {
-        let key = event.which;
-        if (key === 13) {
-            $('#next_sentence_button').trigger('click');
-        }else if(key === 117){
-            $('#update_to_file_button').trigger('click');
-        }
-    });
 
 
 });

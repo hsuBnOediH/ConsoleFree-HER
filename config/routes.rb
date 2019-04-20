@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/:username', to:"users#info"
   get '/:username/:repo_name', to:"repos#main"
 
+  get '/:username/:repo_name/*', to:"repos#main"
   post '/:username/get_repo_user', to: "users#get_repo_user"
   post '/:username/delete_repo', to: "users#delete_repo"
   post '/:username/share_repo', to: "users#share_repo"
