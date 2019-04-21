@@ -1,18 +1,28 @@
 # ConsoleFree HER
-A well-visualized tool for Humanity Entity Recognizer
+A well-visualized tool for Humanity Entity Recognizer[HER].
 
-HER is white box solution for robust handling of different types of entities, different languages, styles, and domains, and varying levels of structure in texts, by [Alex Erdmann](ae1541@nyu.edu)
-
-ConsoleFree HER visilized the console-base HER by change the white-box solution to black-box, in other word, user is not 
-necessary any more to know shell command, pyhton and linux envireoment setting up to use HER
 
 ## Background
-The console-base HER has been widely and frequenly using by 
-linguistic department of The Ohio State University for acdemic using right after the HER was post on [github](https://github.com/alexerdmann/HER).But the actual use efficiency of HER is not as high as envisaged. Since most of the actual users in linguistic department have no common-sence in Computer science field, such as basic opreatios on linux system and setting up python enveriment.
-The whole annotating process is by typing in txt file, when working repetitively for a long time, it is very easy to make mistakes such as typo for user.
-Plus consonle-base HER can't solve the problem that in most cases, multiple people need to work together to complete a annotating, and HER doesn't support share unfinished work cross users.
+HER is developed by [Alexander Erdmann](ae1541@nyu.edu) and supported by [Herodotus group of the Linguistic Department](https://u.osu.edu/herodotos/) 
+in The Ohio State University. It is an active learning system that could reduce the time and cost for NER annotation task, 
+which is able to handle multiple languages, user-defined entity types, and different sort methods. 
+However, the original HER is only a white box solution for such an annotation problem, although it could largely 
+reduce the annotation cost from the algorithm side, it is still hard for annotators to use in the real annotation process 
+since the whole system is based shell commands and text editing, which annotators are not familiar with at all.
+
+The original HER has been widely used by the annotators in the Herodotus group. Normally, most annotators are the experts 
+in the linguistic but not computer science. Therefore, current annotating environment is not friendly to them at all. Also, 
+it is easy to make mistakes when using text editor to annotate a large amount of data. In addition, since annotators are 
+usually working on the same corpus, it is really hard to split the data into partitions for each annotator, which also 
+largely reduces the efficiency of the active learning algorithm.
+
+
 ## Introduction
-In order to solve the problem HER currently have, Alex's group appointed FeatureNotBug, which is led by a group member of Alex's group - Yukun,to find a efficent visualize solution to HER.
+ConsoleFree HER addresses such problem by visualizing the original HER to a web interface, which changes the 
+white-box solution to a black-box. In this case, annotators does not need to use or see any shell commands. Instead, they
+can do the annotation in a very user-friendly environment, by simply moving the mouse and clicking the entity. Also, 
+ConsoleFree HER supports multiple users sharing one repository, which is very important for the whole active learning process. 
+
 ## Functionality
 
 * Based on Rails Framwork, reduced development problems and simplified many complicated actions. 
@@ -28,6 +38,8 @@ In order to solve the problem HER currently have, Alex's group appointed Feature
 ## Need More
 
 ## Implementation Details
+
+### Requirement to Run
 ### Front-End
 The group using 
 ### Server-End
