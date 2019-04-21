@@ -1,7 +1,6 @@
 require 'json'
 class UsersController < ApplicationController
   before_action :set_user, only: [:info, :add_repo, :cp_file, :cp_gaz, :share_repo, :get_repo_user, :delete_repo, :generate_seed]
-  #before_action :set_repo_path, only: [:cp_file, :cp_gaz, :add_repo]
 
   layout "main_layout", :only => [:login]
 

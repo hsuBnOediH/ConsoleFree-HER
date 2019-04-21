@@ -36,9 +36,5 @@ Rails.application.routes.draw do
   get "/:username/:repo_name/repos/download/:f1/fullCorpus.final.txt", to: "repos#download_inf_result1"
   get "/:username/:repo_name/repos/download/:f1/fullCorpus.final-list.txt", to: "repos#download_inf_result2"
   get "/:username/:repo_name/repos/download/:f1/Gazatteers/:file.gaz", to: "repos#download_gaz"
-
-  get '*path', to: "repos#main"
   root 'application#login'
-
-
 end
