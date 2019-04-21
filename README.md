@@ -23,8 +23,34 @@ white-box solution to a black-box. In this case, annotators does not need to use
 can do the annotation in a very user-friendly environment, by simply moving the mouse and clicking the entity. Also, 
 ConsoleFree HER supports multiple users sharing one repository, which is very important for the whole active learning process. 
 
-## Functionality
+## Client-View
+### Functionality
 
+* A very user-friendly environment
+* No scripts and shell commands for users
+##### Account and Repository Management
+* A database for user to sign up and log in
+* The user is able to define his or her own entity types
+* The user is able to select any language and sort method
+* The user is able to upload multiple data files
+* The user is able to share the repository with other users
+* The user is bale to delete the repository
+
+##### Annotation Process
+* Enough information alert to let the user know what he or she is doing
+* Large space and big font to display the annotating sentence
+* Simply move the mouse and click to select the entity type
+* Entity types are differentiated by multiple colors
+* A status bar to display the current progress
+* Only several buttons for users to use, all the process are implemented in the back-end
+* Next-Button: Puts the current sentence to cache, which could be modified later, and get next sentence
+* Update-Button: Update current and cache sentences to file, which cannot be modified
+* Eval-Rank-Button: Do evaluation and ranking every time the user wants to stop
+* Result-Button: Download the result of gazatteers and final inferences 
+* The user could modify the cache data by simply clicking the sentence in the left bar
+* -------
+
+* No scripts and shell commands for users
 * Based on Rails Framwork, reduced development problems and simplified many complicated actions. 
 * Established a remote server, user can acess and useing HER at anywhere with Internet
 * In User center, user could have several reposities at the same time, and they can have different progress
@@ -35,9 +61,9 @@ ConsoleFree HER supports multiple users sharing one repository, which is very im
 * Decentralized operation or decrease the chance of Computer crash, the file could be update anytime they want by clicking update button.
 * Visual progress bar, user could determine rounghly how many seed they has anotated and how many left
 * Repositories could be share to other user in the same sytem. Theoretically, there is not upper bound number of shared user. But they cannn't annotating the same  repositories at the same time.
-## Need More
+### Need More
 
-## Implementation Details
+## Implementation-View
 
 ### Requirement to Run
 ### Front-End
