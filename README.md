@@ -109,3 +109,6 @@ Alexander Erdmann, David Joseph Wrisley, Benjamin Allen, Christopher Brown, Soph
 * [Herodotus Group](https://u.osu.edu/herodotos/) of Linguistic Department in OSU
 * Senior UI Designer: Xiangru Chen
 * [Deepin](https://www.deepin.org/en/) Operating System
+
+#### Questions & BugReports
+Please contact ANY group member with any questions, concerns, bug fixes, or helpful advice.
