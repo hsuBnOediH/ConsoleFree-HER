@@ -28,15 +28,16 @@ ConsoleFree HER supports multiple users sharing one repository, which is very im
 
 * A very user-friendly environment
 * No scripts and shell commands for users
-##### Account and Repository Management
+#### Account and Repository Management
 * A database for user to sign up and log in
+* The user is able to see all the repository when logged in
 * The user is able to define his or her own entity types
 * The user is able to select any language and sort method
 * The user is able to upload multiple data files
 * The user is able to share the repository with other users
 * The user is bale to delete the repository
 
-##### Annotation Process
+#### Annotation Process
 * Enough information alert to let the user know what he or she is doing
 * Large space and big font to display the annotating sentence
 * Simply move the mouse and click to select the entity type
@@ -50,7 +51,9 @@ ConsoleFree HER supports multiple users sharing one repository, which is very im
 * The user could modify the cache data by simply clicking the sentence in the left bar
 * -------
 
-* No scripts and shell commands for users
+## Implementation-View
+
+
 * Based on Rails Framwork, reduced development problems and simplified many complicated actions. 
 * Established a remote server, user can acess and useing HER at anywhere with Internet
 * In User center, user could have several reposities at the same time, and they can have different progress
@@ -61,10 +64,6 @@ ConsoleFree HER supports multiple users sharing one repository, which is very im
 * Decentralized operation or decrease the chance of Computer crash, the file could be update anytime they want by clicking update button.
 * Visual progress bar, user could determine rounghly how many seed they has anotated and how many left
 * Repositories could be share to other user in the same sytem. Theoretically, there is not upper bound number of shared user. But they cannn't annotating the same  repositories at the same time.
-### Need More
-
-## Implementation-View
-
 ### Requirement to Run
 ### Front-End
 The group using 
