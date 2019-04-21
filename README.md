@@ -1,6 +1,7 @@
 # ConsoleFree HER
 A well-visualized tool for Humanity Entity Recognizer[HER].
 
+Currently, the server is running on Google Cloud Platform. Click [HERE](http://35.245.75.7:3000) to see our website.
 
 ## Background
 HER is developed by [Alexander Erdmann](ae1541@nyu.edu) and supported by [Herodotus group of the Linguistic Department](https://u.osu.edu/herodotos/) 
@@ -49,11 +50,16 @@ ConsoleFree HER supports multiple users sharing one repository, which is very im
 * Eval-Rank-Button: Do evaluation and ranking every time the user wants to stop
 * Result-Button: Download the result of gazatteers and final inferences 
 * The user could modify the cache data by simply clicking the sentence in the left bar
-* -------
 
 ## Implementation-View
 
+### Requirement to Run
 
+
+### Front-End
+### Server-End
+### Back-End
+### DataBase
 * Based on Rails Framwork, reduced development problems and simplified many complicated actions. 
 * Established a remote server, user can acess and useing HER at anywhere with Internet
 * In User center, user could have several reposities at the same time, and they can have different progress
@@ -64,10 +70,7 @@ ConsoleFree HER supports multiple users sharing one repository, which is very im
 * Decentralized operation or decrease the chance of Computer crash, the file could be update anytime they want by clicking update button.
 * Visual progress bar, user could determine rounghly how many seed they has anotated and how many left
 * Repositories could be share to other user in the same sytem. Theoretically, there is not upper bound number of shared user. But they cannn't annotating the same  repositories at the same time.
-### Requirement to Run
-### Front-End
-The group using 
-### Server-End
+
 ## Future work
 
 
