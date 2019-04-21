@@ -129,6 +129,20 @@ function sendSignUp() {
     let password = $("#password").val();
     let confirm_password = $("#confirm_password").val();
 
+    if(!(/^([a-zA-Z_]){3,20}$/.test(username))){
+        alert("Username must has a length between 3 and 20 characters.");
+        alert("Only english characters and '_' are allowed.");
+        window.location.reload();
+        return;
+    }
+
+    if(!(/^([a-zA-Z0-9_]){6,15}$/.test(password))){
+        alert("Password must has a length between 6 and 15 characters.");
+        alert("Only english characters, numbers and '_' are allowed.");
+        window.location.reload();
+        return;
+    }
+
     if (password === confirm_password) {
 
         let user_account = {username: username, password: password};
