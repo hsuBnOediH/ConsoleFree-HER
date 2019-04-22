@@ -1,5 +1,5 @@
 # ConsoleFree HER
-A well-visualized tool for Humanity Entity Recognizer[HER].
+A well-visualized tool for Humanity Entity Recognizer [[HER]](https://github.com/alexerdmann/HER).
 
 Currently, the server is running on Google Cloud Platform. Click [HERE](http://35.245.75.7:3000) to see our website.
 
@@ -111,4 +111,4 @@ Alexander Erdmann, David Joseph Wrisley, Benjamin Allen, Christopher Brown, Soph
 * [Deepin](https://www.deepin.org/en/) Operating System
 
 #### Questions & BugReports
-Please contact ANY group member with any questions, concerns, bug fixes, or helpful advice.
+Please contact ANY contributor with any questions, concerns, bug fixes, or helpful advice.
