@@ -258,7 +258,6 @@ function recursive_upload(data, index, path){
     if (index >= data.length){
         return;
     }
-
     let data_form = new FormData();
     data_form.append('file', data[index]);
     $.ajax({

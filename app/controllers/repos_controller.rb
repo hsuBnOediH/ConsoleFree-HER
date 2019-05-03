@@ -200,7 +200,7 @@ class ReposController < ApplicationController
         if line == "\n"
           break
         end
-        $line_num += 1
+        #$line_num += 1
         $time += 1
         word_tag = line.split
         input << {word: word_tag[1], tag:word_tag[0]}
@@ -213,11 +213,11 @@ class ReposController < ApplicationController
         # puts "*************************line 2"
         # puts line
         if line == "\n"
-          $line_num += 1
+          #$line_num += 1
           # puts "***************"+$line_num.to_s
           break
         end
-        $line_num += 1
+        #$line_num += 1
         $time += 1
         word_tag = line.split
         input << {word: word_tag[1], tag:word_tag[0]}
@@ -452,7 +452,7 @@ class ReposController < ApplicationController
 
       #Retrieve from database
       status = @repo.status.split
-      $line_num = status[0].to_i
+      #$line_num = status[0].to_i
       $prev_line_num = status[1].to_i
       $seed_status = status[2] == "true"
       $seed_line_annotated = status[3].to_i
@@ -460,6 +460,7 @@ class ReposController < ApplicationController
       $corpus_line_annotated = status[5].to_i
       $corpus_line_total = status[6].to_i
       $time = status[7].to_i
+
 
       $path = "HER-data/"+$name+"/"
       $return_path = "../.."
@@ -470,6 +471,22 @@ class ReposController < ApplicationController
       if $cache[$name] == nil
         $cache[$name] = [[],[false,-999]]
       end
+
+      num = 0
+      $cache[$name][0].each do |line|
+        num += line.length + 1
+      end
+
+      if $prev_line_num == 1
+        if $cache[$name][0].length == 0
+          $line_num = $prev_line_num
+        else
+          $line_num = $prev_line_num + num - 1
+        end
+      else
+        $line_num = $prev_line_num + num - 1
+      end
+
     end
 
 
